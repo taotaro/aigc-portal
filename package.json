@@ -31,6 +31,7 @@
     "@types/react-dom": "18.0.5",
     "antd": "^4.16.2",
     "axios": "^0.21.1",
+    "babel-types": "^6.26.0",
     "cors": "^2.8.5",
     "echarts": "^5.1.2",
     "eslint": "8.17.0",
