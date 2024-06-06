@@ -4,6 +4,6 @@ WORKDIR /home/project
 
 COPY package.json .
 
-RUN npm install
+RUN yarn install
 
 RUN npm install -g pm2
