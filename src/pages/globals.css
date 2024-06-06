@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    background: var(--bg-100);
+    color: var(--text-100);
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+:root {
+    --e-primary-base: #3787FF;
+    --e-primary-500: #5F9FFF;
+    --e-primary-400: #A5C9FF;
+    --e-primary-300: #F2F7FC;
+    --e-primary-200: #EBF3FF;
+    --e-primary-100: #E2E8F0;
+    --e-accent-base: #3787FF;
+    --e-text-base: #1A202C;
+    --e-text-300: #718096;
+    --e-text-200: #A0AEC0;
+    --e-text-100: #FFFFFF;
+    --e-bg-base: #FFFFFF;
+    --e-bg-100: #FAFAFA;
+    --e-warning-base: #EAB308;
+    --e-warning-100: #FAF9F1;
+    --e-error-base: #DD3333;
+}
