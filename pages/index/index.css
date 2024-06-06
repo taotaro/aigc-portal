@@ -1,0 +1,17 @@
+.promo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 3em 0em;
+}
+
+.promo {
+    width: 40%;
+}
+
+@media (max-width: 990px) {
+    .plan-right {
+        padding: 0;
+        margin-bottom: 12px;
+    }
+}

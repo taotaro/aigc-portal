@@ -1,0 +1,12 @@
+{
+  "locales": [
+    "cn",
+    "hk"
+  ],
+  "defaultLocale": "hk",
+  "pages": {
+    "*": [
+      "common"
+    ]
+  }
+}
