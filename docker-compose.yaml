@@ -1,0 +1,10 @@
+version: '3'
+services:
+  aigc-portal-web:
+    container_name: aigc-portal-web
+    image: aigc-portal-web:latest
+    hostname: "aigc-portal-web"
+    ports:
+      - "9140:3000"
+    network_mode: bridge
+    restart: always
