@@ -6,8 +6,4 @@ COPY package.json .
 
 RUN npm install
 
-RUN npm uninstall @babel/core && npm install --save-dev @babel/core
-
-RUN npm dedupe
-
 RUN npm install -g pm2
