@@ -7,4 +7,4 @@ COPY . /home/project/
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN echo 'Asia/Shanghai' > /etc/timezone
 
-CMD ["pm2-runtime", "start", "./bin/www", "--name", "aigc-portal-web", "--env", "production"]
+CMD ["pm2-runtime", "start", "--name", "aigc-portal-web", "npm", "--", "run", "start"]
