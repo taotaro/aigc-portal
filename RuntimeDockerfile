@@ -4,6 +4,10 @@ WORKDIR /home/project
 
 COPY package.json .
 
-RUN yarn install
+RUN npm install
+
+RUN npm uninstall @babel/core && npm install --save-dev @babel/core
+
+RUN npm dedupe
 
 RUN npm install -g pm2
