@@ -1,8 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { NextSeo } from 'next-seo';
-import Image from "next/image";
 import useTranslation from 'next-translate/useTranslation'
-import axiosInstance from "../util/request";
 import { throttle } from "../util/index";
 
 export default function Index() {
@@ -44,6 +42,7 @@ export default function Index() {
 		return (
 			<div className="module-table__row" key={index}>
 				<div className="module-table__col">{item.time}</div>
+				<div className="module-table__line"></div>
 				<div className="module-table__col">{item.desc}</div>
 			</div>
 		);
@@ -54,7 +53,7 @@ export default function Index() {
 			<NextSeo title={"雲馳通義 ‧ 洞見萬相千問"} description={'阿里雲香港未來教室 暨「雲馳通義 ‧ 洞見萬相千問」生成式 AI 校際比賽發佈會'} />
 			<img id="fixed-bg" className="position-fixed" onLoad={onWindowResize} src="/images/index-bg.png" alt="" style={{ width: '100%', height: 'auto' }} />
 			{/* slogan */}
-			<section className="title-section position-relative" style={{ height: `${fixedBgHeight}px` }}>
+			<section className="title-section position-relative" style={{ height: `${fixedBgHeight}px` }} id="indexModule">
 				<h1 className="title">雲馳通義 ‧ 洞見萬相千問</h1>
 				<h3 className="subtitle">阿里雲香港未來教室 暨「雲馳通義 ‧ 洞見萬相千問」生成式 AI 校際比賽發佈會</h3>
 			</section>
@@ -67,7 +66,7 @@ export default function Index() {
 				</div>
 			</section>
 			{/* 活動內容 */}
-			<section className="position-relative module-box">
+			<section className="position-relative module-box" id="articleModule">
 				<p className="module-title">活動內容</p>
 				<div className="module-content">
 					<div className="module-content__left">
@@ -107,7 +106,7 @@ export default function Index() {
 				</div>
 			</section>
 			{/* 未來教室日程 */}
-			<section className="position-relative module-box">
+			<section className="position-relative module-box" id="classRoomModule">
 				<p className="module-title">未來教室日程</p>
 				<div className="module-table">
 					<div className="module-table__row module-table__header">

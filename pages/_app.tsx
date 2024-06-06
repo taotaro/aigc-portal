@@ -12,6 +12,7 @@ import '../styles/style.css';
 import '../styles/main.css';
 
 import '../pages/index/index.css';
+import '../components/header/index.css';
 
 
 type ComponentWithPageLayout = AppProps & {
