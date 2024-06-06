@@ -1,7 +1,6 @@
 import { createContext, ReactNode, useContext, useState, useEffect, useCallback } from "react";
 import GlobalHeader from './global-header/index';
 import Header from "./header/index";
-import Footer from "./footer/index";
 import { PageContextType } from "../types/contexts";
 import { PageInfo } from "../types";
 
@@ -13,10 +12,9 @@ export default function Layout({ children, pageInfo }: { children: ReactNode, pa
     return (
         <Context.Provider value={context}>
             <GlobalHeader key='appHeader' />
-            <main key='appMain'>
+            <main key='appMain' className="main">
                 <Header current={pageInfo.pageName} hideDot={pageInfo.pageName === 'INDEX'} />
                 {children}
-                <Footer />
             </main>
         </Context.Provider>
     )

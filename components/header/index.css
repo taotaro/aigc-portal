@@ -12,18 +12,6 @@
 	flex-wrap: wrap;
 }
 
-
-
-.navbarContent {
-	display: flex;
-	align-items: center;
-	flex-wrap: nowrap;
-}
-
-.navbarContent>.navbar-toggler {
-	margin-left: auto;
-}
-
 .dropdownTransparent {
 	width: 100%;
 	height: 12px;
@@ -36,7 +24,6 @@
 .navbar-main {
 	padding-left: 1rem;
 	padding-right: 1rem;
-
 }
 
 @media screen and (max-width: 992px) {

@@ -116,3 +116,7 @@ p strong {
 .text-18 {
   font-size: 18px;
 }
+
+.border-bottom-3 {
+  border-bottom: 3px solid #fff;
+}

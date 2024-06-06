@@ -33,7 +33,7 @@ export default function Header(props) {
 			<header>
 				<div className="top-nav">
 					<div className="container-fluid">
-						<nav className="navbar navbar-expand-lg navbar-light">
+						<nav className="navbar navbar-expand-lg navbar-light border-bottom-3">
 							<div className="collapse navbar-collapse" id="navbarSupportedContent">
 								<ul className="navbar-nav navbar-main">
 									{tabs}
