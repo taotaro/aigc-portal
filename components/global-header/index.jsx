@@ -22,7 +22,6 @@ export default function GlobalHeader() {
 				<meta name="robots" content="index, follow"></meta>
 				<link rel="manifest" href="/manifest.json" />
 				{/* <title>的士牌價．HKTEC 香港的士交易中心</title> */}
-				<script type="text/javascript" src="/js/facebooksdk.js"></script>
 				<script type="text/javascript" src="/js/jquery-2.1.4.min.js"></script>
 				<script type="text/javascript" src="/js/responsiveslides.min.js"></script>
 				<script type="text/javascript" src="/js/bootstrap.js"></script>
