@@ -8,10 +8,3 @@
 .promo {
     width: 40%;
 }
-
-@media (max-width: 990px) {
-    .plan-right {
-        padding: 0;
-        margin-bottom: 12px;
-    }
-}

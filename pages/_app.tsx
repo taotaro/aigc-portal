@@ -9,7 +9,6 @@ import '../styles/transition.min.css';
 import '../styles/popuo-box.css';
 import '../styles/bootstrap.css';
 import '../styles/style.css';
-import '../styles/style-article.css';
 import '../styles/main.css';
 
 import '../pages/index/index.css';

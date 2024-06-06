@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { NextSeo } from 'next-seo';
+import Image from "next/image";
 import useTranslation from 'next-translate/useTranslation'
-import Slider from "../components/slider/index";
 import axiosInstance from "../util/request";
 import { getIn } from "../util/index";
 
@@ -43,11 +43,8 @@ export default function Index() {
 
 	return (
 		<>
-			<NextSeo
-				title={"的士牌價．HKTEC 香港的士交易中心"}
-				description={'一站式的士牌照交易平台'}
-			/>
-			<Slider sliders={sliders} />
+			<NextSeo title={"雲馳通義 ‧ 洞見萬相千問"} description={'阿里雲香港未來教室 暨「雲馳通義 ‧ 洞見萬相千問」生成式 AI 校際比賽發佈會'} />
+			<img className="position-fixed" src="/images/index-bg.png" alt="" style={{ width: '100%', height: 'auto' }}/>
 		</>
 	);
 }

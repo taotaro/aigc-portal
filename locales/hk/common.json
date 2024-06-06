@@ -1,4 +1,9 @@
 {
+	"nav": {
+		"index": "首頁",
+		"activity": "活動內容",
+		"future": "未來教室日程"
+	},
 	"homepage": {
 		"slider": {
 			"bannerTitle1": "一站式的士牌照買賣平台，現貨，遠期合約",
