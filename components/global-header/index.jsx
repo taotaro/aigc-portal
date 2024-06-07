@@ -6,8 +6,7 @@ export default function GlobalHeader() {
 	return (
 		<>
 			<Head>
-				<meta charset="utf-8" />
-				{/* <link rel="icon" href="/favicon.ico" /> */}
+				<link rel="icon" href="/favicon.ico" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta
 					name="description"
@@ -17,8 +16,6 @@ export default function GlobalHeader() {
 					name="keywords"
 					content="阿里雲香港未來教室 暨「雲馳通義 ‧ 洞見萬相千問」生成式 AI 校際比賽發佈會"
 				></meta>
-				<meta name="google-site-verification" content="J_plchCoG7sFr3wJjxqbLLcrLYkibJ4wUDCmDsiy_gg" />
-				<meta property="fb:pages" content="153063591397681"></meta>
 				<meta name="robots" content="index, follow"></meta>
 				<link rel="manifest" href="/manifest.json" />
 				{/* <title>雲馳通義 ‧ 洞見萬相千問</title> */}
