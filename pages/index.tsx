@@ -102,106 +102,108 @@ export default function Index() {
 				<h1 className="title">雲馳通義 ‧ 洞見萬相千問</h1>
 				<h3 className="subtitle">阿里雲香港未來教室 暨「雲馳通義 ‧ 洞見萬相千問」生成式 AI 校際比賽發佈會</h3>
 			</section>
-			{/* 介绍 */}
-			<section className="position-relative intro-box">
-				<div className="intro">
-					<img className="intro-tag intro-tag-left" src="/images/tag1.png" alt="tag" />
-					<p>為慶祝在港營運10周年，「阿里雲香港未來教室」及「雲馳通義 ‧ 洞見萬相千問」生成式AI校際比賽計劃正式啟動。阿里雲冀藉此推動學界同工，透過中國自家研發的雲端技術，於課室及學校內使用科技，提升同學學習成果和效率。</p>
-					<img className="intro-tag intro-tag-right" src="/images/tag1.png" alt="tag" />
-				</div>
-			</section>
-			<section className="position-relative module-box" id="articleModule">
-				<p className="module-title">活動資訊</p>
-				<div className="module-content">
-					<div className="module-content__left">
-						<div className="module-content__title">活動資訊</div>
-						<div className="module-content__desc">
-							<p>📅日期 - 2024年7月10日（星期三）及 7月12日（星期五）</p>
-							<p>🕓時間 - 下午2:30 - 5:00（1:30 開始登記）</p>
-							<p>🌏地點 - 阿里巴巴辦公室23樓研討室（銅鑼灣勿地臣街1號時代廣場1座23樓）</p>
-							<p>🤖對象 - 中小學教師</p>
+			<div className="module-container">
+				{/* 介绍 */}
+				<section className="position-relative intro-box">
+					<div className="intro">
+						<img className="intro-tag intro-tag-left" src="/images/tag1.png" alt="tag" />
+						<p>為慶祝在港營運10周年，「阿里雲香港未來教室」及「雲馳通義 ‧ 洞見萬相千問」生成式AI校際比賽計劃正式啟動。阿里雲冀藉此推動學界同工，透過中國自家研發的雲端技術，於課室及學校內使用科技，提升同學學習成果和效率。</p>
+						<img className="intro-tag intro-tag-right" src="/images/tag1.png" alt="tag" />
+					</div>
+				</section>
+				<section className="position-relative module-box" id="articleModule">
+					<p className="module-title">活動資訊</p>
+					<div className="module-content">
+						<div className="module-content__left">
+							<div className="module-content__title">活動資訊</div>
+							<div className="module-content__desc">
+								<p>📅日期 - 2024年7月10日（星期三）及 7月12日（星期五）</p>
+								<p>🕓時間 - 下午2:30 - 5:00（1:30 開始登記）</p>
+								<p>🌏地點 - 阿里巴巴辦公室23樓研討室（銅鑼灣勿地臣街1號時代廣場1座23樓）</p>
+								<p>🤖對象 - 中小學教師</p>
+							</div>
 						</div>
 					</div>
-				</div>
-			</section>
-			{/* 活動內容 */}
-			<section className="position-relative module-box" id="articleModule">
-				<p className="module-title">活動內容</p>
-				<div className="module-content">
-					<div className="module-content__left">
-						<div className="module-content__title">阿里雲教育產品分享</div>
-						<div className="module-content__desc">介紹阿里雲香港在AI教育領域的最新計劃和成果，並展示如何將AI技術應用於教與學環境，以強化學生的創造能力和解難思維。 </div>
+				</section>
+				{/* 活動內容 */}
+				<section className="position-relative module-box" id="articleModule">
+					<p className="module-title">活動內容</p>
+					<div className="module-content">
+						<div className="module-content__left">
+							<div className="module-content__title">阿里雲教育產品分享</div>
+							<div className="module-content__desc">介紹阿里雲香港在AI教育領域的最新計劃和成果，並展示如何將AI技術應用於教與學環境，以強化學生的創造能力和解難思維。 </div>
+						</div>
+						<div className="module-content__right">
+							<img className="module-content__img" src="/images/activity1.png" alt="阿里雲教育產品分享" />
+						</div>
 					</div>
-					<div className="module-content__right">
-						<img className="module-content__img" src="/images/activity1.png" alt="阿里雲教育產品分享" />
+					<div className="module-content module-content-reverse">
+						<div className="module-content__left">
+							<div className="module-content__title">嘉賓演講</div>
+							<div className="module-content__desc">邀請AI教育領域的專家、學者和實踐者分享經驗和見解；探討AI教育的趨勢、挑戰和未來發展。 </div>
+						</div>
+						<div className="module-content__right">
+							<img className="module-content__img" src="/images/activity2.png" alt="阿里雲教育產品分享" />
+						</div>
 					</div>
-				</div>
-				<div className="module-content module-content-reverse">
-					<div className="module-content__left">
-						<div className="module-content__title">嘉賓演講</div>
-						<div className="module-content__desc">邀請AI教育領域的專家、學者和實踐者分享經驗和見解；探討AI教育的趨勢、挑戰和未來發展。 </div>
+					<div className="module-content">
+						<div className="module-content__left">
+							<div className="module-content__title">即場試用阿里雲AI</div>
+							<div className="module-content__desc">即場試用阿里雲生成式AI「通義平台」，讓參與者深入了解AI教育，並提供實際操作的機會。 </div>
+						</div>
+						<div className="module-content__right">
+							<img className="module-content__img" src="/images/activity3.png" alt="阿里雲教育產品分享" />
+						</div>
 					</div>
-					<div className="module-content__right">
-						<img className="module-content__img" src="/images/activity2.png" alt="阿里雲教育產品分享" />
+					<div className="module-content module-content-reverse">
+						<div className="module-content__left">
+							<div className="module-content__title">比賽介紹</div>
+							<div className="module-content__desc">講解「雲馳通義 ‧ 洞見萬相千問」校際生成式 AI 比賽的目的、參賽要求和評分標準。這個創科盛事旨在推動全港中小學生利用AI人工智能，激發創意，並將獨特的意念付諸實行。參賽同學需要運用阿里巴巴旗下AI應用平台「通義千問」、「通義萬相」和「通義星塵」，根據特定主題創作。 </div>
+						</div>
+						<div className="module-content__right">
+							<img className="module-content__img" src="/images/activity4.png" alt="阿里雲教育產品分享" />
+						</div>
 					</div>
-				</div>
-				<div className="module-content">
-					<div className="module-content__left">
-						<div className="module-content__title">即場試用阿里雲AI</div>
-						<div className="module-content__desc">即場試用阿里雲生成式AI「通義平台」，讓參與者深入了解AI教育，並提供實際操作的機會。 </div>
+				</section>
+				{/* 未來教室日程 */}
+				<section className="position-relative module-box" id="classRoomModule">
+					<p className="module-title">未來教室日程</p>
+					<div className="module-table">
+						<div className="module-table__row module-table__header">
+							<div className="module-table__col">時間 July 10 2024</div>
+							<div className="module-table__col">內容</div>
+						</div>
+						{tableColListRender1}
 					</div>
-					<div className="module-content__right">
-						<img className="module-content__img" src="/images/activity3.png" alt="阿里雲教育產品分享" />
+					<div className="module-table">
+						<div className="module-table__row module-table__header">
+							<div className="module-table__col">時間 July 12 2024</div>
+							<div className="module-table__col">內容</div>
+						</div>
+						{tableColListRender2}
 					</div>
-				</div>
-				<div className="module-content module-content-reverse">
-					<div className="module-content__left">
-						<div className="module-content__title">比賽介紹</div>
-						<div className="module-content__desc">講解「雲馳通義 ‧ 洞見萬相千問」校際生成式 AI 比賽的目的、參賽要求和評分標準。這個創科盛事旨在推動全港中小學生利用AI人工智能，激發創意，並將獨特的意念付諸實行。參賽同學需要運用阿里巴巴旗下AI應用平台「通義千問」、「通義萬相」和「通義星塵」，根據特定主題創作。 </div>
+				</section>
+				<section className="position-relative module-box">
+					<div className="module-button">
+						<a href="">立即註冊</a>
 					</div>
-					<div className="module-content__right">
-						<img className="module-content__img" src="/images/activity4.png" alt="阿里雲教育產品分享" />
+				</section>
+				{/* 活動支持 */}
+				<section className="position-relative module-box">
+					<p className="module-title">活動支持</p>
+					<div className="module-logos">
+						{
+							LogoList.map(item => {
+								return (
+									<div className={`module-logo module-logo-${item.name}`} key={item.name}>
+										<img className="module-logo__img" src={item.logo} alt={item.name} />
+									</div>
+								)
+							})
+						}
 					</div>
-				</div>
-			</section>
-			{/* 未來教室日程 */}
-			<section className="position-relative module-box" id="classRoomModule">
-				<p className="module-title">未來教室日程</p>
-				<div className="module-table">
-					<div className="module-table__row module-table__header">
-						<div className="module-table__col">時間July 10 2024</div>
-						<div className="module-table__col">內容</div>
-					</div>
-					{tableColListRender1}
-				</div>
-				<div className="module-table">
-					<div className="module-table__row module-table__header">
-						<div className="module-table__col">時間July 12 2024</div>
-						<div className="module-table__col">內容</div>
-					</div>
-					{tableColListRender2}
-				</div>
-			</section>
-			<section className="position-relative module-box">
-				<div className="module-button">
-					<a href="">立即註冊</a>
-				</div>
-			</section>
-			{/* 活動支持 */}
-			<section className="position-relative module-box">
-				<p className="module-title">活動支持</p>
-				<div className="module-logos">
-					{
-						LogoList.map(item => {
-							return (
-								<div className={`module-logo module-logo-${item.name}`} key={item.name}>
-									<img className="module-logo__img" src={item.logo} alt={item.name} />
-								</div>
-							)
-						})
-					}
-				</div>
-			</section>
+				</section>
+			</div>
 		</>
 	);
 }
