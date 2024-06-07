@@ -7,18 +7,53 @@ export default function Index() {
 	const { t } = useTranslation('common');
 	const [fixedBgHeight, setFixedBgHeight] = useState(200);
 
-	const scheduleList = [
+	const scheduleList1 = [
 		{ time: '2:00 – 2:30 pm', desc: '來賓登記' },
-		{ time: '2:30 – 2:35 pm', desc: '開幕儀式' },
-		{ time: '2:35 – 2:40 pm', desc: '第一位嘉賓分享' },
-		{ time: '2:40 – 2:45 pm', desc: '第二位嘉賓分享' },
-		{ time: '2:45 – 2:50 pm', desc: '全場合照' },
-		{ time: '2:50 – 3:10 pm', desc: '阿里雲及通義產品的介紹' },
-		{ time: '3:10 – 3:25 pm', desc: '小組討論A - 如何應用中國發展技術' },
-		{ time: '3:25 – 3:40 pm', desc: '小組討論B - 以中文為藍本的大型語言模組應用優勢' },
-		{ time: '3:40 – 4:10 pm', desc: '中場休息及茶點招待、Demo試用' },
-		{ time: '4:10 – 4:30 pm', desc: '（分開房間）資料登記、中學／小學賽制介紹及注意事項' },
+		{ time: '2:30 – 2:35 pm', desc: '歡迎辭' },
+		{ time: '2:35 – 2:40 pm', desc: '全場合照' },
+		{ time: '2:40 – 2:50 pm', desc: '阿里雲教育方案概覽簡介' },
+		{
+			time: '2:50 – 3:00 pm', desc: (<div className="module-table__col-mul">
+				<p>利用「阿里雲學院認證」系統提升教與學成效</p>
+				<ul>
+					<li>何謂「阿里雲學院認證」</li>
+					<li>如何挑選適合自己的課程</li>
+					<li>如何運用認證內容快速提升掌握科技的能力</li>
+				</ul>
+			</div>)
+		},
+		{ time: '3:00 – 4:00 pm', desc: '阿里雲學院活動證書工作坊 (即場取得 Alibaba Cloud Academy Event Certificate)' },
+		{ time: '4:00 – 4:15 pm', desc: '嘉賓對談及互節環節：認證課程對實際教學的幫助' },
+		{ time: '4:15 – 4:30 pm', desc: '中場休息及茶點招待' },
+		{ time: '4:30 – 4:45 pm', desc: '中學／小學賽制介紹及注意事項' },
+		{ time: '4:45 – 5:00 pm', desc: '問答時間' },
+	];
+
+	const scheduleList2 = [
+		{ time: '2:00 – 2:30 pm', desc: '來賓登記' },
+		{ time: '2:30 – 2:35 pm', desc: '歡迎辭' },
+		{ time: '2:35 – 2:40 pm', desc: '全場合照' },
+		{ time: '2:40 – 2:50 pm', desc: '阿里雲教育方案概覽簡介' },
+		{
+			time: '2:50 – 3:00 pm', desc: (<div className="module-table__col-mul">
+				<p>通義AI平台的教育實踐應用</p>
+				<ul>
+					<li>介紹「通義」AI平台</li>
+					<li>如何引導同學利用AI科技創作，同時培養資訊素養</li>
+				</ul>
+			</div>)
+		},
+		{ time: '3:00 – 3:45 pm', desc: '試驗工作坊 ：即場試用「通義萬相」圖像生成功能進行繪圖創作' },
+		{ time: '3:45 – 4:00 pm', desc: '嘉賓對談及互節環節：教育應用實例' },
+		{ time: '4:00 – 4:15 pm', desc: '中場休息及茶點招待' },
+		{ time: '4:15 – 4:30 pm', desc: '中學／小學賽制介紹及注意事項' },
 		{ time: '4:30 – 5:00 pm', desc: '問答時間' },
+	];
+
+	const LogoList = [
+		{ name: 'Alibaba', logo: '/images/ali.jpeg' },
+		{ name: 'GamingNoodleSoup', logo: '/images/gns.png' },
+		{ name: 'Materia Logic', logo: '/images/ml.png' },
 	];
 
 	function onWindowResize() {
@@ -38,7 +73,17 @@ export default function Index() {
 		}
 	}, []);
 
-	const tableColListRender = scheduleList.map((item, index) => {
+	const tableColListRender1 = scheduleList1.map((item, index) => {
+		return (
+			<div className="module-table__row" key={index}>
+				<div className="module-table__col">{item.time}</div>
+				<div className="module-table__line"></div>
+				<div className="module-table__col">{item.desc}</div>
+			</div>
+		);
+	});
+
+	const tableColListRender2 = scheduleList2.map((item, index) => {
 		return (
 			<div className="module-table__row" key={index}>
 				<div className="module-table__col">{item.time}</div>
@@ -61,8 +106,22 @@ export default function Index() {
 			<section className="position-relative intro-box">
 				<div className="intro">
 					<img className="intro-tag intro-tag-left" src="/images/tag1.png" alt="tag" />
-					<p>為慶祝在港營運10周年，「阿里雲香港未來教室」及「雲馳通義 ‧ 洞見萬相千問」生成式 AI 校際比賽計劃正式啟動。阿里雲冀藉此推動學界同工，透過中國自家研發的雲端技術，於課室及學校內使用科技，提升同學學習成果和效率。</p>
+					<p>為慶祝在港營運10周年，「阿里雲香港未來教室」及「雲馳通義 ‧ 洞見萬相千問」生成式AI校際比賽計劃正式啟動。阿里雲冀藉此推動學界同工，透過中國自家研發的雲端技術，於課室及學校內使用科技，提升同學學習成果和效率。</p>
 					<img className="intro-tag intro-tag-right" src="/images/tag1.png" alt="tag" />
+				</div>
+			</section>
+			<section className="position-relative module-box" id="articleModule">
+				<p className="module-title">活動資訊</p>
+				<div className="module-content">
+					<div className="module-content__left">
+						<div className="module-content__title">活動資訊</div>
+						<div className="module-content__desc">
+							<p>📅日期 - 2024年7月10日（星期三）及 7月12日（星期五）</p>
+							<p>🕓時間 - 下午2:30 - 5:00（1:30 開始登記）</p>
+							<p>🌏地點 - 阿里巴巴辦公室23樓研討室（銅鑼灣勿地臣街1號時代廣場1座23樓）</p>
+							<p>🤖對象 - 中小學教師</p>
+						</div>
+					</div>
 				</div>
 			</section>
 			{/* 活動內容 */}
@@ -110,10 +169,22 @@ export default function Index() {
 				<p className="module-title">未來教室日程</p>
 				<div className="module-table">
 					<div className="module-table__row module-table__header">
-						<div className="module-table__col">時間</div>
+						<div className="module-table__col">時間July 10 2024</div>
 						<div className="module-table__col">內容</div>
 					</div>
-					{tableColListRender}
+					{tableColListRender1}
+				</div>
+				<div className="module-table">
+					<div className="module-table__row module-table__header">
+						<div className="module-table__col">時間July 12 2024</div>
+						<div className="module-table__col">內容</div>
+					</div>
+					{tableColListRender2}
+				</div>
+			</section>
+			<section className="position-relative module-box">
+				<div className="module-button">
+					<a href="">立即註冊</a>
 				</div>
 			</section>
 			{/* 活動支持 */}
@@ -121,10 +192,10 @@ export default function Index() {
 				<p className="module-title">活動支持</p>
 				<div className="module-logos">
 					{
-						[1, 2, 3].map(item => {
+						LogoList.map(item => {
 							return (
-								<div className="module-logo">
-									<img className="module-logo__img" src="/images/alibaba.png" alt="阿里雲教育產品分享" />
+								<div className={`module-logo module-logo-${item.name}`} key={item.name}>
+									<img className="module-logo__img" src={item.logo} alt={item.name} />
 								</div>
 							)
 						})

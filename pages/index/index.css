@@ -166,7 +166,7 @@
     width: 1px;
     height: 100%;
     background-color: #242424;
-    height: 80px;
+    height: 140px;
     position: absolute;
     top: 0;
     left: 50%;
@@ -176,7 +176,7 @@
     flex: 1;
     display: flex;
     align-items: center;
-    padding: 0 24px;
+    padding: 10px 24px;
     box-sizing: border-box;
     min-height: 52px;
     color: #242424;
@@ -197,6 +197,11 @@
     border: none;
 }
 
+.module-table__col-mul>ul {
+    box-sizing: border-box;
+    padding-left: 32px;
+}
+
 .module-logos {
     display: flex;
     align-items: center;
@@ -209,16 +214,49 @@
     width: 292px;
     height: 108px;
     border-radius: 12px;
-    /* border: 1px solid #CCC; */
+    border: 1px solid #CCC;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-right: 12px;
+    overflow: hidden;
 }
 
 .module-logo>.module-logo__img {
     height: 100%;
-    width: 100%;
+    width: auto;
+}
+.module-logo-Alibaba>.module-logo__img{
+    height: 200px;
+}
+
+.module-logo-GamingNoodleSoup>.module-logo__img{
+    height: 160px;
+}
+
+.module-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+    max-width: 250px;
+    height: 63px;
+    padding: 12px 24px;
+    box-sizing: border-box;
+    background: #FF6A00;
+    color: #FFF;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 auto;
+    border-radius: 12px;
+    cursor: pointer;
+}
+.module-button>a{
+    color: #fff;
+}
+
+.module-button:hover{
+    opacity: 0.8;
 }
 
 @media (max-width: 860px) {
@@ -312,13 +350,13 @@
         padding: 0 12px;
     }
 
-    .module-logos>.module-logo{
+    .module-logos>.module-logo {
         width: 140px;
         height: auto;
         margin-bottom: 12px;
     }
 
-    .module-title{
+    .module-title {
         font-size: 24px;
     }
 

@@ -91,14 +91,6 @@ p strong {
   margin-right: .5em;
 }
 
-/*-- innerpage_banner --*/
-
-.innerpage_banner {
-  background: url("") no-repeat 0px 0px;
-  background-size: cover;
-  min-height: 90px;
-}
-
 .dot1 {
   position: absolute;
   top: 0;
