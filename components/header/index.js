@@ -9,9 +9,9 @@ export default function Header(props) {
 	const [navLinkStyle, setNavLinkStyle] = useState({ color: '#fff' });
 
 	const NavList = [
-		{ label: t("nav.index"), current: "INDEX", href: "/#indexModule" },
-		{ label: t("nav.activity"), current: "INDEX", href: "/#articleModule" },
-		{ label: t("nav.future"), current: "INDEX", href: "/#classRoomModule" },
+		{ label: "首頁", current: "INDEX", href: "/#indexModule" },
+		{ label: "活動內容", current: "INDEX", href: "/#articleModule" },
+		{ label: "未來教室日程", current: "INDEX", href: "/#classRoomModule" },
 	];
 
 
