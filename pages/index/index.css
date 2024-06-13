@@ -54,6 +54,7 @@
     font-family: "PingFang HK";
     font-size: 24px;
     font-weight: 500;
+    line-height: 44px;
 }
 
 .intro-tag {
@@ -209,12 +210,35 @@
     padding-left: 32px;
 }
 
+.module-table-texts p:first-child {
+    margin-top: 24px;
+}
+
+.module-table-texts p {
+    box-sizing: border-box;
+    color: #242424;
+    font-size: 20px;
+    margin-top: 12px;
+}
+
+.module-table-texts ul {
+    box-sizing: border-box;
+    padding: 14px;
+}
+
+.module-table-texts ul li {
+    color: #242424;
+    font-size: 18px;
+    box-sizing: border-box;
+    padding: 8px 0;
+}
+
 .module-logos {
     display: flex;
     align-items: center;
     justify-content: center;
     margin-top: 40px;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .module-logo {
@@ -227,19 +251,14 @@
     justify-content: center;
     margin-right: 12px;
     overflow: hidden;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-bottom: 12px;
 }
 
 .module-logo>.module-logo__img {
-    height: 100%;
-    width: auto;
-}
-
-.module-logo-Alibaba>.module-logo__img {
-    height: 200px;
-}
-
-.module-logo-GamingNoodleSoup>.module-logo__img {
-    height: 160px;
+    width: 100%;
+    height: auto;
 }
 
 .module-button {
@@ -306,6 +325,10 @@
     .module-table {
         width: 100%;
     }
+
+    .module-logos {
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 500px) {
@@ -359,14 +382,8 @@
         padding: 0 12px;
     }
 
-    .module-logos>.module-logo {
-        width: 100%;
-        height: 74px;
-        margin-bottom: 12px;
-    }
-
-    .module-logo-GamingNoodleSoup>.module-logo__img{
-        height: 140px;
+    .module-logos {
+        flex-wrap: wrap;
     }
 
     .module-title {

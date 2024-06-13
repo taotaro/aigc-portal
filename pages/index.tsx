@@ -54,6 +54,8 @@ export default function Index() {
 		{ name: 'Alibaba', logo: '/images/ali.jpeg' },
 		{ name: 'GamingNoodleSoup', logo: '/images/gns.png' },
 		{ name: 'Materia Logic', logo: '/images/ml.png' },
+		{ name: 'HKACE', logo: '/images/hkace.png' },
+		{ name: 'Aitle', logo: '/images/aitle.png' },
 	];
 
 	function onWindowResize() {
@@ -95,32 +97,36 @@ export default function Index() {
 
 	return (
 		<>
-			<NextSeo title={"雲馳通義 ‧ 洞見萬相千問"} description={'阿里雲香港未來教室 暨「雲馳通義 ‧ 洞見萬相千問」生成式 AI 校際比賽發佈會'} />
-			<img id="fixed-bg" className="position-fixed" onLoad={onWindowResize} src="/images/index-bg.png" alt="" style={{ width: '100%', height: 'auto' }} />
+			<NextSeo title={"阿里雲AI未來教室"} description={'阿里雲香港未來教室 暨「雲馳通義 ‧ 洞見萬相千問」生成式 AI 校際比賽發佈會'} />
+			<img id="fixed-bg" className="position-fixed" onLoad={onWindowResize} src="/images/index-bg.jpeg" alt="" style={{ width: '100%', height: 'auto' }} />
 			{/* slogan */}
 			<section className="title-section position-relative" style={{ height: `${fixedBgHeight}px` }} id="indexModule">
-				<h1 className="title">雲馳通義 ‧ 洞見萬相千問</h1>
-				<h3 className="subtitle">阿里雲香港未來教室 暨「雲馳通義 ‧ 洞見萬相千問」生成式 AI 校際比賽發佈會</h3>
+				<h1 className="title">阿里雲AI未來教室</h1>
+				{/* <h3 className="subtitle">阿里雲香港未來教室 暨「雲馳通義 ‧ 洞見萬相千問」生成式 AI 校際比賽發佈會</h3> */}
 			</section>
 			<div className="module-container">
 				{/* 介绍 */}
 				<section className="position-relative intro-box">
 					<div className="intro">
 						<img className="intro-tag intro-tag-left" src="/images/tag1.png" alt="tag" />
-						<p>為慶祝在港營運10周年，「阿里雲香港未來教室」及「雲馳通義 ‧ 洞見萬相千問」生成式AI校際比賽計劃正式啟動。阿里雲冀藉此推動學界同工，透過中國自家研發的雲端技術，於課室及學校內使用科技，提升同學學習成果和效率。</p>
+						<p className="text-left">
+							阿里雲有幸一直為香港各行各業的數碼轉型盡一分力，積累了豐富的行業經驗。為慶祝在港營運10周年，我們特別舉辦「阿里雲AI未來教室」及「雲遊通義 – 阿里雲香港10週年校際生成式AI比賽」。人工智能作為新世代的科技熱點及未來趨勢之一，與雲端科技息息相關，此次活動旨在通過與學界合作，提升教師與學生在雲端及AI領域的學習成果和效率，促進持續創新，共同培育未來科技人才。
+						</p>
 						<img className="intro-tag intro-tag-right" src="/images/tag1.png" alt="tag" />
 					</div>
 				</section>
+				{/*  */}
 				<section className="position-relative module-box" id="articleModule">
 					<p className="module-title">活動資訊</p>
 					<div className="module-content">
 						<div className="module-content__left">
 							<div className="module-content__title">活動資訊</div>
 							<div className="module-content__desc">
-								<p>📅日期 - 2024年7月10日（星期三）及 7月12日（星期五）</p>
-								<p>🕓時間 - 下午2:30 - 5:00（1:30 開始登記）</p>
-								<p>🌏地點 - 阿里巴巴辦公室23樓研討室（銅鑼灣勿地臣街1號時代廣場1座23樓）</p>
-								<p>🤖對象 - 中小學教師</p>
+								<p>📅 日期 - 2024年7月10日（星期三）及 7月11日（星期四）</p>
+								<p>🕓 時間 - 下午3:00 - 5:30（2:30 開始登記）</p>
+								<p>🌏 地點 - 阿里巴巴辦公室23樓研討室（銅鑼灣勿地臣街1號時代廣場1座23樓）</p>
+								<p>🤖 對象 - 中小學教師</p>
+								<div className="mt-2">期待你的參與！</div>
 							</div>
 						</div>
 					</div>
@@ -158,15 +164,53 @@ export default function Index() {
 					<div className="module-content module-content-reverse">
 						<div className="module-content__left">
 							<div className="module-content__title">比賽介紹</div>
-							<div className="module-content__desc">講解「雲馳通義 ‧ 洞見萬相千問」校際生成式 AI 比賽的目的、參賽要求和評分標準。這個創科盛事旨在推動全港中小學生利用AI人工智能，激發創意，並將獨特的意念付諸實行。參賽同學需要運用阿里巴巴旗下AI應用平台「通義千問」、「通義萬相」和「通義星塵」，根據特定主題創作。 </div>
+							<div className="module-content__desc">講解「雲遊通義」全港校際生成式 AI 比賽的目的、參賽要求和評分標準。這個創科盛事旨在推動全港中小學生利用AI人工智能，激發創意，並將獨特的意念付諸實行。</div>
 						</div>
 						<div className="module-content__right">
 							<img className="module-content__img" src="/images/activity4.png" alt="阿里雲教育產品分享" />
 						</div>
 					</div>
 				</section>
-				{/* 未來教室日程 */}
+				{/* 精彩內容包括 */}
 				<section className="position-relative module-box" id="classRoomModule">
+					<p className="module-title">精彩內容包括</p>
+					<div className="module-table">
+						<div className="module-table__row module-table__header">
+							<div className="module-table__col">7月10日限定</div>
+						</div>
+						<div className="module-table-texts">
+							<p>未來教室 1：阿里雲AI——阿里雲學院 & 通義 AI教室</p>
+							<p>阿里雲學院 及 通義AI平台的教育實踐應用</p>
+							<ul>
+								<li>介紹「阿里雲學院」- 如何運用認證內容快速提升掌握科技的能力</li>
+								<li>介紹「通義」AI平台 及「阿里雲學院」上的 AI 相關證書內容</li>
+								<li>試驗工作坊 ：即場探索「阿里雲學院」及「通義」AI平台</li>
+								<li>更多教育應用實例</li>
+								<li>嘉賓對談及互節環節</li>
+								<li>*出席活動並合資格的教育工作者可獲頒「阿里雲學院活動證書」</li>
+							</ul>
+						</div>
+					</div>
+					<div className="module-table">
+						<div className="module-table__row module-table__header">
+							<div className="module-table__col">7月11日限定</div>
+						</div>
+						<div className="module-table-texts">
+							<p>未來教室 2：阿里雲AI——通義AI平台教室</p>
+							<p>通義AI平台的教育實踐應用</p>
+							<ul>
+								<li>介紹「通義」AI平台</li>
+								<li>如何引導同學利用AI科技創作，同時培養資訊素養</li>
+								<li>試驗工作坊 ：即場試用「通義萬相」圖像生成功能進行繪圖創作</li>
+								<li>更多教育應用實例</li>
+								<li>嘉賓對談及互動環節</li>
+								<li>*出席活動並合資格的教育工作者可獲頒「阿里雲學院活動證書」</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+				{/* 未來教室日程 */}
+				{/* <section className="position-relative module-box" id="classRoomModule">
 					<p className="module-title">未來教室日程</p>
 					<div className="module-table">
 						<div className="module-table__row module-table__header">
@@ -182,7 +226,7 @@ export default function Index() {
 						</div>
 						{tableColListRender2}
 					</div>
-				</section>
+				</section> */}
 				<section className="position-relative module-box">
 					<div className="module-button">
 						<a href="https://survey.aliyun.com/apps/zhiliao/08tKHXN_I" target="__blank">立即註冊</a>
@@ -193,7 +237,18 @@ export default function Index() {
 					<p className="module-title">活動支持</p>
 					<div className="module-logos">
 						{
-							LogoList.map(item => {
+							LogoList.filter(item => item.name === 'Alibaba').map(item => {
+								return (
+									<div className={`module-logo module-logo-${item.name}`} key={item.name}>
+										<img className="module-logo__img" src={item.logo} alt={item.name} />
+									</div>
+								)
+							})
+						}
+					</div>
+					<div className="module-logos">
+						{
+							LogoList.filter(item => item.name !== 'Alibaba').map(item => {
 								return (
 									<div className={`module-logo module-logo-${item.name}`} key={item.name}>
 										<img className="module-logo__img" src={item.logo} alt={item.name} />
