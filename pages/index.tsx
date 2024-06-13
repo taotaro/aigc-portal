@@ -122,11 +122,11 @@ export default function Index() {
 						<div className="module-content__left">
 							<div className="module-content__title">活動資訊</div>
 							<div className="module-content__desc">
-								<p>📅 日期 - 2024年7月10日（星期三）及 7月11日（星期四）</p>
-								<p>🕓 時間 - 下午3:00 - 5:30（2:30 開始登記）</p>
+								<p>📅 日期 - 2024年7月10日（星期三）及 7月11日（星期四）</p>
+								<p>🕓 時間 - 下午3:30 - 5:00（2:30 開始登記）</p>
 								<p>🌏 地點 - 阿里巴巴辦公室23樓研討室（銅鑼灣勿地臣街1號時代廣場1座23樓）</p>
-								<p>🤖 對象 - 中小學教師</p>
-								<div className="mt-2">期待你的參與！</div>
+								<p>🤖 對象 - 中小學資訊科技學科教師 及 對AI課題有興趣的教職員</p>
+								<div className="mt-2">*出席活動並合資格的教育工作者可獲頒「阿里雲學院活動證書」</div>
 							</div>
 						</div>
 					</div>
@@ -164,7 +164,7 @@ export default function Index() {
 					<div className="module-content module-content-reverse">
 						<div className="module-content__left">
 							<div className="module-content__title">比賽介紹</div>
-							<div className="module-content__desc">講解「雲遊通義」全港校際生成式 AI 比賽的目的、參賽要求和評分標準。這個創科盛事旨在推動全港中小學生利用AI人工智能，激發創意，並將獨特的意念付諸實行。</div>
+							<div className="module-content__desc">講解「雲遊通義 – 阿里雲香港10週年校際生成式AI比賽」目的、參賽要求和評分標準。此次活動旨在通過與學界合作，推動全港中小學生利用AI人工智能，激發創意，並將獨特的意念付諸實行。參賽同學需要運用阿里巴巴旗下AI應用平台「通義千問」、「通義萬相」和「通義星塵」，根據特定主題創作。</div>
 						</div>
 						<div className="module-content__right">
 							<img className="module-content__img" src="/images/activity4.png" alt="阿里雲教育產品分享" />
