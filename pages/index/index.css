@@ -19,6 +19,7 @@
     letter-spacing: 18.24px;
     box-sizing: border-box;
     padding: 0 32px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .subtitle {
@@ -27,6 +28,7 @@
     margin-top: 32px;
     box-sizing: border-box;
     padding: 0 32px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .intro-box {
