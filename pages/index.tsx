@@ -102,7 +102,10 @@ export default function Index() {
 			{/* slogan */}
 			<section className="title-section position-relative" style={{ height: `${fixedBgHeight}px` }} id="indexModule">
 				<h1 className="title">阿里雲AI未來教室</h1>
-				<h3 className="subtitle">雲遊通義 – 阿里雲香港10週年校際生成式AI比賽發佈會</h3>
+				<h3 className="subtitle">
+					<p>雲遊通義 – 阿里雲香港10週年</p>
+					<p>校際生成式AI比賽發佈會</p>
+				</h3>
 			</section>
 			<div className="module-container">
 				{/* 介绍 */}
