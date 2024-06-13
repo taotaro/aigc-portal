@@ -97,12 +97,12 @@ export default function Index() {
 
 	return (
 		<>
-			<NextSeo title={"阿里雲AI未來教室"} description={'阿里雲香港未來教室 暨「雲馳通義 ‧ 洞見萬相千問」生成式 AI 校際比賽發佈會'} />
+			<NextSeo title={"阿里雲AI未來教室"} description={'雲遊通義 – 阿里雲香港10週年校際生成式AI比賽發佈會'} />
 			<img id="fixed-bg" className="position-fixed" onLoad={onWindowResize} src="/images/index-bg.jpeg" alt="" style={{ width: '100%', height: 'auto' }} />
 			{/* slogan */}
 			<section className="title-section position-relative" style={{ height: `${fixedBgHeight}px` }} id="indexModule">
 				<h1 className="title">阿里雲AI未來教室</h1>
-				{/* <h3 className="subtitle">阿里雲香港未來教室 暨「雲馳通義 ‧ 洞見萬相千問」生成式 AI 校際比賽發佈會</h3> */}
+				<h3 className="subtitle">雲遊通義 – 阿里雲香港10週年校際生成式AI比賽發佈會</h3>
 			</section>
 			<div className="module-container">
 				{/* 介绍 */}
@@ -227,6 +227,9 @@ export default function Index() {
 						{tableColListRender2}
 					</div>
 				</section> */}
+				<section className="position-relative module-box">
+					<img className="module-poster" src="/images/poster.jpeg" alt="poster" />
+				</section>
 				<section className="position-relative module-box">
 					<div className="module-button">
 						<a href="https://survey.aliyun.com/apps/zhiliao/08tKHXN_I" target="__blank">立即註冊</a>
