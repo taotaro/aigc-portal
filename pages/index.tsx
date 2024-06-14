@@ -126,7 +126,7 @@ export default function Index() {
 							<div className="module-content__title">活動資訊</div>
 							<div className="module-content__desc">
 								<p>📅 日期 - 2024年7月10日（星期三）及 7月11日（星期四）</p>
-								<p>🕓 時間 - 下午3:30 - 5:00（2:30 開始登記）</p>
+								<p>🕓 時間 - 下午3:00 - 5:30（2:30 開始登記）</p>
 								<p>🌏 地點 - 阿里巴巴辦公室23樓研討室（銅鑼灣勿地臣街1號時代廣場1座23樓）</p>
 								<p>🤖 對象 - 中小學資訊科技學科教師 及 對AI課題有興趣的教職員</p>
 								<div className="mt-2">*出席活動並合資格的教育工作者可獲頒「阿里雲學院活動證書」</div>
