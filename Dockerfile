@@ -1,4 +1,4 @@
-FROM aigc-portal-web-runtime:latest
+FROM PROJECT_NAME-runtime:latest
 
 WORKDIR /home/project
 

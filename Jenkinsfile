@@ -1,12 +1,9 @@
-
- import groovy.json.JsonSlurper
+import groovy.json.JsonSlurper
 import hudson.FilePath
 import java.text.SimpleDateFormat
 
 print JOB_NAME
 print JENKINS_HOME
-
-env.GIT_CHANGE_FILE_LIST = ""
 
 pipeline {
     agent {
@@ -18,15 +15,20 @@ pipeline {
         timeout(time: 30, unit: "MINUTES")
     }
     stages {
-        stage("Initial") {
-            steps {
-                buildName "AigcPortal ${NODE_ENV.capitalize()} Manual Deploy NO.${BUILD_NUMBER}"
-                buildDescription "Build On Node: ${NODE_NAME} By ${BUILD_USER}"
-            }
-        }
         stage("Check Runtime Image") {
             steps {
+                buildName "AIGC Portal ${NODE_ENV.capitalize()} Auto Deploy NO.${BUILD_NUMBER}"
+                buildDescription "Build On Node: ${NODE_NAME} By ${BUILD_USER}"
+
                 script {
+                    sh """
+                        sudo sed -i "s/PROJECT_NAME/${PROJECT_NAME}/g" Dockerfile
+                        cat Dockerfile
+                        sudo sed -i "s/PROJECT_NAME/${PROJECT_NAME}-${NODE_ENV}/g" docker-compose.yaml
+                        sudo sed -i "s/EXPOSE_PORT/${EXPOSE_PORT}/g" docker-compose.yaml
+                        cat docker-compose.yaml
+                    """
+
                     def projectRuntimeDockerImageExists = !sh(returnStatus: true, script: "sudo docker inspect ${PROJECT_NAME}-runtime:latest")
                     println "Project Runtime Docker Image Exists: ${projectRuntimeDockerImageExists}"
 
@@ -36,7 +38,7 @@ pipeline {
                     def runtimeDockerfileChanged = env.GIT_CHANGE_FILE_LIST.matches(/.*RuntimeDockerfile.*/)
                     println "Need rebuild Runtime Docker Image: ${runtimeDockerfileChanged}"
 
-                    def nodeRequireModulesChanged = env.GIT_CHANGE_FILE_LIST.matches(/.*package.*?.json.*/)
+                    def nodeRequireModulesChanged = env.GIT_CHANGE_FILE_LIST.matches(/.*Pipfile.*/)
                     println "has Node Require Modules been changed: ${nodeRequireModulesChanged}"
 
                     if (projectRuntimeDockerImageExists) {
@@ -53,19 +55,21 @@ pipeline {
         stage("Build Image") {
             steps {
                 script {
-                    def projectDockerImageExists = !sh(returnStatus: true, script: "sudo docker inspect ${PROJECT_NAME}:latest")
+                    sh "sudo cp -f /mnt/data/runtime-env/${PROJECT_NAME}-${NODE_ENV}-env ./.env"
+
+                    def projectDockerImageExists = !sh(returnStatus: true, script: "sudo docker inspect ${PROJECT_NAME}-${NODE_ENV}:latest")
                     println "Project Docker Image Exists: ${projectDockerImageExists}"
 
-                    def projectDockerContainerExists = !sh(returnStatus: true, script: "sudo docker inspect ${PROJECT_NAME}")
+                    def projectDockerContainerExists = !sh(returnStatus: true, script: "sudo docker inspect ${PROJECT_NAME}-${NODE_ENV}")
                     println "Project Docker Container Exists: ${projectDockerContainerExists}"
 
                     if (projectDockerImageExists) {
                         if (projectDockerContainerExists) {
                             sh "sudo docker-compose down"
                         }
-                        sh "sudo docker rmi -f ${PROJECT_NAME}:latest"
+                        sh "sudo docker rmi -f ${PROJECT_NAME}-${NODE_ENV}:latest"
                     }
-                    sh "sudo docker build -t ${PROJECT_NAME}:latest ."
+                    sh "sudo docker build -t ${PROJECT_NAME}-${NODE_ENV}:latest ."
                 }
             }
         }
@@ -80,9 +84,9 @@ pipeline {
     post {
         always {
             slackSend channel: "#deploy", blocks: genSlackNotificationBlocks(currentBuild)
-            emailext subject: "[Manual Deploy] - AigcPortal ${NODE_ENV.capitalize()} Build Result",
+            emailext subject: "[Auto Deploy] - AIGC Portal ${NODE_ENV.capitalize()} Build Result",
                 body: '''${SCRIPT, template="managed:Groovy Email Build Result Template"}''',
-                to: 'tuobao95@gmail.com;jacky@materia-logic.com; ${DEFAULT_RECIPIENTS}',
+                to: '${DEFAULT_RECIPIENTS}; kgb@materia-logic.com; taobao@materia-logic.com',
                 mimeType: "text/html"
         }
     }
@@ -118,20 +122,22 @@ def genSlackNotificationBlocks(build) {
         if (!hadChanges) {
             changeDetail.append("\tNo Changes")
         }
+        println(changeDetail.toString())
     }
+
 
     return [[
         "type": "header",
         "text": [
             "type": "plain_text",
-            "text": "Jenkins Manual Deploy Job Build Result",
+            "text": "Jenkins Auto Deploy Job Build Result",
             "emoji": true
         ]
     ], [
         "type": "section",
         "text": [
             "type": "mrkdwn",
-            "text": "${resultIconMap[build.result]} *<${BUILD_URL}|AigcPortal ${NODE_ENV.capitalize()}>*\t<@U05H9MAFMBM> <@U01G2KHDKKK>"
+            "text": "${resultIconMap[build.result]} *<${BUILD_URL}|AIGC Portal ${NODE_ENV.capitalize()}>*\t<@U05H9MAFMBM> <@U036EQRRFU7> <@U01G2KHDKKK>"
         ]
     ], [
         "type": "section",
@@ -141,7 +147,7 @@ def genSlackNotificationBlocks(build) {
         ],
         "accessory": [
             "type": "image",
-            "image_url": "https://taotaro-test.oss-cn-hongkong.aliyuncs.com/Y_Brand_D_YWCA_8163809fc2.png",
+            "image_url": "${LOGO_URL}",
             "alt_text": "project link"
         ]
     ], [
