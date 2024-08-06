@@ -9,4 +9,4 @@ RUN echo 'Asia/Shanghai' > /etc/timezone
 
 RUN npm run build
 
-CMD ["pm2-runtime", "start", "--name", "aigc-portal-web", "npm", "--", "run", "start"]
+CMD ["pm2-runtime", "start", "--name", "aigc-portal", "npm", "--", "run", "start"]
