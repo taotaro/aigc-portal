@@ -66,7 +66,6 @@ export default function Registration() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("teams: ", teams);
 
     const teamData = teams.map((team) => ({
       team_name: `Team ${team.id}`,
@@ -78,7 +77,6 @@ export default function Registration() {
         grade: member.data.studentGrade,
       })),
     }));
-    console.log("teamData: ", teamData);
 
     const payload = {
       email: formValues.teacherEmail,
