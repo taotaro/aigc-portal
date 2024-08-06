@@ -65,7 +65,7 @@ export default function Registration() {
   };
 
   const handleSubmit = async (e) => {
-    console.log("submit button pressed");
+    console.log("submit button pressed test");
     e.preventDefault();
 
     // const teamData = teams.map((team) => ({
