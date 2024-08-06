@@ -17,7 +17,7 @@ pipeline {
     stages {
         stage("Check Runtime Image") {
             steps {
-                buildName "AIGC Portal ${NODE_ENV.capitalize()} Auto Deploy NO.${BUILD_NUMBER}"
+                buildName "AIGC portal ${NODE_ENV.capitalize()} Auto Deploy NO.${BUILD_NUMBER}"
                 buildDescription "Build On Node: ${NODE_NAME} By ${BUILD_USER}"
 
                 script {
@@ -38,7 +38,7 @@ pipeline {
                     def runtimeDockerfileChanged = env.GIT_CHANGE_FILE_LIST.matches(/.*RuntimeDockerfile.*/)
                     println "Need rebuild Runtime Docker Image: ${runtimeDockerfileChanged}"
 
-                    def nodeRequireModulesChanged = env.GIT_CHANGE_FILE_LIST.matches(/.*Pipfile.*/)
+                    def nodeRequireModulesChanged = env.GIT_CHANGE_FILE_LIST.matches(/.*package.json.*/)
                     println "has Node Require Modules been changed: ${nodeRequireModulesChanged}"
 
                     if (projectRuntimeDockerImageExists) {
@@ -84,9 +84,9 @@ pipeline {
     post {
         always {
             // slackSend channel: "#deploy", blocks: genSlackNotificationBlocks(currentBuild)
-            emailext subject: "[Manual Deploy] - AigcPortal ${NODE_ENV.capitalize()} Build Result",
+            emailext subject: "[Auto Deploy] - AIGC portal ${NODE_ENV.capitalize()} Build Result",
                 body: '''${SCRIPT, template="managed:Groovy Email Build Result Template"}''',
-                to: '${DEFAULT_RECIPIENTS}; kgb@materia-logic.com; taobao@materia-logic.com',
+                to: 'tuobao@materia-logic.com; kgb@materia-logic.com; ${DEFAULT_RECIPIENTS}',
                 mimeType: "text/html"
         }
     }
@@ -122,20 +122,22 @@ pipeline {
 //         if (!hadChanges) {
 //             changeDetail.append("\tNo Changes")
 //         }
+//         println(changeDetail.toString())
 //     }
+
 
 //     return [[
 //         "type": "header",
 //         "text": [
 //             "type": "plain_text",
-//             "text": "Jenkins Manual Deploy Job Build Result",
+//             "text": "Jenkins Auto Deploy Job Build Result",
 //             "emoji": true
 //         ]
 //     ], [
 //         "type": "section",
 //         "text": [
 //             "type": "mrkdwn",
-//             "text": "${resultIconMap[build.result]} *<${BUILD_URL}|AigcPortal ${NODE_ENV.capitalize()}>*\t<@U05H9MAFMBM> <@U01G2KHDKKK>"
+//             "text": "${resultIconMap[build.result]} *<${BUILD_URL}|AIGC portal ${NODE_ENV.capitalize()}>*\t<@U05H9MAFMBM> <@U036EQRRFU7> <@U01G2KHDKKK>"
 //         ]
 //     ], [
 //         "type": "section",
@@ -145,7 +147,7 @@ pipeline {
 //         ],
 //         "accessory": [
 //             "type": "image",
-//             "image_url": "https://taotaro-test.oss-cn-hongkong.aliyuncs.com/Y_Brand_D_YWCA_8163809fc2.png",
+//             "image_url": "${LOGO_URL}",
 //             "alt_text": "project link"
 //         ]
 //     ], [
