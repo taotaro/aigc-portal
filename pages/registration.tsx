@@ -93,7 +93,7 @@ export default function Registration() {
       title: formValues.teacherTitle,
     };
 
-    console.log("http://aigc-backend-dev.materia-logic.com/common/register");
+    console.log("calling backend");
 
     try {
       const response = await axios.post(
