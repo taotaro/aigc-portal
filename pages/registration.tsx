@@ -68,42 +68,42 @@ export default function Registration() {
     console.log("submit button pressed test");
     e.preventDefault();
 
-    // const teamData = teams.map((team) => ({
-    //   team_name: `Team ${team.id}`,
-    //   team_members: team.members.map((member) => ({
-    //     name_english: member.data.studentNameCN,
-    //     name_chinese: member.data.studentNameEN,
-    //     year_of_birth: member.data.studentYearOfBirth,
-    //     gender: member.data.studentGender ? member.data.studentGender : "Male",
-    //     grade: member.data.studentGrade,
-    //   })),
-    // }));
+    const teamData = teams.map((team) => ({
+      team_name: `Team ${team.id}`,
+      team_members: team.members.map((member) => ({
+        name_english: member.data.studentNameCN,
+        name_chinese: member.data.studentNameEN,
+        year_of_birth: member.data.studentYearOfBirth,
+        gender: member.data.studentGender ? member.data.studentGender : "Male",
+        grade: member.data.studentGrade,
+      })),
+    }));
 
-    // const payload = {
-    //   email: formValues.teacherEmail,
-    //   name_english: formValues.teacherNameEN,
-    //   name_chinese: formValues.teacherNameCN,
-    //   school_name_english: formValues.schoolNameEN,
-    //   school_name_chinese: formValues.schoolNameCN,
-    //   school_address_english: formValues.schoolAddressEN,
-    //   school_address_chinese: formValues.schoolAddressCN,
-    //   mobile_phone: formValues.teacherPhone,
-    //   telephone: formValues.schoolPhone,
-    //   team_info: teamData,
-    //   title: formValues.teacherTitle,
-    // };
+    const payload = {
+      email: formValues.teacherEmail,
+      name_english: formValues.teacherNameEN,
+      name_chinese: formValues.teacherNameCN,
+      school_name_english: formValues.schoolNameEN,
+      school_name_chinese: formValues.schoolNameCN,
+      school_address_english: formValues.schoolAddressEN,
+      school_address_chinese: formValues.schoolAddressCN,
+      mobile_phone: formValues.teacherPhone,
+      telephone: formValues.schoolPhone,
+      team_info: teamData,
+      title: formValues.teacherTitle,
+    };
 
-    // console.log("http://aigc-backend-dev.materia-logic.com/common/register");
+    console.log("http://aigc-backend-dev.materia-logic.com/common/register");
 
-    // try {
-    //   const response = await axios.post(
-    //     "http://aigc-backend-dev.materia-logic.com/common/register",
-    //     payload
-    //   );
-    //   console.log(response.data);
-    // } catch (error) {
-    //   console.error(error);
-    // }
+    try {
+      const response = await axios.post(
+        "http://aigc-backend-dev.materia-logic.com/common/register",
+        payload
+      );
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   return (
