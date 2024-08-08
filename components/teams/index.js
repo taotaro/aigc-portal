@@ -62,10 +62,11 @@ export default function Teams({ teamNumber, onTeamDataChange }) {
             gap: "24px",
             alignItems: "center",
             alignSelf: "center",
+            paddingBottom: "80px",
           }}
         >
           <button
-            type="submit"
+            type="button"
             style={{
               display: "flex",
               borderRadius: "22px",
@@ -86,7 +87,7 @@ export default function Teams({ teamNumber, onTeamDataChange }) {
             添加会员
           </button>
           <button
-            type="submit"
+            type="button"
             style={{
               display: "flex",
               borderRadius: "22px",

@@ -96,7 +96,7 @@ export default function Registration() {
 
       for (let field of fieldsToCheck) {
         if (!formValues[field]) {
-          // toast.error("Please fill in all required fields.");
+          toast.error("Please fill in all required fields.");
           return false;
         }
       }
@@ -146,6 +146,8 @@ export default function Registration() {
         year_of_birth: member.data.studentYearOfBirth,
         gender: member.data.studentGender ? member.data.studentGender : "Male",
         grade: member.data.studentGrade,
+        mobile_phone: member.data.studentPhone ? member.data.studentPhone : "",
+        email: member.data.studentEmail ? member.data.studentEmail : "",
       })),
     }));
 
@@ -515,11 +517,10 @@ export default function Registration() {
                   gap: "24px",
                   alignItems: "center",
                   alignSelf: "center",
-                  paddingTop: "80px",
                 }}
               >
                 <button
-                  type="submit"
+                  type="button"
                   style={{
                     display: "flex",
                     borderRadius: "22px",
@@ -539,7 +540,7 @@ export default function Registration() {
                   添加团队
                 </button>
                 <button
-                  type="submit"
+                  type="button"
                   style={{
                     display: "flex",
                     borderRadius: "22px",
@@ -594,6 +595,7 @@ export default function Registration() {
                     justifyContent: "center",
                     alignItems: "center",
                   }}
+                  onClick={handleSubmit}
                 >
                   提交報名表
                 </button>
