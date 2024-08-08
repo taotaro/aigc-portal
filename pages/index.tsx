@@ -309,55 +309,7 @@ export default function Index() {
 						{tableColListRender2}
 					</div>
 				</section> */}
-        {/* 精彩內容包括 */}
-        <section
-          className="position-relative module-box"
-          id="registrationModule"
-        >
-          <p className="module-title">Registration</p>
-          <div className="module-table">
-            <div className="module-table__row module-table__header">
-              <div className="module-table__col">7月10日限定</div>
-            </div>
-            <div className="module-table-texts">
-              <p>未來教室 1：阿里雲AI——阿里雲學院 & 通義 AI教室</p>
-              <p>阿里雲學院 及 通義AI平台的教育實踐應用</p>
-              <ul>
-                <li>
-                  介紹「阿里雲學院」- 如何運用認證內容快速提升掌握科技的能力
-                </li>
-                <li>介紹「通義」AI平台 及「阿里雲學院」上的 AI 相關證書內容</li>
-                <li>試驗工作坊 ：即場探索「阿里雲學院」及「通義」AI平台</li>
-                <li>更多教育應用實例</li>
-                <li>嘉賓對談及互節環節</li>
-                <li>
-                  *出席活動並合資格的教育工作者可獲頒「阿里雲學院活動證書」
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="module-table">
-            <div className="module-table__row module-table__header">
-              <div className="module-table__col">7月11日限定</div>
-            </div>
-            <div className="module-table-texts">
-              <p>未來教室 2：阿里雲AI——通義AI平台教室</p>
-              <p>通義AI平台的教育實踐應用</p>
-              <ul>
-                <li>介紹「通義」AI平台</li>
-                <li>如何引導同學利用AI科技創作，同時培養資訊素養</li>
-                <li>
-                  試驗工作坊 ：即場試用「通義萬相」圖像生成功能進行繪圖創作
-                </li>
-                <li>更多教育應用實例</li>
-                <li>嘉賓對談及互動環節</li>
-                <li>
-                  *出席活動並合資格的教育工作者可獲頒「阿里雲學院活動證書」
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
+
         <section className="position-relative module-box">
           <img
             className="module-poster"

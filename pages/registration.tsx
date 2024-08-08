@@ -22,6 +22,14 @@ export default function Registration() {
     teacherEmail: "",
   });
 
+  const LogoList = [
+    { name: "Alibaba", logo: "/images/ali.jpeg" },
+    { name: "GamingNoodleSoup", logo: "/images/gns.png" },
+    { name: "Materia Logic", logo: "/images/ml.png" },
+    { name: "HKACE", logo: "/images/hkace.png" },
+    { name: "Aitle", logo: "/images/aitle.png" },
+  ];
+
   function onWindowResize() {
     const $fixedBg = document.getElementById("fixed-bg");
     const height = $fixedBg?.getBoundingClientRect()?.height || 200;
@@ -97,7 +105,8 @@ export default function Registration() {
 
     try {
       const response = await axios.post(
-        "http://aigc-backend-dev.materia-logic.com/common/register",
+        // "http://aigc-backend-dev.materia-logic.com/common/register",
+        "http://127.0.0.1:8000/common/register",
         payload
       );
       console.log(response.data);
@@ -288,6 +297,42 @@ export default function Registration() {
               src="/images/tag1.png"
               alt="tag"
             />
+          </div>
+        </section>
+        {/* {footer} */}
+        <section className="position-relative module-box">
+          <p className="module-title">活動支持</p>
+          <div className="module-logos">
+            {LogoList.filter((item) => item.name === "Alibaba").map((item) => {
+              return (
+                <div
+                  className={`module-logo module-logo-${item.name}`}
+                  key={item.name}
+                >
+                  <img
+                    className="module-logo__img"
+                    src={item.logo}
+                    alt={item.name}
+                  />
+                </div>
+              );
+            })}
+          </div>
+          <div className="module-logos">
+            {LogoList.filter((item) => item.name !== "Alibaba").map((item) => {
+              return (
+                <div
+                  className={`module-logo module-logo-${item.name}`}
+                  key={item.name}
+                >
+                  <img
+                    className="module-logo__img"
+                    src={item.logo}
+                    alt={item.name}
+                  />
+                </div>
+              );
+            })}
           </div>
         </section>
       </div>
