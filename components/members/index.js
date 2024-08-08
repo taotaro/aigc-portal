@@ -13,6 +13,22 @@ export default function Members({
     onMemberDataChange(memberNumber, { ...memberData, [name]: value });
   };
 
+  const validateForm = () => {
+    const requiredFields = [
+      "studentNameCN",
+      "studentNameEN",
+      "studentYearOfBirth",
+      "studentGender",
+      "studentEmail",
+    ];
+    for (const field of requiredFields) {
+      if (!memberData[field]) {
+        return false;
+      }
+    }
+    return true;
+  };
+
   return (
     <>
       <form>
@@ -32,6 +48,7 @@ export default function Members({
                 name="studentNameCN"
                 value={memberData.studentNameCN || ""}
                 onChange={handleInputChange}
+                required
               />
             </label>
             <label>
@@ -41,6 +58,7 @@ export default function Members({
                 name="studentNameEN"
                 value={memberData.studentNameEN || ""}
                 onChange={handleInputChange}
+                required
               />
             </label>
           </div>
@@ -52,6 +70,7 @@ export default function Members({
                 name="studentYearOfBirth"
                 value={memberData.studentYearOfBirth || ""}
                 onChange={handleInputChange}
+                required
               />
             </label>
           </div>
@@ -76,6 +95,7 @@ export default function Members({
                 name="studentGrade"
                 value={memberData.studentGrade || ""}
                 onChange={handleInputChange}
+                required
               />
             </label>
           </div>

@@ -4,6 +4,9 @@ import useTranslation from "next-translate/useTranslation";
 import { throttle } from "../util/index";
 import Teams from "../components/teams";
 import axios from "axios";
+import { toast, Toaster } from "react-hot-toast";
+// import { ToastContainer, toast } from "react-toastify";
+// import "react-toastify/dist/ReactToastify.css";
 
 export default function Registration() {
   const { t } = useTranslation("common");
@@ -76,6 +79,64 @@ export default function Registration() {
     console.log("submit button pressed test");
     e.preventDefault();
 
+    const validateForm = () => {
+      console.log("validate");
+      const fieldsToCheck = [
+        "schoolNameCN",
+        "schoolNameEN",
+        "schoolAddressCN",
+        "schoolAddressEN",
+        "teacherNameCN",
+        "teacherNameEN",
+        "schoolPhone",
+        "teacherPhone",
+        "teacherEmail",
+      ];
+
+      for (let field of fieldsToCheck) {
+        if (!formValues[field]) {
+          // toast.error("Please fill in all required fields.");
+          return false;
+        }
+      }
+
+      for (let team of teams) {
+        console.log(team);
+        if (team.members.length === 0) {
+          toast.error(
+            "Please fill in atleast one team information to proceed. "
+          );
+          console.log("not members");
+          return false;
+        }
+        for (let member of team.members) {
+          console.log(member);
+          const memberFieldsToCheck = [
+            "studentNameCN",
+            "studentNameEN",
+            "studentYearOfBirth",
+            "studentGrade",
+          ];
+
+          for (let field of memberFieldsToCheck) {
+            if (!member.data[field]) {
+              toast.error(
+                "Please fill in all required fields for all team members."
+              );
+              console.log("not filled");
+              return false;
+            }
+          }
+        }
+      }
+
+      return true;
+    };
+
+    if (!validateForm()) {
+      return;
+    }
+
     const teamData = teams.map((team) => ({
       team_name: `Team ${team.id}`,
       team_members: team.members.map((member) => ({
@@ -110,8 +171,15 @@ export default function Registration() {
         payload
       );
       console.log(response.data);
+      if (response.data.code !== "0000") {
+        toast.error(response.data.data);
+        return;
+      }
+      toast.success("Registration successful!");
+      return;
     } catch (error) {
       console.error(error);
+      toast.error("Registration failed! Please try again");
     }
   };
 
@@ -167,6 +235,7 @@ export default function Registration() {
                         name="schoolNameCN"
                         value={formValues.schoolNameCN}
                         onChange={handleInputChange}
+                        required
                       />
                     </label>
                     <label>
@@ -176,6 +245,7 @@ export default function Registration() {
                         name="schoolNameEN"
                         value={formValues.schoolNameEN}
                         onChange={handleInputChange}
+                        required
                       />
                     </label>
                   </div>
@@ -187,6 +257,7 @@ export default function Registration() {
                         name="schoolAddressCN"
                         value={formValues.schoolAddressCN}
                         onChange={handleInputChange}
+                        required
                       />
                     </label>
                     <label>
@@ -196,6 +267,7 @@ export default function Registration() {
                         name="schoolAddressEN"
                         value={formValues.schoolAddressEN}
                         onChange={handleInputChange}
+                        required
                       />
                     </label>
                   </div>
@@ -224,6 +296,7 @@ export default function Registration() {
                         name="teacherNameCN"
                         value={formValues.teacherNameCN}
                         onChange={handleInputChange}
+                        required
                       />
                     </label>
                     <label>
@@ -233,6 +306,7 @@ export default function Registration() {
                         name="teacherNameEN"
                         value={formValues.teacherNameEN}
                         onChange={handleInputChange}
+                        required
                       />
                     </label>
                   </div>
@@ -244,17 +318,19 @@ export default function Registration() {
                         name="schoolPhone"
                         value={formValues.schoolPhone}
                         onChange={handleInputChange}
+                        required
                       />
                     </label>
                   </div>
                   <div style={{ padding: "10px" }}>
                     <label>
-                      Mobile Phone
+                      Telephone
                       <input
                         type="text"
                         name="teacherPhone"
                         value={formValues.teacherPhone}
                         onChange={handleInputChange}
+                        required
                       />
                     </label>
                   </div>
@@ -266,6 +342,7 @@ export default function Registration() {
                         name="teacherEmail"
                         value={formValues.teacherEmail}
                         onChange={handleInputChange}
+                        required
                       />
                     </label>
                   </div>
@@ -336,6 +413,8 @@ export default function Registration() {
           </div>
         </section>
       </div>
+      <Toaster />
+      {/* <ToastContainer /> */}
     </>
   );
 }
