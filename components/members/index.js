@@ -32,94 +32,203 @@ export default function Members({
   return (
     <>
       <form>
-        <fieldset style={{ textAlign: "left" }}>
-          <div>
+        <fieldset style={{ paddingBottom: "80px" }}>
+          <div
+            style={{
+              fontSize: "24px",
+              paddingBottom: "24px",
+              paddingTop: "24px",
+            }}
+          >
             {memberNumber === 1 ? (
-              <h5 style={{ marginBottom: "10px" }}>Member 1 (Leader)</h5>
+              <>成员 {memberNumber} （领导者）</>
             ) : (
-              <h5 style={{ marginBottom: "10px" }}>Member {memberNumber}</h5>
+              <>成员 {memberNumber}</>
             )}
           </div>
-          <div style={{ padding: "10px" }}>
-            <label>
-              Student Name (Chinese)
-              <input
-                type="text"
-                name="studentNameCN"
-                value={memberData.studentNameCN || ""}
-                onChange={handleInputChange}
-                required
-              />
-            </label>
-            <label>
-              (English)
-              <input
-                type="text"
-                name="studentNameEN"
-                value={memberData.studentNameEN || ""}
-                onChange={handleInputChange}
-                required
-              />
-            </label>
-          </div>
-          <div style={{ padding: "10px" }}>
-            <label>
-              Year of Birth
-              <input
-                type="text"
-                name="studentYearOfBirth"
-                value={memberData.studentYearOfBirth || ""}
-                onChange={handleInputChange}
-                required
-              />
-            </label>
-          </div>
-          <div style={{ padding: "10px" }}>
-            <label>
-              Gender
-              <select
-                name="studentGender"
-                value={memberData.studentGender || ""}
-                onChange={handleInputChange}
-              >
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-              </select>
-            </label>
-          </div>
-          <div style={{ padding: "10px" }}>
-            <label>
-              Grade
-              <input
-                type="text"
-                name="studentGrade"
-                value={memberData.studentGrade || ""}
-                onChange={handleInputChange}
-                required
-              />
-            </label>
-          </div>
-          <div style={{ padding: "10px" }}>
-            <label>
-              Mobile Phone (optional)
-              <input
-                type="text"
-                name="studentPhone"
-                value={memberData.studentPhone || ""}
-                onChange={handleInputChange}
-              />
-            </label>
-          </div>
-          <div style={{ padding: "10px" }}>
-            <label>
-              Email (optional)
-              <input
-                type="text"
-                name="studentEmail"
-                value={memberData.studentEmail || ""}
-                onChange={handleInputChange}
-              />
-            </label>
+          <div
+            style={
+              {
+                // display: "flex",
+                // alignSelf: "stretch",
+                // gap: "24px",
+                // alignContent: "flex-start",
+                // alignItems: "flex-start",
+                // flexWrap: "wrap",
+              }
+            }
+          >
+            <div
+              style={{
+                display: "flex",
+                // flexDirection: "column",
+                gap: "24px",
+                alignContent: "flex-start",
+                alignItems: "flex-start",
+                alignSelf: "stretch",
+                flexWrap: "wrap",
+              }}
+            >
+              {/* student name */}
+              <div style={{ width: "48%" }}>
+                {" "}
+                <label style={{ fontSize: "18px", width: "100%" }}>
+                  1. 學生姓名（中文）
+                </label>
+                <input
+                  type="text"
+                  name="studentNameCN"
+                  value={memberData.studentNameCN || ""}
+                  onChange={handleInputChange}
+                  required
+                  placeholder="請輸入"
+                  style={{
+                    borderRadius: "10px",
+                    height: "50px",
+                    width: "100%",
+                    gap: "16px",
+                    padding: "7px 26px 7px 20px",
+                    marginRight: "10px",
+                  }}
+                />
+              </div>
+              <div style={{ width: "48%" }}>
+                {" "}
+                <label style={{ fontSize: "18px", width: "100%" }}>
+                  2. 學生姓名（英文）
+                </label>
+                <input
+                  type="text"
+                  name="studentNameEN"
+                  value={memberData.studentNameEN || ""}
+                  onChange={handleInputChange}
+                  required
+                  placeholder="請輸入"
+                  style={{
+                    borderRadius: "10px",
+                    height: "50px",
+                    width: "100%",
+                    gap: "16px",
+                    padding: "7px 26px 7px 20px",
+                  }}
+                />
+              </div>
+              {/* year of birth and gender */}
+              <div style={{ width: "48%" }}>
+                {" "}
+                <label style={{ fontSize: "18px", width: "100%" }}>
+                  3. 出生年份
+                </label>
+                <input
+                  type="text"
+                  name="studentYearOfBirth"
+                  value={memberData.studentYearOfBirth || ""}
+                  onChange={handleInputChange}
+                  required
+                  placeholder="請輸入"
+                  style={{
+                    borderRadius: "10px",
+                    height: "50px",
+                    width: "100%",
+                    gap: "16px",
+                    padding: "7px 26px 7px 20px",
+                    marginRight: "10px",
+                  }}
+                />
+              </div>
+              <div style={{ width: "48%" }}>
+                {" "}
+                <label style={{ fontSize: "18px", width: "100%" }}>
+                  4. 性別
+                </label>
+                <select
+                  name="studentGender"
+                  value={memberData.studentGender || ""}
+                  onChange={handleInputChange}
+                  placeholder="請輸入"
+                  style={{
+                    borderRadius: "10px",
+                    borderWidth: "2px",
+                    borderColor: "black",
+                    height: "50px",
+                    width: "100%",
+                    gap: "16px",
+                    padding: "7px 26px 7px 20px",
+                  }}
+                >
+                  {" "}
+                  <option value="Male">男性</option>
+                  <option value="Female">女性</option>
+                </select>
+              </div>
+
+              {/* grade and mobile */}
+              <div style={{ width: "48%" }}>
+                {" "}
+                <label style={{ fontSize: "18px", width: "100%" }}>
+                  5. 就讀年級
+                </label>
+                <input
+                  type="text"
+                  name="studentGrade"
+                  value={memberData.studentGrade || ""}
+                  onChange={handleInputChange}
+                  required
+                  placeholder="請輸入"
+                  style={{
+                    borderRadius: "10px",
+                    height: "50px",
+                    width: "100%",
+                    gap: "16px",
+                    padding: "7px 26px 7px 20px",
+                    marginRight: "10px",
+                  }}
+                />
+              </div>
+              <div style={{ width: "48%" }}>
+                {" "}
+                <label style={{ fontSize: "18px", width: "100%" }}>
+                  6. 手提電話 （选修的）
+                </label>
+                <input
+                  type="text"
+                  name="studentPhone"
+                  value={memberData.studentPhone || ""}
+                  onChange={handleInputChange}
+                  placeholder="請輸入"
+                  style={{
+                    borderRadius: "10px",
+                    height: "50px",
+                    width: "100%",
+                    gap: "16px",
+                    padding: "7px 26px 7px 20px",
+                  }}
+                />
+              </div>
+
+              {/* email */}
+              <div style={{ width: "48%" }}>
+                {" "}
+                <label style={{ fontSize: "18px", width: "100%" }}>
+                  7. 電子郵箱（选修的）
+                </label>
+                <input
+                  type="text"
+                  name="studentEmail"
+                  value={memberData.studentEmail || ""}
+                  onChange={handleInputChange}
+                  placeholder="請輸入"
+                  style={{
+                    borderRadius: "10px",
+                    height: "50px",
+                    width: "100%",
+                    gap: "16px",
+                    padding: "7px 26px 7px 20px",
+                    marginRight: "10px",
+                  }}
+                />
+              </div>
+            </div>
           </div>
         </fieldset>
       </form>

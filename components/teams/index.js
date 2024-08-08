@@ -31,9 +31,20 @@ export default function Teams({ teamNumber, onTeamDataChange }) {
 
   return (
     <>
-      <fieldset style={{ textAlign: "left" }}>
-        <h4 style={{ marginBottom: "10px" }}>Team {teamNumber}</h4>
-        <div style={{ marginBottom: "20px" }}>
+      <fieldset>
+        <div
+          style={
+            {
+              // fontSize: "24px",
+            }
+          }
+        >
+          <div style={{ fontSize: "24px", paddingBottom: "24px" }}>
+            {" "}
+            隊伍 {teamNumber}
+          </div>
+        </div>
+        <div>
           {members.map((member, index) => (
             <Members
               key={member.id}
@@ -43,7 +54,60 @@ export default function Teams({ teamNumber, onTeamDataChange }) {
             />
           ))}
         </div>
-        <button
+        <div
+          style={{
+            display: "flex",
+            // justifyContent: "center",
+            // flexDirection: "column",
+            gap: "24px",
+            alignItems: "center",
+            alignSelf: "center",
+          }}
+        >
+          <button
+            type="submit"
+            style={{
+              display: "flex",
+              borderRadius: "22px",
+              // background: "#FE6A00",
+              // color: "#fff",
+              background: members.length >= 4 ? "darkgrey" : "transparent",
+              color: members.length >= 4 ? "white" : "black",
+              borderColor: members.length >= 4 ? "darkgrey" : "#FE6A00",
+              padding: "12px 32px",
+              width: "20%",
+              // textAlign: "center",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            onClick={addMember}
+            disabled={members.length >= 4}
+          >
+            添加会员
+          </button>
+          <button
+            type="submit"
+            style={{
+              display: "flex",
+              borderRadius: "22px",
+              // background: "#FE6A00",
+              // color: "black",
+              background: members.length <= 2 ? "darkgrey" : "transparent",
+              color: members.length <= 2 ? "white" : "black",
+              borderColor: members.length <= 2 ? "darkgrey" : "#FE6A00",
+              padding: "12px 32px",
+              width: "20%",
+              // textAlign: "center",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+            onClick={deleteLastMember}
+            disabled={members.length <= 2}
+          >
+            删除会员
+          </button>
+        </div>
+        {/* <button
           type="button"
           onClick={addMember}
           disabled={members.length >= 4}
@@ -56,7 +120,7 @@ export default function Teams({ teamNumber, onTeamDataChange }) {
           disabled={members.length <= 2}
         >
           Delete Member
-        </button>
+        </button> */}
       </fieldset>
     </>
   );
