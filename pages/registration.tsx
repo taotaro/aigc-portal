@@ -169,8 +169,8 @@ export default function Registration() {
 
     try {
       const response = await axios.post(
-        // "http://aigc-backend-dev.materia-logic.com/common/register",
-        "http://127.0.0.1:8000/common/register",
+        "http://aigc-backend-dev.materia-logic.com/common/register",
+        // "http://127.0.0.1:8000/common/register",
         payload
       );
       console.log(response.data);
