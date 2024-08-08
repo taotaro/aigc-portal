@@ -18,7 +18,7 @@ export default function Registration() {
     schoolNameEN: "",
     schoolAddressCN: "",
     schoolAddressEN: "",
-    teacherTitle: "Mr.",
+    // teacherTitle: "Mr.",
     teacherNameCN: "",
     teacherNameEN: "",
     schoolPhone: "",
@@ -162,7 +162,7 @@ export default function Registration() {
       mobile_phone: formValues.teacherPhone,
       telephone: formValues.schoolPhone,
       team_info: teamData,
-      title: formValues.teacherTitle,
+      // title: formValues.teacherTitle,
     };
 
     console.log("calling backend");
