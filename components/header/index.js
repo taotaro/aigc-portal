@@ -12,7 +12,7 @@ export default function Header(props) {
     { label: "首頁", current: "INDEX", href: "/#indexModule" },
     { label: "活動內容", current: "INDEX", href: "/#articleModule" },
     { label: "未來教室日程", current: "INDEX", href: "/#classRoomModule" },
-    { label: "Registration", current: "REGISTRATION", href: "/registration" },
+    { label: "登记", current: "REGISTRATION", href: "/registration" },
   ];
 
   function SubMenu({ item }) {
