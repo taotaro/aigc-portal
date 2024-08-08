@@ -18,7 +18,7 @@ export default function Registration() {
     schoolNameEN: "",
     schoolAddressCN: "",
     schoolAddressEN: "",
-    // teacherTitle: "Mr.",
+    teacherTitle: "Mr.",
     teacherNameCN: "",
     teacherNameEN: "",
     schoolPhone: "",
@@ -162,7 +162,7 @@ export default function Registration() {
       mobile_phone: formValues.teacherPhone,
       telephone: formValues.schoolPhone,
       team_info: teamData,
-      // title: formValues.teacherTitle,
+      title: formValues.teacherTitle,
     };
 
     console.log("calling backend");
@@ -220,7 +220,34 @@ export default function Registration() {
                   textAlign: "left",
                 }}
               >
-                {" "}
+                <div
+                  style={{
+                    textAlign: "center",
+                    fontSize: "24px",
+                    display: "flex",
+                    // padding: "0px 48px",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    gap: "10px",
+                    paddingBottom: "80px",
+                  }}
+                >
+                  雲遊通義 – 阿里雲香港10週年校際生成式AI比賽
+                </div>{" "}
+                <div
+                  style={{
+                    textAlign: "center",
+                    fontSize: "24px",
+                    display: "flex",
+                    // padding: "0px 48px",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    gap: "10px",
+                    paddingBottom: "80px",
+                  }}
+                >
+                  報名表
+                </div>{" "}
                 <p
                   style={{
                     textAlign: "left",
@@ -233,14 +260,20 @@ export default function Registration() {
                     alignSelf: "stretch",
                   }}
                 >
-                  <div>對象：小學生、中學生及特殊學校學生</div>
                   <div>
-                    名額： 以隊際形式報名，每隊 2 – 4
-                    人，每間學校不限報名隊伍數量
+                    參賽組別分為小學組、中學組及展能組（為特殊學校學生開設）。
                   </div>
-                  <div>語言：中文</div>
-                  <div>費用：全免</div>
-                  <div>截止報名：2024年9月20日</div>
+                  <div>參賽者由學校老師代表提名，並以隊際形式報名。</div>
+                  <div>
+                    參賽者必須為2024至2025學年仍然就讀該校的全日制學生。
+                  </div>
+                  <div>每隊隊伍由 2 – 4 人組成，每間學校不限報名隊伍數量。</div>
+                  <div>
+                    參賽者需要使用阿里雲巴巴旗下AI應用平台「通義千問」及「通義萬相」進行比賽。
+                  </div>
+                  <div>工作坊及賽事作品內容均以中文進行。</div>
+                  <div>參賽費用全免。</div>
+                  <div>截止報名為2024年9月20日23:59。</div>
                 </p>
               </div>
               <div
@@ -375,6 +408,35 @@ export default function Registration() {
                               padding: "7px 26px 7px 20px",
                             }}
                           />
+                        </div>
+                        {/* title */}
+                        <div style={{ width: "48%" }}>
+                          {" "}
+                          <label style={{ fontSize: "18px", width: "100%" }}>
+                            3. 學校地址（中文）
+                          </label>
+                          <select
+                            name="teacherTitle"
+                            value={formValues.teacherTitle}
+                            onChange={handleInputChange}
+                            required
+                            placeholder="請輸入"
+                            style={{
+                              borderRadius: "10px",
+                              height: "50px",
+                              width: "100%",
+                              gap: "16px",
+                              padding: "7px 26px 7px 20px",
+                              marginRight: "10px",
+                            }}
+                          >
+                            <option value="Mr.">先生</option>
+                            <option value="Mrs.">太太</option>
+                            <option value="Ms.">女士</option>
+                            <option value="Miss">小姐</option>
+                            <option value="Prof.">教授</option>
+                            <option value="Dr.">博士</option>
+                          </select>
                         </div>
 
                         {/* teacher name */}
@@ -561,16 +623,6 @@ export default function Registration() {
                   删除团队
                 </button>
               </div>
-              {/* <button type="button" onClick={addTeam}>
-                Add Team
-              </button>
-              <button
-                type="button"
-                onClick={deleteLastTeam}
-                disabled={teams.length <= 1}
-              >
-                Delete Team
-              </button> */}
               <div
                 style={{
                   display: "flex",
@@ -579,6 +631,7 @@ export default function Registration() {
                   alignItems: "center",
                   alignSelf: "center",
                   paddingTop: "80px",
+                  paddingBottom: "80px",
                 }}
               >
                 <button
@@ -601,6 +654,47 @@ export default function Registration() {
                 </button>
               </div>
             </div>
+            <div
+              style={{
+                textAlign: "left",
+                fontSize: "24px",
+                display: "flex",
+                fontStyle: "bold",
+                // padding: "0px 48px",
+                flexDirection: "column",
+                justifyContent: "center",
+                gap: "10px",
+                paddingBottom: "80px",
+              }}
+            >
+              條款及細則
+            </div>{" "}
+            <p
+              style={{
+                textAlign: "left",
+                fontSize: "24px",
+                display: "flex",
+                fontWeight: "bold",
+                // padding: "0px 48px",
+                flexDirection: "column",
+                justifyContent: "center",
+                gap: "10px",
+                alignSelf: "stretch",
+              }}
+            >
+              <div>
+                在以下方格內加上「√」號並完成登記手續後，本人將確認以上填寫的個人資料均是真實和正確的，並同意上述資料如有錯漏，Alibaba
+                Cloud (Singapore) Private
+                Limited毋須負責。本人亦同意在參與活動時遵守活動條款及細則(連結跳轉：https://www.alibabacloud.com/help/tc/legal/latest/alibaba-cloud-international-website-privacy-policy)。
+              </div>
+              <div>
+                報名將以大會的最終確認為準。閣下遞交申請後，需以書面通知方可更改你的個人資料。參加者須自行安排賽事期間的交通安排，並承擔所有相關費用。在任何情況下若賽事或相關活動被逼取消，大會毋須負上任何責任。
+              </div>
+              <div>
+                以上所收集的資料只用作活動登記、通訊及相關用途，並只限阿里雲巴巴及其授權之服務承辦商存取。登記者有權要求查閱、更正或刪除其個人資料。如有查詢，與我們聯絡。有關詳情亦可瀏覽免責條款、私隱政策及收集個人資料聲明。
+              </div>
+              <div style={{ paddingTop: "24px" }}>我同意。</div>
+            </p>
             <img
               className="intro-tag intro-tag-right"
               src="/images/tag1.png"
