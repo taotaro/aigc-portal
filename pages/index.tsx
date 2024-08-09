@@ -319,10 +319,7 @@ export default function Index() {
         </section>
         <section className="position-relative module-box">
           <div className="module-button">
-            <a
-              href="https://survey.aliyun.com/apps/zhiliao/08tKHXN_I"
-              target="__blank"
-            >
+            <a href="/registration" target="__blank">
               立即註冊
             </a>
           </div>
