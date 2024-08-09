@@ -339,7 +339,7 @@ export default function Index() {
             小學組要求
           </p>
           <div className="module-content" style={{ padding: "36px" }}>
-            {/* <div className="module-content__title">活動資訊</div> */}
+            {/* <div className= */}
             <div
               className="module-content__desc"
               style={{ marginTop: "-10px" }}
