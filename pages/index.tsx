@@ -142,9 +142,23 @@ export default function Index() {
         {/* 介绍 */}
         <section
           className="position-relative module-box"
-          style={{ paddingTop: "80px", paddingBottom: "80px" }}
+          style={{
+            paddingTop: "80px",
+            marginBottom: "0px",
+            paddingBottom: "0px",
+          }}
         >
-          <p className="module-title">比賽簡介</p>
+          <p className="module-title">比賽目標</p>
+        </section>
+        <section
+          className="position-relative intro-box"
+          style={{
+            paddingTop: "80px",
+            paddingBottom: "80px",
+            marginTop: "0px",
+          }}
+        >
+          {/* <p className="module-title">比賽簡介</p> */}
           <div className="intro" style={{ marginTop: "24px" }}>
             <img
               className="intro-tag intro-tag-left"
@@ -334,10 +348,26 @@ export default function Index() {
               <li>2-4人一組參賽，組員須為同校同學。</li>
               <li>參賽者需要學習使用：</li>
               <ul>
-                1.「通義千問」大語言模型 (https://tongyi.aliyun.com/qianwen)
+                1.
+                <a
+                  href="https://tongyi.aliyun.com/qianwen"
+                  target="_blank"
+                  style={{ color: "#ff6a00" }}
+                >
+                  「通義千問」大語言模型
+                </a>{" "}
+                (https://tongyi.aliyun.com/qianwen)
               </ul>
               <ul>
-                2.「通義萬相」文生圖模型 (https://tongyi.aliyun.com/wanxiang)
+                2.
+                <a
+                  href="https://tongyi.aliyun.com/wanxiang"
+                  target="_blank"
+                  style={{ color: "#ff6a00" }}
+                >
+                  「通義萬相」文生圖模型
+                </a>{" "}
+                (https://tongyi.aliyun.com/wanxiang)
               </ul>
               <li>
                 所有參賽者必須參加最少一場由阿里雲香港舉辦的實體工作坊；缺席者將會被取消參賽資格。
