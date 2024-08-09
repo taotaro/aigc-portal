@@ -408,10 +408,26 @@ export default function Index() {
               <li>2-4人一組參賽，組員須為同校同學。</li>
               <li>參賽者需要學習使用：</li>
               <ul>
-                1.「通義千問」大語言模型 (https://tongyi.aliyun.com/qianwen)
+                1.
+                <a
+                  href="https://tongyi.aliyun.com/qianwen"
+                  target="_blank"
+                  style={{ color: "#ff6a00" }}
+                >
+                  「通義千問」大語言模型
+                </a>{" "}
+                (https://tongyi.aliyun.com/qianwen)
               </ul>
               <ul>
-                2.「通義萬相」文生圖模型 (https://tongyi.aliyun.com/wanxiang)
+                2.
+                <a
+                  href="https://tongyi.aliyun.com/wanxiang"
+                  target="_blank"
+                  style={{ color: "#ff6a00" }}
+                >
+                  「通義萬相」文生圖模型
+                </a>{" "}
+                (https://tongyi.aliyun.com/wanxiang)
               </ul>
               <li>
                 所有參賽者必須參加最少一場由阿里雲香港舉辦的實體工作坊；缺席者將會被取消參賽資格。
@@ -459,10 +475,26 @@ export default function Index() {
               <li>2-4人一組參賽，組員須為同校同學。</li>
               <li>參賽者需要學習使用：</li>
               <ul>
-                1.「通義千問」大語言模型 (https://tongyi.aliyun.com/qianwen)
+                1.
+                <a
+                  href="https://tongyi.aliyun.com/qianwen"
+                  target="_blank"
+                  style={{ color: "#ff6a00" }}
+                >
+                  「通義千問」大語言模型
+                </a>{" "}
+                (https://tongyi.aliyun.com/qianwen)
               </ul>
               <ul>
-                2.「通義萬相」文生圖模型 (https://tongyi.aliyun.com/wanxiang)
+                2.
+                <a
+                  href="https://tongyi.aliyun.com/wanxiang"
+                  target="_blank"
+                  style={{ color: "#ff6a00" }}
+                >
+                  「通義萬相」文生圖模型
+                </a>{" "}
+                (https://tongyi.aliyun.com/wanxiang)
               </ul>
               <li>
                 所有參賽者必須參加最少一場由阿里雲香港舉辦的實體工作坊；缺席者將會被取消參賽資格。
