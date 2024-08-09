@@ -10,8 +10,9 @@ export default function Header(props) {
 
   const NavList = [
     { label: "首頁", current: "INDEX", href: "/#indexModule" },
-    { label: "活動內容", current: "INDEX", href: "/#articleModule" },
-    { label: "未來教室日程", current: "INDEX", href: "/#classRoomModule" },
+    { label: "游戏资讯", current: "INDEX", href: "/#gameInfoModule" },
+    { label: "比賽要求", current: "INDEX", href: "/#requirementsModule" },
+    { label: "日程", current: "INDEX", href: "/#scheduleModule" },
     { label: "登记", current: "REGISTRATION", href: "/registration" },
   ];
 
