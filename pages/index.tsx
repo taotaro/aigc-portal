@@ -469,13 +469,15 @@ export default function Index() {
             <div className="module-table">
               {" "}
               <div className="module-table__row module-table__header">
-                <div className="module-table__col" style={{ width: "100%" }}>
+                <div className="module-table__col" style={{ width: "70%" }}>
                   評分範疇
                 </div>
-                <div className="module-table__col">佔分比重</div>
+                <div className="module-table__col" style={{ width: "70%" }}>
+                  佔分比重
+                </div>
               </div>
               <div className="module-table__row ">
-                <div className="module-table__col">
+                <div className="module-table__col" style={{ width: "70%" }}>
                   <div
                     className="module-content__desc"
                     style={{ fontSize: "18px", marginTop: "0px" }}
@@ -487,10 +489,12 @@ export default function Index() {
                     AI生成的元素是否良好地融入了創作內容？
                   </div>
                 </div>
-                <div className="module-table__col">35%</div>
+                <div className="module-table__col" style={{ width: "70%" }}>
+                  35%
+                </div>
               </div>
               <div className="module-table__row ">
-                <div className="module-table__col">
+                <div className="module-table__col" style={{ width: "70%" }}>
                   <div
                     className="module-content__desc"
                     style={{ fontSize: "18px", marginTop: "0px" }}
@@ -500,10 +504,12 @@ export default function Index() {
                     <li>作品是否表現了新穎和具創意的想法？</li>
                   </div>
                 </div>
-                <div className="module-table__col">25%</div>
+                <div className="module-table__col" style={{ width: "70%" }}>
+                  25%
+                </div>
               </div>
               <div className="module-table__row ">
-                <div className="module-table__col">
+                <div className="module-table__col" style={{ width: "70%" }}>
                   <div
                     className="module-content__desc"
                     style={{ fontSize: "18px", marginTop: "0px" }}
@@ -512,10 +518,12 @@ export default function Index() {
                     <li>內容是否良好地呈現主題？</li>
                   </div>
                 </div>
-                <div className="module-table__col">20%</div>
+                <div className="module-table__col" style={{ width: "70%" }}>
+                  20%
+                </div>
               </div>
               <div className="module-table__row ">
-                <div className="module-table__col">
+                <div className="module-table__col" style={{ width: "70%" }}>
                   <div
                     className="module-content__desc"
                     style={{ fontSize: "18px", marginTop: "0px" }}
@@ -525,7 +533,9 @@ export default function Index() {
                     <li>視覺上是否吸引人？圖像是否配置得當？</li>
                   </div>
                 </div>
-                <div className="module-table__col">20%</div>
+                <div className="module-table__col" style={{ width: "30%" }}>
+                  20%
+                </div>
               </div>
             </div>
             <div className="module-content__left">
