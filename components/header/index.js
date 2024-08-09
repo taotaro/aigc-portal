@@ -10,10 +10,12 @@ export default function Header(props) {
 
   const NavList = [
     { label: "首頁", current: "INDEX", href: "/#indexModule" },
-    { label: "游戏资讯", current: "INDEX", href: "/#gameInfoModule" },
-    { label: "比賽要求", current: "INDEX", href: "/#requirementsModule" },
-    { label: "日程", current: "INDEX", href: "/#scheduleModule" },
-    { label: "登记", current: "REGISTRATION", href: "/registration" },
+    // { label: "游戏资讯", current: "INDEX", href: "/#gameInfoModule" },
+    // { label: "比賽要求", current: "INDEX", href: "/#requirementsModule" },
+    // { label: "日程", current: "INDEX", href: "/#scheduleModule" },
+    { label: "立即報名", current: "REGISTRATION", href: "/registration" },
+    { label: "活動評委", current: "JUDGES", href: "/judges" },
+    { label: "活動條款及細則", current: "TERMS", href: "/terms" },
   ];
 
   function SubMenu({ item }) {
