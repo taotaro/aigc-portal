@@ -7,6 +7,7 @@ export default function Header(props) {
   const { t, lang } = useTranslation("common");
   const { current, hideDot = false } = props || {};
   const [navLinkStyle, setNavLinkStyle] = useState({ color: "#fff" });
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const NavList = [
     { label: "首頁", current: "INDEX", href: "/#indexModule" },
@@ -56,7 +57,18 @@ export default function Header(props) {
   return (
     <header className="index-header">
       <nav className="navbar navbar-expand-lg navbar-light border-bottom-3">
-        <ul className="navbar-nav navbar-main">{tabs}</ul>
+        <button
+          className="navbar-toggler"
+          type="button"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className={`collapse navbar-collapse ${menuOpen ? "show" : ""}`}>
+          <ul className="navbar-nav navbar-main" style={{ color: "black" }}>
+            {tabs}
+          </ul>
+        </div>
       </nav>
     </header>
   );
