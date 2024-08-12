@@ -73,7 +73,7 @@ export default function Members({
               <div style={{ width: "48%" }}>
                 {" "}
                 <label style={{ fontSize: "18px", width: "100%" }}>
-                  1. 學生姓名（中文）
+                  1. 學生姓名（中文）<span style={{ color: "red" }}>*</span>
                 </label>
                 <input
                   type="text"
@@ -95,7 +95,7 @@ export default function Members({
               <div style={{ width: "48%" }}>
                 {" "}
                 <label style={{ fontSize: "18px", width: "100%" }}>
-                  2. 學生姓名（英文）
+                  2. 學生姓名（英文）<span style={{ color: "red" }}>*</span>
                 </label>
                 <input
                   type="text"
@@ -117,7 +117,7 @@ export default function Members({
               <div style={{ width: "48%" }}>
                 {" "}
                 <label style={{ fontSize: "18px", width: "100%" }}>
-                  3. 出生年份
+                  3. 出生年份 <span style={{ color: "red" }}>*</span>
                 </label>
                 <input
                   type="text"
@@ -139,7 +139,7 @@ export default function Members({
               <div style={{ width: "48%" }}>
                 {" "}
                 <label style={{ fontSize: "18px", width: "100%" }}>
-                  4. 性別
+                  4. 性別 <span style={{ color: "red" }}>*</span>
                 </label>
                 <select
                   name="studentGender"
@@ -166,7 +166,7 @@ export default function Members({
               <div style={{ width: "48%" }}>
                 {" "}
                 <label style={{ fontSize: "18px", width: "100%" }}>
-                  5. 就讀年級
+                  5. 就讀年級 <span style={{ color: "red" }}>*</span>
                 </label>
                 <input
                   type="text"

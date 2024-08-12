@@ -1,13 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import useTranslation from "next-translate/useTranslation";
 import Members from "../members";
 
-export default function Teams({ teamNumber, onTeamDataChange }) {
+export default function Teams({ teamNumber, onTeamDataChange, reset }) {
   const { t } = useTranslation("common");
   const [members, setMembers] = useState([
     { id: 1, data: {} },
     { id: 2, data: {} },
   ]);
+
+  useEffect(() => {
+    if (reset) {
+      setMembers([
+        { id: 1, data: {} },
+        { id: 2, data: {} },
+      ]);
+    }
+  }, [reset]);
 
   const addMember = () => {
     if (members.length < 4) {

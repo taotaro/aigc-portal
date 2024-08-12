@@ -179,6 +179,20 @@ export default function Registration() {
         return;
       }
       toast.success("Registration successful!");
+      setFormValues({
+        schoolNameCN: "",
+        schoolNameEN: "",
+        schoolAddressCN: "",
+        schoolAddressEN: "",
+        teacherTitle: "Mr.",
+        teacherNameCN: "",
+        teacherNameEN: "",
+        schoolPhone: "",
+        teacherPhone: "",
+        teacherEmail: "",
+      });
+      setTeams([{ id: 1, members: [] }]);
+
       return;
     } catch (error) {
       console.error(error);
@@ -326,6 +340,7 @@ export default function Registration() {
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
                             1. 學校名稱（中文）
+                            <span style={{ color: "red" }}>*</span>
                           </label>
                           <input
                             type="text"
@@ -348,6 +363,7 @@ export default function Registration() {
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
                             2. 學校名稱（英文）
+                            <span style={{ color: "red" }}>*</span>
                           </label>
                           <input
                             type="text"
@@ -370,6 +386,7 @@ export default function Registration() {
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
                             3. 學校地址（中文）
+                            <span style={{ color: "red" }}>*</span>
                           </label>
                           <input
                             type="text"
@@ -392,6 +409,7 @@ export default function Registration() {
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
                             4. 學校地址（英文）
+                            <span style={{ color: "red" }}>*</span>
                           </label>
                           <input
                             type="text"
@@ -413,7 +431,8 @@ export default function Registration() {
                         <div style={{ width: "48%" }}>
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
-                            3. 學校地址（中文）
+                            5. 學校地址（中文）
+                            <span style={{ color: "red" }}>*</span>
                           </label>
                           <select
                             name="teacherTitle"
@@ -443,7 +462,8 @@ export default function Registration() {
                         <div style={{ width: "48%" }}>
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
-                            5. 主要聯絡老師姓名 （中文）
+                            6. 主要聯絡老師姓名 （中文）
+                            <span style={{ color: "red" }}>*</span>
                           </label>
                           <input
                             type="text"
@@ -465,7 +485,8 @@ export default function Registration() {
                         <div style={{ width: "48%" }}>
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
-                            6. 主要聯絡老師姓名 （英文）
+                            7. 主要聯絡老師姓名 （英文）
+                            <span style={{ color: "red" }}>*</span>
                           </label>
                           <input
                             type="text"
@@ -488,7 +509,8 @@ export default function Registration() {
                         <div style={{ width: "48%" }}>
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
-                            7. 電話（學校）
+                            8. 電話（學校）
+                            <span style={{ color: "red" }}>*</span>
                           </label>
                           <input
                             type="text"
@@ -510,7 +532,7 @@ export default function Registration() {
                         <div style={{ width: "48%" }}>
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
-                            8. 手提電話
+                            9. 手提電話 <span style={{ color: "red" }}>*</span>
                           </label>
                           <input
                             type="text"
@@ -532,7 +554,7 @@ export default function Registration() {
                         <div style={{ width: "48%" }}>
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
-                            9. 電子郵箱
+                            10. 電子郵箱 <span style={{ color: "red" }}>*</span>
                           </label>
                           <input
                             type="email"
@@ -564,6 +586,7 @@ export default function Registration() {
                           key={team.id}
                           teamNumber={index + 1}
                           onTeamDataChange={handleTeamDataChange}
+                          reset={formValues.teacherEmail === ""}
                         />
                       ))}
                     </div>
@@ -613,7 +636,7 @@ export default function Registration() {
                     style={{
                       borderColor: teams.length <= 1 ? "darkgrey" : "#FE6A00",
                       background: teams.length <= 1 ? "darkgrey" : "#ff6a00",
-                      // color: teams.length <= 1 ? "white" : "black",
+                      color: teams.length <= 1 ? "white" : "black",
                     }}
                   >
                     删除团队
