@@ -13,6 +13,7 @@ export default function Registration() {
   const { t } = useTranslation("common");
   const [fixedBgHeight, setFixedBgHeight] = useState(200);
   const [teams, setTeams] = useState([{ id: 1, members: [] }]);
+  const [isAgreed, setIsAgreed] = useState(false);
   const [formValues, setFormValues] = useState({
     schoolNameCN: "",
     schoolNameEN: "",
@@ -39,6 +40,10 @@ export default function Registration() {
     const height = $fixedBg?.getBoundingClientRect()?.height || 200;
     setFixedBgHeight(height);
   }
+
+  const handleCheckboxChange = (event) => {
+    setIsAgreed(event.target.checked);
+  };
 
   const throttledResize = throttle(onWindowResize, 200);
 
@@ -77,6 +82,10 @@ export default function Registration() {
   };
 
   const handleSubmit = async (e) => {
+    if (!isAgreed) {
+      toast.error("Please agree to the terms and conditions.");
+      return;
+    }
     console.log("submit button pressed test");
     e.preventDefault();
 
@@ -287,7 +296,9 @@ export default function Registration() {
                   </div>
                   <div>工作坊及賽事作品內容均以中文進行。</div>
                   <div>參賽費用全免。</div>
-                  <div>截止報名為2024年9月20日23:59。</div>
+                  <div style={{ fontWeight: "bold" }}>
+                    截止報名為2024年9月20日23:59。
+                  </div>
                 </p>
               </div>
               <div
@@ -664,6 +675,79 @@ export default function Registration() {
                   删除团队
                 </button> */}
               </div>
+              <section>
+                <div
+                  style={{
+                    textAlign: "left",
+                    fontSize: "24px",
+                    display: "flex",
+                    fontWeight: "bold", // Changed from fontStyle to fontWeight
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    gap: "10px",
+                    paddingBottom: "24px",
+                    paddingTop: "24px",
+                  }}
+                >
+                  條款及細則
+                </div>
+                <p
+                  style={{
+                    textAlign: "left",
+                    fontSize: "24px",
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                    gap: "10px",
+                    alignSelf: "stretch",
+                  }}
+                >
+                  <div>
+                    {" "}
+                    在以下方格內加上「√」號並完成登記手續後，本人將確認以上填寫的個人資料均是真實和正確的，並同意上述資料如有錯漏，Alibaba
+                    Cloud毋須負責。本人亦同意在參與活動時遵守{" "}
+                    <a href="#" style={{ color: "#ff6a00" }}>
+                      活動條款及細則
+                    </a>
+                    。
+                  </div>
+                  <br />
+                  <div>
+                    報名將以大會的最終確認為準。閣下遞交申請後，須以書面通知方可更改你的個人資料。參加者須自行安排賽事期間的交通安排，並承擔所有相關費用。在任何情況下若賽事或相關活動被逼取消，大會毋須負上任何責任。
+                  </div>
+                  <br />
+                  <div>
+                    以上所收集的資料只用作活動登記、通訊及相關用途，並只限Alibaba
+                    Cloud及其授權之服務承辦商存取。登記者有權要求查閱、更正或刪除其個人資料。如有查詢，與我們聯絡。有關詳情亦可瀏覽Alibaba
+                    Cloud的{" "}
+                    <a href="#" style={{ color: "#ff6a00" }}>
+                      私隱政策
+                    </a>
+                    。
+                  </div>
+                  <div style={{ paddingTop: "24px" }}>
+                    <input
+                      type="checkbox"
+                      id="agree"
+                      style={{
+                        width: "20px",
+                        height: "20px",
+                        marginRight: "10px",
+                        cursor: "pointer",
+                      }}
+                      checked={isAgreed}
+                      onChange={handleCheckboxChange}
+                    />
+                    <label
+                      htmlFor="agree"
+                      style={{ fontSize: "18px", cursor: "pointer" }}
+                    >
+                      我同意。
+                    </label>
+                  </div>
+                </p>
+              </section>
+
               <div
                 style={{
                   display: "flex",
@@ -692,53 +776,20 @@ export default function Registration() {
                   提交報名表
                 </button> */}
                 <section className="position-relative module-box">
-                  <div className="module-button" onClick={handleSubmit}>
+                  <div
+                    className="module-button"
+                    onClick={handleSubmit}
+                    style={{
+                      background: isAgreed ? "#FE6A00" : "darkgrey",
+                      cursor: isAgreed ? "pointer" : "not-allowed",
+                    }}
+                  >
                     提交報名表
                   </div>
                 </section>
               </div>
             </div>
-            <div
-              style={{
-                textAlign: "left",
-                fontSize: "24px",
-                display: "flex",
-                fontStyle: "bold",
-                // padding: "0px 48px",
-                flexDirection: "column",
-                justifyContent: "center",
-                gap: "10px",
-                paddingBottom: "80px",
-              }}
-            >
-              條款及細則
-            </div>{" "}
-            <p
-              style={{
-                textAlign: "left",
-                fontSize: "24px",
-                display: "flex",
-                fontWeight: "bold",
-                // padding: "0px 48px",
-                flexDirection: "column",
-                justifyContent: "center",
-                gap: "10px",
-                alignSelf: "stretch",
-              }}
-            >
-              <div>
-                在以下方格內加上「√」號並完成登記手續後，本人將確認以上填寫的個人資料均是真實和正確的，並同意上述資料如有錯漏，Alibaba
-                Cloud (Singapore) Private
-                Limited毋須負責。本人亦同意在參與活動時遵守活動條款及細則(連結跳轉：https://www.alibabacloud.com/help/tc/legal/latest/alibaba-cloud-international-website-privacy-policy)。
-              </div>
-              <div>
-                報名將以大會的最終確認為準。閣下遞交申請後，需以書面通知方可更改你的個人資料。參加者須自行安排賽事期間的交通安排，並承擔所有相關費用。在任何情況下若賽事或相關活動被逼取消，大會毋須負上任何責任。
-              </div>
-              <div>
-                以上所收集的資料只用作活動登記、通訊及相關用途，並只限阿里雲巴巴及其授權之服務承辦商存取。登記者有權要求查閱、更正或刪除其個人資料。如有查詢，與我們聯絡。有關詳情亦可瀏覽免責條款、私隱政策及收集個人資料聲明。
-              </div>
-              <div style={{ paddingTop: "24px" }}>我同意。</div>
-            </p>
+
             <img
               className="intro-tag intro-tag-right"
               src="/images/tag1.png"
