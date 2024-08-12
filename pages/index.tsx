@@ -356,7 +356,6 @@ export default function Index() {
                 >
                   「通義千問」大語言模型
                 </a>{" "}
-                (https://tongyi.aliyun.com/qianwen)
               </ul>
               <ul>
                 2.
@@ -367,7 +366,6 @@ export default function Index() {
                 >
                   「通義萬相」文生圖模型
                 </a>{" "}
-                (https://tongyi.aliyun.com/wanxiang)
               </ul>
               <li>
                 所有參賽者必須參加最少一場由阿里雲香港舉辦的實體工作坊；缺席者將會被取消參賽資格。
@@ -416,7 +414,6 @@ export default function Index() {
                 >
                   「通義千問」大語言模型
                 </a>{" "}
-                (https://tongyi.aliyun.com/qianwen)
               </ul>
               <ul>
                 2.
@@ -427,7 +424,6 @@ export default function Index() {
                 >
                   「通義萬相」文生圖模型
                 </a>{" "}
-                (https://tongyi.aliyun.com/wanxiang)
               </ul>
               <li>
                 所有參賽者必須參加最少一場由阿里雲香港舉辦的實體工作坊；缺席者將會被取消參賽資格。
@@ -683,6 +679,28 @@ export default function Index() {
             </a>
           </div>
         </section>
+        <section className="position-relative module-box" id="gameInfoModule">
+          <p className="module-title">活動查詢及聯絡</p>
+          <div className="module-content" style={{ padding: "36px" }}>
+            <div className="module-content__left">
+              {/* <div className="module-content__title">活動資訊</div> */}
+              <div className="module-content__desc">
+                如有任何活動問題，歡迎聯絡 Gamenoodlesoup
+                (edu@gamenoodlesoup.com / 30011280)
+              </div>
+            </div>
+            <div className="module-content__desc">
+              <div>
+                參賽者必須同意在參與活動時遵守活動條款及細則，詳情請 按此 查閱。
+              </div>
+              <div>
+                是次活動所收集的資料只用作活動登記、通訊及相關用途，並只限Alibaba
+                Cloud及其授權之服務承辦商存取。登記者有權要求查閱、更正或刪除其個人資料。如有查詢，與我們聯絡。有關詳情亦可瀏覽Alibaba
+                Cloud的 私隱政策 。
+              </div>
+            </div>
+          </div>
+        </section>
         {/* 活動支持 */}
         <section className="position-relative module-box">
           <p className="module-title">活動支持</p>
@@ -720,28 +738,6 @@ export default function Index() {
           </div>
         </section>
         {/* footer */}
-        <section className="position-relative module-box" id="gameInfoModule">
-          <p className="module-title">活動查詢及聯絡</p>
-          <div className="module-content" style={{ padding: "36px" }}>
-            <div className="module-content__left">
-              {/* <div className="module-content__title">活動資訊</div> */}
-              <div className="module-content__desc">
-                如有任何活動問題，歡迎聯絡 Gamenoodlesoup
-                (edu@gamenoodlesoup.com / 30011280)
-              </div>
-            </div>
-            <div className="module-content__desc">
-              <div>
-                參賽者必須同意在參與活動時遵守活動條款及細則，詳情請 按此 查閱。
-              </div>
-              <div>
-                是次活動所收集的資料只用作活動登記、通訊及相關用途，並只限Alibaba
-                Cloud及其授權之服務承辦商存取。登記者有權要求查閱、更正或刪除其個人資料。如有查詢，與我們聯絡。有關詳情亦可瀏覽Alibaba
-                Cloud的 私隱政策 。
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
     </>
   );

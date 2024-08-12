@@ -87,9 +87,12 @@ export default function Judges() {
               padding: "80px",
               // flexDirection: "column",
               gap: "40px",
-              alignContent: "flex-start",
-              alignItems: "flex-start",
-              alignSelf: "stretch",
+              // alignContent: "flex-start",
+              // alignItems: "flex-start",
+              // alignSelf: "stretch",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100%",
               flexWrap: "wrap",
             }}
           >

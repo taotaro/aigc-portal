@@ -59,13 +59,29 @@ export default function Teams({ teamNumber, onTeamDataChange }) {
             display: "flex",
             // justifyContent: "center",
             // flexDirection: "column",
-            gap: "24px",
-            alignItems: "center",
-            alignSelf: "center",
-            paddingBottom: "80px",
+            // alignItems: "center",
+            // alignSelf: "center",
+            justifyContent: "space-between",
           }}
         >
-          <button
+          <section
+            className="position-relative module-box"
+            // style={{ width: "20%" }}
+          >
+            <div
+              className="module-button"
+              onClick={addMember}
+              style={{
+                background: members.length >= 4 ? "darkgrey" : "ff6a00",
+                width: "100%",
+                // color: members.length >= 4 ? "white" : "black",
+                // borderColor: members.length >= 4 ? "darkgrey" : "#FE6A00",
+              }}
+            >
+              添加会员
+            </div>
+          </section>
+          {/* <button
             type="button"
             style={{
               display: "flex",
@@ -85,8 +101,8 @@ export default function Teams({ teamNumber, onTeamDataChange }) {
             disabled={members.length >= 4}
           >
             添加会员
-          </button>
-          <button
+          </button> */}
+          {/* <button
             type="button"
             style={{
               display: "flex",
@@ -106,7 +122,18 @@ export default function Teams({ teamNumber, onTeamDataChange }) {
             disabled={members.length <= 2}
           >
             删除会员
-          </button>
+          </button> */}
+          <section className="position-relative module-box">
+            <div
+              className="module-button"
+              onClick={deleteLastMember}
+              style={{
+                background: members.length <= 2 ? "darkgrey" : "ff6a00",
+              }}
+            >
+              删除会员
+            </div>
+          </section>
         </div>
         {/* <button
           type="button"

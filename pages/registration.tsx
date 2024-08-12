@@ -576,12 +576,12 @@ export default function Registration() {
                   display: "flex",
                   justifyContent: "center",
                   // flexDirection: "column",
-                  gap: "24px",
+                  // gap: "24px",
                   alignItems: "center",
                   alignSelf: "center",
                 }}
               >
-                <button
+                {/* <button
                   type="button"
                   style={{
                     display: "flex",
@@ -600,8 +600,26 @@ export default function Registration() {
                   onClick={addTeam}
                 >
                   添加团队
-                </button>
-                <button
+                </button> */}
+                <section className="position-relative module-box">
+                  <div className="module-button" onClick={addTeam}>
+                    添加团队
+                  </div>
+                </section>
+                <section className="position-relative module-box">
+                  <div
+                    className="module-button"
+                    onClick={deleteLastTeam}
+                    style={{
+                      borderColor: teams.length <= 1 ? "darkgrey" : "#FE6A00",
+                      background: teams.length <= 1 ? "darkgrey" : "#ff6a00",
+                      // color: teams.length <= 1 ? "white" : "black",
+                    }}
+                  >
+                    删除团队
+                  </div>
+                </section>
+                {/* <button
                   type="button"
                   style={{
                     display: "flex",
@@ -621,7 +639,7 @@ export default function Registration() {
                   disabled={teams.length <= 1}
                 >
                   删除团队
-                </button>
+                </button> */}
               </div>
               <div
                 style={{
@@ -630,11 +648,9 @@ export default function Registration() {
                   flexDirection: "column",
                   alignItems: "center",
                   alignSelf: "center",
-                  paddingTop: "80px",
-                  paddingBottom: "80px",
                 }}
               >
-                <button
+                {/* <button
                   type="submit"
                   style={{
                     display: "flex",
@@ -651,7 +667,12 @@ export default function Registration() {
                   onClick={handleSubmit}
                 >
                   提交報名表
-                </button>
+                </button> */}
+                <section className="position-relative module-box">
+                  <div className="module-button" onClick={handleSubmit}>
+                    提交報名表
+                  </div>
+                </section>
               </div>
             </div>
             <div
