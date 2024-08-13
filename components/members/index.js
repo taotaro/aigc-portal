@@ -89,6 +89,7 @@ export default function Members({
                     gap: "16px",
                     padding: "7px 26px 7px 20px",
                     marginRight: "10px",
+                    border: "2px solid #d9d9d9",
                   }}
                 />
               </div>
@@ -110,6 +111,7 @@ export default function Members({
                     width: "100%",
                     gap: "16px",
                     padding: "7px 26px 7px 20px",
+                    border: "2px solid #d9d9d9",
                   }}
                 />
               </div>
@@ -133,6 +135,7 @@ export default function Members({
                     gap: "16px",
                     padding: "7px 26px 7px 20px",
                     marginRight: "10px",
+                    border: "2px solid #d9d9d9",
                   }}
                 />
               </div>
@@ -154,6 +157,7 @@ export default function Members({
                     width: "100%",
                     gap: "16px",
                     padding: "7px 26px 7px 20px",
+                    border: "2px solid #d9d9d9",
                   }}
                 >
                   {" "}
@@ -182,6 +186,7 @@ export default function Members({
                     gap: "16px",
                     padding: "7px 26px 7px 20px",
                     marginRight: "10px",
+                    border: "2px solid #d9d9d9",
                   }}
                 />
               </div>
@@ -202,6 +207,7 @@ export default function Members({
                     width: "100%",
                     gap: "16px",
                     padding: "7px 26px 7px 20px",
+                    border: "2px solid #d9d9d9",
                   }}
                 />
               </div>
@@ -225,6 +231,7 @@ export default function Members({
                     gap: "16px",
                     padding: "7px 26px 7px 20px",
                     marginRight: "10px",
+                    border: "2px solid #d9d9d9",
                   }}
                 />
               </div>

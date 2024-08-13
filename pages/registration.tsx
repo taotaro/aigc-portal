@@ -82,10 +82,6 @@ export default function Registration() {
   };
 
   const handleSubmit = async (e) => {
-    if (!isAgreed) {
-      toast.error("Please agree to the terms and conditions.");
-      return;
-    }
     console.log("submit button pressed test");
     e.preventDefault();
 
@@ -173,6 +169,11 @@ export default function Registration() {
       team_info: teamData,
       title: formValues.teacherTitle,
     };
+
+    if (!isAgreed) {
+      toast.error("Please agree to the terms and conditions.");
+      return;
+    }
 
     console.log("calling backend");
 
@@ -367,6 +368,7 @@ export default function Registration() {
                               gap: "16px",
                               padding: "7px 26px 7px 20px",
                               marginRight: "10px",
+                              border: "2px solid #d9d9d9",
                             }}
                           />
                         </div>
@@ -389,6 +391,7 @@ export default function Registration() {
                               width: "100%",
                               gap: "16px",
                               padding: "7px 26px 7px 20px",
+                              border: "2px solid #d9d9d9",
                             }}
                           />
                         </div>
@@ -413,6 +416,7 @@ export default function Registration() {
                               gap: "16px",
                               padding: "7px 26px 7px 20px",
                               marginRight: "10px",
+                              border: "2px solid #d9d9d9",
                             }}
                           />
                         </div>
@@ -435,6 +439,7 @@ export default function Registration() {
                               width: "100%",
                               gap: "16px",
                               padding: "7px 26px 7px 20px",
+                              border: "2px solid #d9d9d9",
                             }}
                           />
                         </div>
@@ -458,6 +463,7 @@ export default function Registration() {
                               gap: "16px",
                               padding: "7px 26px 7px 20px",
                               marginRight: "10px",
+                              border: "2px solid #d9d9d9",
                             }}
                           >
                             <option value="Mr.">先生</option>
@@ -490,6 +496,7 @@ export default function Registration() {
                               gap: "16px",
                               padding: "7px 26px 7px 20px",
                               marginRight: "10px",
+                              border: "2px solid #d9d9d9",
                             }}
                           />
                         </div>
@@ -512,6 +519,7 @@ export default function Registration() {
                               width: "100%",
                               gap: "16px",
                               padding: "7px 26px 7px 20px",
+                              border: "2px solid #d9d9d9",
                             }}
                           />
                         </div>
@@ -537,6 +545,7 @@ export default function Registration() {
                               gap: "16px",
                               padding: "7px 26px 7px 20px",
                               marginRight: "10px",
+                              border: "2px solid #d9d9d9",
                             }}
                           />
                         </div>
@@ -558,6 +567,7 @@ export default function Registration() {
                               width: "100%",
                               gap: "16px",
                               padding: "7px 26px 7px 20px",
+                              border: "2px solid #d9d9d9",
                             }}
                           />
                         </div>
@@ -581,6 +591,7 @@ export default function Registration() {
                               gap: "16px",
                               padding: "7px 26px 7px 20px",
                               marginRight: "10px",
+                              border: "2px solid #d9d9d9",
                             }}
                           />
                         </div>
@@ -675,7 +686,13 @@ export default function Registration() {
                   删除团队
                 </button> */}
               </div>
-              <section>
+              <section
+                style={{
+                  boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.1)",
+                  padding: "24px",
+                  borderRadius: "10px",
+                }}
+              >
                 <div
                   style={{
                     textAlign: "left",
