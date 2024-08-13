@@ -792,7 +792,10 @@ export default function Registration() {
                 >
                   提交報名表
                 </button> */}
-                <section className="position-relative module-box">
+                <section
+                  className="position-relative module-box"
+                  style={{ padding: "24px" }}
+                >
                   <div
                     className="module-button"
                     onClick={handleSubmit}
