@@ -366,7 +366,7 @@ export default function Registration() {
                         }}
                       >
                         {/* school name */}
-                        <div style={{ width: "48%" }}>
+                        <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
                             1. 學校名稱（中文）
@@ -390,7 +390,7 @@ export default function Registration() {
                             }}
                           />
                         </div>
-                        <div style={{ width: "48%" }}>
+                        <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
                             2. 學校名稱（英文）
@@ -414,7 +414,7 @@ export default function Registration() {
                           />
                         </div>
                         {/* school address */}
-                        <div style={{ width: "48%" }}>
+                        <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
                             3. 學校地址（中文）
@@ -438,7 +438,7 @@ export default function Registration() {
                             }}
                           />
                         </div>
-                        <div style={{ width: "48%" }}>
+                        <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
                             4. 學校地址（英文）
@@ -462,7 +462,7 @@ export default function Registration() {
                           />
                         </div>
                         {/* title */}
-                        <div style={{ width: "48%" }}>
+                        <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
                             5. 學校地址（中文）
@@ -494,7 +494,7 @@ export default function Registration() {
                         </div>
 
                         {/* teacher name */}
-                        <div style={{ width: "48%" }}>
+                        <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
                             6. 主要聯絡老師姓名 （中文）
@@ -518,7 +518,7 @@ export default function Registration() {
                             }}
                           />
                         </div>
-                        <div style={{ width: "48%" }}>
+                        <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
                             7. 主要聯絡老師姓名 （英文）
@@ -543,7 +543,7 @@ export default function Registration() {
                         </div>
 
                         {/* contact (telepone and mobile) */}
-                        <div style={{ width: "48%" }}>
+                        <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
                             8. 電話（學校）
@@ -567,7 +567,7 @@ export default function Registration() {
                             }}
                           />
                         </div>
-                        <div style={{ width: "48%" }}>
+                        <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
                             9. 手提電話 <span style={{ color: "red" }}>*</span>
@@ -590,7 +590,7 @@ export default function Registration() {
                           />
                         </div>
                         {/* contact (email) */}
-                        <div style={{ width: "48%" }}>
+                        <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
                             10. 電子郵箱 <span style={{ color: "red" }}>*</span>
@@ -654,7 +654,7 @@ export default function Registration() {
                                 }}
                                 onClick={() => handleDeleteTeam(index)}
                               >
-                                <FaTrashAlt size={24} />
+                                {index > 0 && <FaTrashAlt size={24} />}
                               </div>
                             </div>
 

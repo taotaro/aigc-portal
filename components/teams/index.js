@@ -93,19 +93,21 @@ export default function Teams({
               memberData={member.data}
               onMemberDataChange={handleMemberDataChange}
             />
-            <div
-              onClick={() => deleteMember(member.id)}
-              style={{
-                backgroundColor: "transparent",
-                width: "100%",
-                color: "#FE6A00",
-                fontWeight: "normal",
-                paddingBottom: "24px",
-                cursor: "pointer",
-              }}
-            >
-              删除会员 -
-            </div>
+            {index === members.length - 1 && members.length > 2 && (
+              <div
+                onClick={() => deleteLastMember()}
+                style={{
+                  backgroundColor: "transparent",
+                  width: "100%",
+                  color: "#FE6A00",
+                  fontWeight: "normal",
+                  paddingBottom: "24px",
+                  cursor: "pointer",
+                }}
+              >
+                删除会员 -
+              </div>
+            )}
           </div>
         ))}
       </div>
@@ -115,18 +117,20 @@ export default function Teams({
           justifyContent: "space-between",
         }}
       >
-        <div
-          className="module-button"
-          onClick={addMember}
-          style={{
-            backgroundColor: "transparent",
-            width: "100%",
-            color: "#FE6A00",
-            fontWeight: "normal",
-          }}
-        >
-          新增學生 +
-        </div>
+        {members.length < 4 && (
+          <div
+            className="module-button"
+            onClick={addMember}
+            style={{
+              backgroundColor: "transparent",
+              width: "100%",
+              color: "#FE6A00",
+              fontWeight: "normal",
+            }}
+          >
+            新增學生 +
+          </div>
+        )}
       </div>
       <Toaster />
     </>

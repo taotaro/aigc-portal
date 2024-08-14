@@ -71,7 +71,7 @@ export default function Members({
                 }}
               >
                 {/* student name */}
-                <div style={{ width: "48%" }}>
+                <div className="input-container">
                   {" "}
                   <label style={{ fontSize: "18px", width: "100%" }}>
                     1. 學生姓名（中文）<span style={{ color: "red" }}>*</span>
@@ -94,7 +94,7 @@ export default function Members({
                     }}
                   />
                 </div>
-                <div style={{ width: "48%" }}>
+                <div className="input-container">
                   {" "}
                   <label style={{ fontSize: "18px", width: "100%" }}>
                     2. 學生姓名（英文）<span style={{ color: "red" }}>*</span>
@@ -117,7 +117,7 @@ export default function Members({
                   />
                 </div>
                 {/* year of birth and gender */}
-                <div style={{ width: "48%" }}>
+                <div className="input-container">
                   {" "}
                   <label style={{ fontSize: "18px", width: "100%" }}>
                     3. 出生年份 <span style={{ color: "red" }}>*</span>
@@ -140,7 +140,7 @@ export default function Members({
                     }}
                   />
                 </div>
-                <div style={{ width: "48%" }}>
+                <div className="input-container">
                   {" "}
                   <label style={{ fontSize: "18px", width: "100%" }}>
                     4. 性別 <span style={{ color: "red" }}>*</span>
@@ -168,7 +168,7 @@ export default function Members({
                 </div>
 
                 {/* grade and mobile */}
-                <div style={{ width: "48%" }}>
+                <div className="input-container">
                   {" "}
                   <label style={{ fontSize: "18px", width: "100%" }}>
                     5. 就讀年級 <span style={{ color: "red" }}>*</span>
@@ -191,7 +191,7 @@ export default function Members({
                     }}
                   />
                 </div>
-                <div style={{ width: "48%" }}>
+                <div className="input-container">
                   {" "}
                   <label style={{ fontSize: "18px", width: "100%" }}>
                     6. 手提電話 （选修的）
@@ -214,7 +214,7 @@ export default function Members({
                 </div>
 
                 {/* email */}
-                <div style={{ width: "48%" }}>
+                <div className="input-container">
                   {" "}
                   <label style={{ fontSize: "18px", width: "100%" }}>
                     7. 電子郵箱（选修的）

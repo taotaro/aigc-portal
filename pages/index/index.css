@@ -2,6 +2,10 @@
   min-width: 660px;
 }
 
+.input-container {
+  width: 48%;
+}
+
 .title-section {
   width: 100%;
   display: flex;
@@ -355,6 +359,9 @@
 }
 
 @media (max-width: 500px) {
+  .input-container {
+    width: 100%;
+  }
   .title {
     font-size: 20px;
     letter-spacing: 12px;
