@@ -169,8 +169,8 @@ export default function Registration() {
       return;
     }
 
-    const teamData = teams.map((team) => ({
-      team_name: `Team ${team.id}`,
+    const teamData = teams.map((team, index) => ({
+      team_name: `Team ${index + 1}`,
       team_members: team.members.map((member) => ({
         name_english: member.data.studentNameCN,
         name_chinese: member.data.studentNameEN,
