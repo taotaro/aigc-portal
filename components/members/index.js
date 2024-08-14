@@ -32,7 +32,7 @@ export default function Members({
   return (
     <>
       <form>
-        <fieldset style={{ paddingBottom: "80px" }}>
+        <fieldset style={{ paddingBottom: "24px" }}>
           <div
             style={{
               fontSize: "24px",

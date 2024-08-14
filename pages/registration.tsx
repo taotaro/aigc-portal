@@ -6,6 +6,8 @@ import Teams from "../components/teams";
 import axios from "axios";
 import { toast, Toaster } from "react-hot-toast";
 import { wrap } from "module";
+import { FaTrashAlt } from "react-icons/fa";
+import { v4 as uuidv4 } from "uuid";
 // import { ToastContainer, toast } from "react-toastify";
 // import "react-toastify/dist/ReactToastify.css";
 
@@ -74,12 +76,32 @@ export default function Registration() {
     });
   };
 
-  const handleTeamDataChange = (teamNumber, members) => {
+  const handleTeamDataChange = (teamId, members) => {
     const updatedTeams = teams.map((team) =>
-      team.id === teamNumber ? { ...team, members } : team
+      team.id === teamId ? { ...team, members } : team
     );
     setTeams(updatedTeams);
   };
+
+  const handleDeleteTeam = (index) => {
+    console.log("Deleting team at index: ", index);
+    // const updatedTeams = teams.filter((_, i) => i !== index);
+
+    // console.log("Updated teams: ", updatedTeams);
+    // setTeams(updatedTeams);
+    let clone = [...teams];
+    console.log("clone: ", clone);
+    clone.splice(index, 1);
+    console.log("clone after splice: ", clone);
+    setTeams(clone);
+    console.log("teams after setting: ", teams);
+  };
+
+  // const handleTeamDataChange = (updatedTeam) => {
+  //   setTeams((prevTeams) =>
+  //     prevTeams.map((team) => (team.id === updatedTeam.id ? updatedTeam : team))
+  //   );
+  // };
 
   const handleSubmit = async (e) => {
     console.log("submit button pressed test");
@@ -202,6 +224,7 @@ export default function Registration() {
         teacherEmail: "",
       });
       setTeams([{ id: 1, members: [] }]);
+      setIsAgreed(false);
 
       return;
     } catch (error) {
@@ -604,12 +627,52 @@ export default function Registration() {
                       }}
                     >
                       {teams.map((team, index) => (
-                        <Teams
-                          key={team.id}
-                          teamNumber={index + 1}
-                          onTeamDataChange={handleTeamDataChange}
-                          reset={formValues.teacherEmail === ""}
-                        />
+                        <>
+                          <div
+                            key={team.id}
+                            style={{
+                              backgroundColor: "#F8F8F8",
+                              padding: "24px",
+                              borderRadius: "10px",
+                              marginBottom: "24px",
+                            }}
+                          >
+                            <div
+                              style={{
+                                flexDirection: "row",
+                                gap: "24px",
+                                display: "flex",
+                                justifyContent: "space-between",
+                              }}
+                            >
+                              {" "}
+                              <div style={{ width: "70%" }}>
+                                <div style={{ fontSize: "24px" }}>
+                                  {" "}
+                                  隊伍 {index + 1}
+                                </div>
+                              </div>{" "}
+                              <div
+                                style={{
+                                  alignSelf: "right",
+                                  color: "#FE6A00",
+                                  cursor: "pointer",
+                                }}
+                                onClick={() => handleDeleteTeam(index)}
+                              >
+                                <FaTrashAlt size={24} />
+                              </div>
+                            </div>
+
+                            <Teams
+                              key={team.id}
+                              teamNumber={team.id}
+                              onTeamDataChange={handleTeamDataChange}
+                              membersInfo={team.members}
+                              reset={formValues.teacherEmail === ""}
+                            />
+                          </div>
+                        </>
                       ))}
                     </div>
                   </fieldset>
@@ -646,12 +709,29 @@ export default function Registration() {
                 >
                   添加团队
                 </button> */}
-                <section className="position-relative module-box">
-                  <div className="module-button" onClick={addTeam}>
+                <section
+                  className="position-relative module-box"
+                  style={{
+                    minWidth: "70%",
+                    paddingLeft: "0px",
+                    paddingRight: "0px",
+                  }}
+                >
+                  <div
+                    className="module-button"
+                    onClick={addTeam}
+                    style={{
+                      backgroundColor: "transparent",
+                      color: "#FE6A00",
+                      border: "2px solid #FE6A00",
+                      borderRadius: "10px",
+                      minWidth: "60%",
+                    }}
+                  >
                     添加团队
                   </div>
                 </section>
-                <section className="position-relative module-box">
+                {/* <section className="position-relative module-box">
                   <div
                     className="module-button"
                     onClick={deleteLastTeam}
@@ -663,7 +743,7 @@ export default function Registration() {
                   >
                     删除团队
                   </div>
-                </section>
+                </section> */}
                 {/* <button
                   type="button"
                   style={{
