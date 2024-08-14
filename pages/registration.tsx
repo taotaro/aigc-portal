@@ -700,7 +700,7 @@ export default function Registration() {
                       minWidth: "60%",
                     }}
                   >
-                    添加团队
+                    新增隊伍
                   </div>
                 </section>
               </div>
@@ -741,7 +741,11 @@ export default function Registration() {
                     {" "}
                     在以下方格內加上「√」號並完成登記手續後，本人將確認以上填寫的個人資料均是真實和正確的，並同意上述資料如有錯漏，Alibaba
                     Cloud毋須負責。本人亦同意在參與活動時遵守{" "}
-                    <a href="#" style={{ color: "#ff6a00" }}>
+                    <a
+                      href="https://aigc-portal-dev.materia-logic.com/terms"
+                      target="_blank"
+                      style={{ color: "#ff6a00" }}
+                    >
                       活動條款及細則
                     </a>
                     。
@@ -755,7 +759,11 @@ export default function Registration() {
                     以上所收集的資料只用作活動登記、通訊及相關用途，並只限Alibaba
                     Cloud及其授權之服務承辦商存取。登記者有權要求查閱、更正或刪除其個人資料。如有查詢，與我們聯絡。有關詳情亦可瀏覽Alibaba
                     Cloud的{" "}
-                    <a href="#" style={{ color: "#ff6a00" }}>
+                    <a
+                      href="https://www.alibabacloud.com/help/tc/legal/latest/alibaba-cloud-international-website-privacy-policy"
+                      target="_blank"
+                      style={{ color: "#ff6a00" }}
+                    >
                       私隱政策
                     </a>
                     。

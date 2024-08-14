@@ -42,7 +42,7 @@ export default function Members({
               }}
             >
               {memberNumber === 1 ? (
-                <>成员 {memberNumber} （领导者）</>
+                <>成员 {memberNumber} （隊長）</>
               ) : (
                 <>成员 {memberNumber}</>
               )}
@@ -194,7 +194,7 @@ export default function Members({
                 <div className="input-container">
                   {" "}
                   <label style={{ fontSize: "18px", width: "100%" }}>
-                    6. 手提電話 （选修的）
+                    6. 手提電話 （選填）
                   </label>
                   <input
                     type="text"
