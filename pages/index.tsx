@@ -148,10 +148,10 @@ export default function Index() {
             paddingBottom: "0px",
           }}
         >
-          <p className="module-title">比賽目標</p>
+          <p className="module-title">比賽簡介</p>
         </section>
         <section
-          className="position-relative intro-box"
+          // className="position-relative intro-box"
           style={{
             paddingTop: "80px",
             paddingBottom: "80px",
@@ -165,7 +165,7 @@ export default function Index() {
               src="/images/tag1.png"
               alt="tag"
             />
-            <p className="text-left">
+            <p className="text-left" style={{ padding: "0px" }}>
               阿里雲有幸一直為香港各行各業的數碼轉型盡一分力，積累了豐富的行業經驗。人工智能作為新世代的科技熱點及未來趨勢之一，與雲端科技息息相關，為慶祝在港營運10周年，我們特別舉辦「雲遊通義
               –
               阿里雲香港10週年校際生成式AI比賽」，透個此次活動旨在通過與學界合作，提升教師與學生在雲端及AI領域的學習成果和效率，促進持續創新，共同培育未來科技人才。
@@ -184,16 +184,18 @@ export default function Index() {
             <div className="module-content__left">
               {/* <div className="module-content__title">活動資訊</div> */}
               <div className="module-content__desc">
-                <li>
-                  推動全港中小及特殊需要學生利用AI人工智能，激發創意，並將獨特的意念付諸實行。
-                </li>
-                <li>
-                  介紹阿里雲AI技術應用於教與學環境，以強化學生的創造能力和解難思維。
-                </li>
-                <li>
-                  {" "}
-                  邀請AI教育領域的專家、學者和實踐者分享經驗和見解；探討AI教育的趨勢、挑戰和未來發展。
-                </li>
+                <ul style={{ paddingLeft: "20px", textIndent: "-2px" }}>
+                  <li>
+                    推動全港中小及特殊需要學生利用AI人工智能，激發創意，並將獨特的意念付諸實行。
+                  </li>
+                  <li>
+                    介紹阿里雲AI技術應用於教與學環境，以強化學生的創造能力和解難思維。
+                  </li>
+                  <li>
+                    {" "}
+                    邀請AI教育領域的專家、學者和實踐者分享經驗和見解；探討AI教育的趨勢、挑戰和未來發展。
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -205,17 +207,19 @@ export default function Index() {
             <div className="module-content__left">
               {/* <div className="module-content__title">阿里雲教育產品分享</div> */}
               <div className="module-content__desc">
-                <li>
-                  參賽組別分為小學組、中學組及展能組（為特殊學校學生開設）。
-                </li>
-                <li>參賽者由學校老師代表提名，並以隊際形式報名。</li>
-                <li>參賽者必須為2024至2025學年仍然就讀該校的全日制學生。</li>
-                <li>每隊隊伍由 2 – 4 人組成，每間學校不限報名隊伍數量。</li>
-                <li>
-                  參賽者需要使用阿里雲旗下AI應用平台「通義千問」及「通義萬相」進行比賽。
-                </li>
-                <li>工作坊及賽事作品內容均以中文進行。</li>
-                <li>參賽費用全免。</li>
+                <ul style={{ paddingLeft: "20px", textIndent: "-2px" }}>
+                  <li>
+                    參賽組別分為小學組、中學組及展能組（為特殊學校學生開設）。
+                  </li>
+                  <li>參賽者由學校老師代表提名，並以隊際形式報名。</li>
+                  <li>參賽者必須為2024至2025學年仍然就讀該校的全日制學生。</li>
+                  <li>每隊隊伍由 2 – 4 人組成，每間學校不限報名隊伍數量。</li>
+                  <li>
+                    參賽者需要使用阿里雲旗下AI應用平台「通義千問」及「通義萬相」進行比賽。
+                  </li>
+                  <li>工作坊及賽事作品內容均以中文進行。</li>
+                  <li>參賽費用全免。</li>
+                </ul>
               </div>
             </div>
             {/* <div className="module-content__right">
@@ -242,7 +246,10 @@ export default function Index() {
           <div className="module-content" style={{ padding: "36px" }}>
             <div className="module-table">
               {" "}
-              <div className="module-table__row module-table__header">
+              <div
+                className="module-table__row module-table__header"
+                style={{ border: "1px solid black" }}
+              >
                 <div className="module-table__col">獎項</div>
                 <div className="module-table__col">獎品</div>
               </div>
@@ -345,46 +352,50 @@ export default function Index() {
               style={{ marginTop: "-10px" }}
             >
               創作AI 故事圖書：
-              <li>2-4人一組參賽，組員須為同校同學。</li>
-              <li>參賽者需要學習使用：</li>
-              <ul>
-                1.
-                <a
-                  href="https://tongyi.aliyun.com/qianwen"
-                  target="_blank"
-                  style={{ color: "#ff6a00" }}
-                >
-                  「通義千問」大語言模型
-                </a>{" "}
+              <ul style={{ paddingLeft: "20px", textIndent: "-2px" }}>
+                <li>2-4人一組參賽，組員須為同校同學。</li>
+                <li>參賽者需要學習使用：</li>
+                <ul>
+                  1.
+                  <a
+                    href="https://tongyi.aliyun.com/qianwen"
+                    target="_blank"
+                    style={{ color: "#ff6a00" }}
+                  >
+                    「通義千問」大語言模型
+                  </a>{" "}
+                </ul>
+                <ul>
+                  2.
+                  <a
+                    href="https://tongyi.aliyun.com/wanxiang"
+                    target="_blank"
+                    style={{ color: "#ff6a00" }}
+                  >
+                    「通義萬相」文生圖模型
+                  </a>{" "}
+                </ul>
+                <li>
+                  所有參賽者必須參加最少一場由阿里雲香港舉辦的實體工作坊；缺席者將會被取消參賽資格。
+                </li>
+                <li>參賽者須根據大會指定主題創作一本故事圖書。</li>
+                <li>參賽者可自由透過「通義千問」生成或創作內容。</li>
+                <li>所有參賽圖像必須以「通義萬相」 生成。</li>
+                <li>
+                  參賽作品檔案須以A5大小的PDF檔案格式繳交，其中包含封面(1頁)、內容(上限為30頁)、封底(1頁)。
+                </li>
+                <li>如有需要，作品可附有不多於1,000字的中文內文。</li>
+                <li>
+                  故事需展現參賽者的想像力，並包括簡單的開端、發展和結局。
+                </li>
+                <li>
+                  參賽隊伍必須同時提交以「通義」工具生成圖像及文字內容的相關模型提示
+                  (prompt)詳情。
+                </li>
+                <li>
+                  大會將根據參賽作品的AI模型的技術使用、創意和原創性、內容與主題的相關性、呈現方式和格式來進行評分。
+                </li>
               </ul>
-              <ul>
-                2.
-                <a
-                  href="https://tongyi.aliyun.com/wanxiang"
-                  target="_blank"
-                  style={{ color: "#ff6a00" }}
-                >
-                  「通義萬相」文生圖模型
-                </a>{" "}
-              </ul>
-              <li>
-                所有參賽者必須參加最少一場由阿里雲香港舉辦的實體工作坊；缺席者將會被取消參賽資格。
-              </li>
-              <li>參賽者須根據大會指定主題創作一本故事圖書。</li>
-              <li>參賽者可自由透過「通義千問」生成或創作內容。</li>
-              <li>所有參賽圖像必須以「通義萬相」 生成。</li>
-              <li>
-                參賽作品檔案須以A5大小的PDF檔案格式繳交，其中包含封面(1頁)、內容(上限為30頁)、封底(1頁)。
-              </li>
-              <li>如有需要，作品可附有不多於1,000字的中文內文。</li>
-              <li>故事需展現參賽者的想像力，並包括簡單的開端、發展和結局。</li>
-              <li>
-                參賽隊伍必須同時提交以「通義」工具生成圖像及文字內容的相關模型提示
-                (prompt)詳情。
-              </li>
-              <li>
-                大會將根據參賽作品的AI模型的技術使用、創意和原創性、內容與主題的相關性、呈現方式和格式來進行評分。
-              </li>
             </div>
           </div>
           <p
@@ -403,53 +414,58 @@ export default function Index() {
               style={{ marginTop: "-10px" }}
             >
               創作AI小說圖集：
-              <li>2-4人一組參賽，組員須為同校同學。</li>
-              <li>參賽者需要學習使用：</li>
-              <ul>
-                1.
-                <a
-                  href="https://tongyi.aliyun.com/qianwen"
-                  target="_blank"
-                  style={{ color: "#ff6a00" }}
-                >
-                  「通義千問」大語言模型
-                </a>{" "}
+              <ul style={{ paddingLeft: "20px", textIndent: "-2px" }}>
+                <li>2-4人一組參賽，組員須為同校同學。</li>
+                <li>參賽者需要學習使用：</li>
+                <ul>
+                  1.
+                  <a
+                    href="https://tongyi.aliyun.com/qianwen"
+                    target="_blank"
+                    style={{ color: "#ff6a00" }}
+                  >
+                    「通義千問」大語言模型
+                  </a>{" "}
+                </ul>
+                <ul>
+                  2.
+                  <a
+                    href="https://tongyi.aliyun.com/wanxiang"
+                    target="_blank"
+                    style={{ color: "#ff6a00" }}
+                  >
+                    「通義萬相」文生圖模型
+                  </a>{" "}
+                </ul>
+                <li>
+                  所有參賽者必須參加最少一場由阿里雲香港舉辦的實體工作坊；缺席者將會被取消參賽資格。
+                </li>
+                <li>參賽者須根據大會指定主題創作一本小說圖集。</li>
+                <li>
+                  參賽者必須使用「通義千問」
+                  的「虛擬人物」功能創作人物為故事主角，及後可自由透過「通義千問」生成或創作內容。
+                </li>
+                <li>
+                  參賽作品須至少附有1張圖像；作品所有圖像必須以「通義萬相」
+                  生成。
+                </li>
+                <li>
+                  參賽作品檔案須以A5大小的PDF檔案格式繳交，其中包含封面(1頁)、內容(上限100頁)、封底(1頁)。
+                </li>
+                <li>
+                  作品最多分為5個章節，全書不少於3,000字，不多於5,000字中文內文。
+                </li>
+                <li>
+                  故事需展現參賽者的想像力，並包括簡單的開端、發展和結局。
+                </li>
+                <li>
+                  參賽隊伍必須同時提交以「通義」工具生成圖像及文字內容的相關模型提示
+                  (prompt)詳情。
+                </li>
+                <li>
+                  大會將根據參賽作品的AI模型的技術使用、創意和原創性、內容與主題的相關性、呈現方式和格式來進行評分。
+                </li>
               </ul>
-              <ul>
-                2.
-                <a
-                  href="https://tongyi.aliyun.com/wanxiang"
-                  target="_blank"
-                  style={{ color: "#ff6a00" }}
-                >
-                  「通義萬相」文生圖模型
-                </a>{" "}
-              </ul>
-              <li>
-                所有參賽者必須參加最少一場由阿里雲香港舉辦的實體工作坊；缺席者將會被取消參賽資格。
-              </li>
-              <li>參賽者須根據大會指定主題創作一本小說圖集。</li>
-              <li>
-                參賽者必須使用「通義千問」
-                的「虛擬人物」功能創作人物為故事主角，及後可自由透過「通義千問」生成或創作內容。
-              </li>
-              <li>
-                參賽作品須至少附有1張圖像；作品所有圖像必須以「通義萬相」 生成。
-              </li>
-              <li>
-                參賽作品檔案須以A5大小的PDF檔案格式繳交，其中包含封面(1頁)、內容(上限100頁)、封底(1頁)。
-              </li>
-              <li>
-                作品最多分為5個章節，全書不少於3,000字，不多於5,000字中文內文。
-              </li>
-              <li>故事需展現參賽者的想像力，並包括簡單的開端、發展和結局。</li>
-              <li>
-                參賽隊伍必須同時提交以「通義」工具生成圖像及文字內容的相關模型提示
-                (prompt)詳情。
-              </li>
-              <li>
-                大會將根據參賽作品的AI模型的技術使用、創意和原創性、內容與主題的相關性、呈現方式和格式來進行評分。
-              </li>
             </div>
           </div>
           <p
@@ -468,48 +484,50 @@ export default function Index() {
               style={{ marginTop: "-10px" }}
             >
               創作AI小說圖集：
-              <li>2-4人一組參賽，組員須為同校同學。</li>
-              <li>參賽者需要學習使用：</li>
-              <ul>
-                1.
-                <a
-                  href="https://tongyi.aliyun.com/qianwen"
-                  target="_blank"
-                  style={{ color: "#ff6a00" }}
-                >
-                  「通義千問」大語言模型
-                </a>{" "}
-              </ul>
-              <ul>
-                2.
-                <a
-                  href="https://tongyi.aliyun.com/wanxiang"
-                  target="_blank"
-                  style={{ color: "#ff6a00" }}
-                >
-                  「通義萬相」文生圖模型
-                </a>{" "}
-              </ul>
-              <li>
-                所有參賽者必須參加最少一場由阿里雲香港舉辦的實體工作坊；缺席者將會被取消參賽資格。
-              </li>
-              <li>參賽者須以「通義萬相」生成一幅圖像作品。</li>
-              <li>參賽者可自由選擇主題，以鼓勵表達個人興趣、情感及需要。</li>
-              <li>所有參賽圖像必須以「通義萬相」 生成。</li>
-              <li>參賽作品檔案須以A3大小的PDF格式繳交。</li>
-              <li>
-                如有需要，作品可附有不多於200字的中文介紹，並使用「通義千問」幫助內容創作。
-              </li>
-              <li>
-                參賽隊伍必須同時提交以「通義」工具生成圖像及文字內容的相關模型提示
-                (prompt)詳情。
-              </li>
-              <li>
-                大會將根據參賽作品的AI模型的技術使用、創意和原創性、內容與主題的相關性、呈現方式和格式來進行評分。
-              </li>
-              {/* <li>
+              <ul style={{ paddingLeft: "20px", textIndent: "-2px" }}>
+                <li>2-4人一組參賽，組員須為同校同學。</li>
+                <li>參賽者需要學習使用：</li>
+                <ul>
+                  1.
+                  <a
+                    href="https://tongyi.aliyun.com/qianwen"
+                    target="_blank"
+                    style={{ color: "#ff6a00" }}
+                  >
+                    「通義千問」大語言模型
+                  </a>{" "}
+                </ul>
+                <ul>
+                  2.
+                  <a
+                    href="https://tongyi.aliyun.com/wanxiang"
+                    target="_blank"
+                    style={{ color: "#ff6a00" }}
+                  >
+                    「通義萬相」文生圖模型
+                  </a>{" "}
+                </ul>
+                <li>
+                  所有參賽者必須參加最少一場由阿里雲香港舉辦的實體工作坊；缺席者將會被取消參賽資格。
+                </li>
+                <li>參賽者須以「通義萬相」生成一幅圖像作品。</li>
+                <li>參賽者可自由選擇主題，以鼓勵表達個人興趣、情感及需要。</li>
+                <li>所有參賽圖像必須以「通義萬相」 生成。</li>
+                <li>參賽作品檔案須以A3大小的PDF格式繳交。</li>
+                <li>
+                  如有需要，作品可附有不多於200字的中文介紹，並使用「通義千問」幫助內容創作。
+                </li>
+                <li>
+                  參賽隊伍必須同時提交以「通義」工具生成圖像及文字內容的相關模型提示
+                  (prompt)詳情。
+                </li>
+                <li>
+                  大會將根據參賽作品的AI模型的技術使用、創意和原創性、內容與主題的相關性、呈現方式和格式來進行評分。
+                </li>
+                {/* <li>
                 大會將根據參賽作品的AI模型的技術使用、創意和原創性、內容與主題的相關性、呈現方式和格式來進行評分。
               </li> */}
+              </ul>
             </div>
           </div>
           <p
@@ -524,7 +542,10 @@ export default function Index() {
           <div className="module-content" style={{ padding: "36px" }}>
             <div className="module-table">
               {" "}
-              <div className="module-table__row module-table__header">
+              <div
+                className="module-table__row module-table__header"
+                style={{ border: "1px solid black" }}
+              >
                 <div className="module-table__col" style={{ width: "70%" }}>
                   評分範疇
                 </div>
@@ -613,7 +634,10 @@ export default function Index() {
           <div className="module-content" style={{ padding: "36px" }}>
             <div className="module-table">
               {" "}
-              <div className="module-table__row module-table__header">
+              <div
+                className="module-table__row module-table__header"
+                style={{ border: "1px solid black" }}
+              >
                 <div className="module-table__col">日期</div>
                 <div className="module-table__col">內容</div>
               </div>
@@ -647,7 +671,7 @@ export default function Index() {
             <div className="module-content__left">
               {/* <div className="module-content__title">活動資訊</div> */}
               <div className="module-content__desc">
-                <div>日期：2024年10月3日（星期四） 時間：待定 地點：待定</div>
+                <div>日期：2024年10月3日（星期四） </div>
                 <div>時間：待定</div>
                 <div>地點：待定</div>
               </div>
