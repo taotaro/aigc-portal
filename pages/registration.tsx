@@ -16,6 +16,7 @@ export default function Registration() {
   const [fixedBgHeight, setFixedBgHeight] = useState(200);
   const [teams, setTeams] = useState([{ id: 1, members: [] }]);
   const [isAgreed, setIsAgreed] = useState(false);
+  const [resetAllFields, setResetAllFields] = useState(false);
   const [formValues, setFormValues] = useState({
     schoolNameCN: "",
     schoolNameEN: "",
@@ -50,6 +51,9 @@ export default function Registration() {
   const throttledResize = throttle(onWindowResize, 200);
 
   useEffect(() => {
+    if (resetAllFields) {
+      setTeams([{ id: 1, members: [] }]);
+    }
     window.scrollTo(0, 0);
     onWindowResize();
     window.addEventListener("resize", throttledResize);
@@ -224,7 +228,9 @@ export default function Registration() {
         teacherEmail: "",
       });
       setTeams([{ id: 1, members: [] }]);
+      console.log("team members: ", teams);
       setIsAgreed(false);
+      setResetAllFields(true);
 
       return;
     } catch (error) {
@@ -295,7 +301,7 @@ export default function Registration() {
                 >
                   報名表
                 </div>{" "}
-                <p
+                <div
                   style={{
                     textAlign: "left",
                     fontSize: "24px",
@@ -323,7 +329,7 @@ export default function Registration() {
                   <div style={{ fontWeight: "bold" }}>
                     截止報名為2024年9月20日23:59。
                   </div>
-                </p>
+                </div>
               </div>
               <div
                 className="form"
@@ -346,18 +352,7 @@ export default function Registration() {
                     >
                       學校聯絡資料
                     </div>
-                    <div
-                      style={
-                        {
-                          // display: "flex",
-                          // alignSelf: "stretch",
-                          // gap: "24px",
-                          // alignContent: "flex-start",
-                          // alignItems: "flex-start",
-                          // flexWrap: "wrap",
-                        }
-                      }
-                    >
+                    <div>
                       <div
                         style={{
                           display: "flex",
@@ -622,12 +617,11 @@ export default function Registration() {
                     </div>
                     <div
                       style={{
-                        // fontSize: "24px",
                         paddingBottom: "24px",
                       }}
                     >
                       {teams.map((team, index) => (
-                        <>
+                        <div key={team.id}>
                           <div
                             key={team.id}
                             style={{
@@ -669,10 +663,10 @@ export default function Registration() {
                               teamNumber={team.id}
                               onTeamDataChange={handleTeamDataChange}
                               membersInfo={team.members}
-                              reset={formValues.teacherEmail === ""}
+                              reset={resetAllFields}
                             />
                           </div>
-                        </>
+                        </div>
                       ))}
                     </div>
                   </fieldset>
@@ -683,32 +677,10 @@ export default function Registration() {
                 style={{
                   display: "flex",
                   justifyContent: "center",
-                  // flexDirection: "column",
-                  // gap: "24px",
                   alignItems: "center",
                   alignSelf: "center",
                 }}
               >
-                {/* <button
-                  type="button"
-                  style={{
-                    display: "flex",
-                    borderRadius: "22px",
-                    // background: "#FE6A00",
-                    // color: "#fff",
-                    color: "black",
-                    borderColor: "#FE6A00",
-                    background: "transparent",
-                    padding: "12px 32px",
-                    width: "40%",
-                    // textAlign: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                  onClick={addTeam}
-                >
-                  添加团队
-                </button> */}
                 <section
                   className="position-relative module-box"
                   style={{
@@ -731,40 +703,6 @@ export default function Registration() {
                     添加团队
                   </div>
                 </section>
-                {/* <section className="position-relative module-box">
-                  <div
-                    className="module-button"
-                    onClick={deleteLastTeam}
-                    style={{
-                      borderColor: teams.length <= 1 ? "darkgrey" : "#FE6A00",
-                      background: teams.length <= 1 ? "darkgrey" : "#ff6a00",
-                      color: teams.length <= 1 ? "white" : "black",
-                    }}
-                  >
-                    删除团队
-                  </div>
-                </section> */}
-                {/* <button
-                  type="button"
-                  style={{
-                    display: "flex",
-                    borderRadius: "22px",
-                    // background: "#FE6A00",
-                    // color: "black",
-                    borderColor: teams.length <= 1 ? "darkgrey" : "#FE6A00",
-                    background: teams.length <= 1 ? "darkgrey" : "transparent",
-                    color: teams.length <= 1 ? "white" : "black",
-                    padding: "12px 32px",
-                    width: "40%",
-                    // textAlign: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                  onClick={deleteLastTeam}
-                  disabled={teams.length <= 1}
-                >
-                  删除团队
-                </button> */}
               </div>
               <section
                 style={{
@@ -788,7 +726,7 @@ export default function Registration() {
                 >
                   條款及細則
                 </div>
-                <p
+                <div
                   style={{
                     textAlign: "left",
                     fontSize: "24px",
@@ -842,7 +780,7 @@ export default function Registration() {
                       我同意。
                     </label>
                   </div>
-                </p>
+                </div>
               </section>
 
               <div
@@ -854,24 +792,6 @@ export default function Registration() {
                   alignSelf: "center",
                 }}
               >
-                {/* <button
-                  type="submit"
-                  style={{
-                    display: "flex",
-                    borderRadius: "22px",
-                    background: "#FE6A00",
-                    color: "#fff",
-                    borderColor: "#FE6A00",
-                    padding: "12px 32px",
-                    width: "50%",
-                    // textAlign: "center",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                  onClick={handleSubmit}
-                >
-                  提交報名表
-                </button> */}
                 <section
                   className="position-relative module-box"
                   style={{ padding: "24px" }}
@@ -935,7 +855,6 @@ export default function Registration() {
         </section>
       </div>
       <Toaster />
-      {/* <ToastContainer /> */}
     </>
   );
 }
