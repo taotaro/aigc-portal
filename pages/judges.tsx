@@ -96,9 +96,10 @@ export default function Judges() {
               flexWrap: "wrap",
             }}
           >
-            {judgeData.map((item) => {
+            {judgeData.map((item, index) => {
               return (
                 <Judge
+                  key={index}
                   judgeName={item.name}
                   judgeDescription={item.description}
                 />
