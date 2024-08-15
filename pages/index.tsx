@@ -71,6 +71,7 @@ export default function Index() {
     { name: "Materia Logic", logo: "/images/ml.png" },
     { name: "HKACE", logo: "/images/hkace.png" },
     { name: "Aitle", logo: "/images/aitle.png" },
+    { name: "SteelSeries", logo: "/images/steelseries.png" },
   ];
 
   function onWindowResize() {
@@ -159,17 +160,22 @@ export default function Index() {
           }}
         >
           {/* <p className="module-title">比賽簡介</p> */}
-          <div className="intro" style={{ marginTop: "24px" }}>
+          <div className="intro" style={{ margin: "24px" }}>
             <img
               className="intro-tag intro-tag-left"
               src="/images/tag1.png"
               alt="tag"
             />
-            <p className="text-left" style={{ padding: "0px" }}>
-              阿里雲有幸一直為香港各行各業的數碼轉型盡一分力，積累了豐富的行業經驗。人工智能作為新世代的科技熱點及未來趨勢之一，與雲端科技息息相關，為慶祝在港營運10周年，我們特別舉辦「雲遊通義
-              –
-              阿里雲香港10週年校際生成式AI比賽」，透個此次活動旨在通過與學界合作，提升教師與學生在雲端及AI領域的學習成果和效率，促進持續創新，共同培育未來科技人才。
-            </p>
+            <div
+              style={{ padding: "24px", fontSize: "24px", fontWeight: "bold" }}
+            >
+              <div className="text-left">
+                阿里雲有幸一直為香港各行各業的數碼轉型盡一分力，積累了豐富的行業經驗。人工智能作為新世代的科技熱點及未來趨勢之一，與雲端科技息息相關，為慶祝在港營運10周年，我們特別舉辦「雲遊通義
+                –
+                阿里雲香港10週年校際生成式AI比賽」，透個此次活動旨在通過與學界合作，提升教師與學生在雲端及AI領域的學習成果和效率，促進持續創新，共同培育未來科技人才。
+              </div>
+            </div>
+
             <img
               className="intro-tag intro-tag-right"
               src="/images/tag1.png"
@@ -707,25 +713,47 @@ export default function Index() {
             <div className="module-content__left">
               {/* <div className="module-content__title">活動資訊</div> */}
               <div className="module-content__desc">
-                如有任何活動問題，歡迎聯絡 Gamenoodlesoup
+                如有任何活動問題，歡迎聯絡{" "}
+                <a
+                  href="mailto:edu@gamenoodlesoup.com"
+                  // target="_blank"
+                  style={{ color: "#ff6a00" }}
+                >
+                  Gamenoodlesoup
+                </a>
                 (edu@gamenoodlesoup.com / 30011280)
               </div>
             </div>
             <div className="module-content__desc">
-              <div>
-                參賽者必須同意在參與活動時遵守活動條款及細則，詳情請 按此 查閱。
+              <div style={{ marginBottom: "24px" }}>
+                參賽者必須同意在參與活動時遵守活動條款及細則，
+                <a
+                  href="https://aigc-portal-dev.materia-logic.com/terms"
+                  target="_blank"
+                  style={{ color: "#ff6a00" }}
+                >
+                  詳情請按此查閱
+                </a>
+                。
               </div>
               <div>
                 是次活動所收集的資料只用作活動登記、通訊及相關用途，並只限Alibaba
-                Cloud及其授權之服務承辦商存取。登記者有權要求查閱、更正或刪除其個人資料。如有查詢，與我們聯絡。有關詳情亦可瀏覽Alibaba
-                Cloud的 私隱政策 。
+                Cloud及其授權之服務承辦商存取。登記者有權要求查閱、更正或刪除其個人資料。如有查詢，與我們聯絡。有關詳情亦可瀏覽{" "}
+                <a
+                  href="https://www.alibabacloud.com/help/tc/legal/latest/alibaba-cloud-international-website-privacy-policy"
+                  target="_blank"
+                  style={{ color: "#ff6a00" }}
+                >
+                  Alibaba Cloud的私隱政策
+                </a>{" "}
+                。
               </div>
             </div>
           </div>
         </section>
         {/* 活動支持 */}
         <section className="position-relative module-box">
-          <p className="module-title">活動支持</p>
+          <p className="module-title">活動主辦</p>
           <div className="module-logos">
             {LogoList.filter((item) => item.name === "Alibaba").map((item) => {
               return (
@@ -742,6 +770,9 @@ export default function Index() {
               );
             })}
           </div>
+          <p className="module-title" style={{ paddingTop: "24px" }}>
+            支持單位
+          </p>
           <div className="module-logos">
             {LogoList.filter((item) => item.name !== "Alibaba").map((item) => {
               return (

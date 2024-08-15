@@ -36,6 +36,7 @@ export default function Registration() {
     { name: "Materia Logic", logo: "/images/ml.png" },
     { name: "HKACE", logo: "/images/hkace.png" },
     { name: "Aitle", logo: "/images/aitle.png" },
+    { name: "SteelSeries", logo: "/images/steelseries.png" },
   ];
 
   function onWindowResize() {
@@ -255,7 +256,7 @@ export default function Registration() {
       <div className="module-container">
         {/* Registration form */}
         <section className="position-relative intro-box">
-          <div className="intro">
+          <div className="intro" style={{ margin: "24px" }}>
             <img
               className="intro-tag intro-tag-left"
               src="/images/tag1.png"
@@ -461,11 +462,38 @@ export default function Registration() {
                             }}
                           />
                         </div>
+
+                        {/* school phone */}
+                        <div className="input-container">
+                          {" "}
+                          <label style={{ fontSize: "18px", width: "100%" }}>
+                            5. 電話（學校）
+                            <span style={{ color: "red" }}>*</span>
+                          </label>
+                          <input
+                            type="text"
+                            name="teacherPhone"
+                            value={formValues.teacherPhone}
+                            onChange={handleInputChange}
+                            required
+                            placeholder="請輸入"
+                            style={{
+                              borderRadius: "10px",
+                              height: "50px",
+                              width: "100%",
+                              gap: "16px",
+                              padding: "7px 26px 7px 20px",
+                              marginRight: "10px",
+                              border: "2px solid #d9d9d9",
+                            }}
+                          />
+                        </div>
+
                         {/* title */}
                         <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
-                            5. 學校地址（中文）
+                            6. 老師稱謂
                             <span style={{ color: "red" }}>*</span>
                           </label>
                           <select
@@ -497,7 +525,7 @@ export default function Registration() {
                         <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
-                            6. 主要聯絡老師姓名 （中文）
+                            7. 聯絡老師姓名（中文）
                             <span style={{ color: "red" }}>*</span>
                           </label>
                           <input
@@ -521,7 +549,7 @@ export default function Registration() {
                         <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
-                            7. 主要聯絡老師姓名 （英文）
+                            8. 聯絡老師姓名（英文）
                             <span style={{ color: "red" }}>*</span>
                           </label>
                           <input
@@ -543,30 +571,7 @@ export default function Registration() {
                         </div>
 
                         {/* contact (telepone and mobile) */}
-                        <div className="input-container">
-                          {" "}
-                          <label style={{ fontSize: "18px", width: "100%" }}>
-                            8. 電話（學校）
-                            <span style={{ color: "red" }}>*</span>
-                          </label>
-                          <input
-                            type="text"
-                            name="teacherPhone"
-                            value={formValues.teacherPhone}
-                            onChange={handleInputChange}
-                            required
-                            placeholder="請輸入"
-                            style={{
-                              borderRadius: "10px",
-                              height: "50px",
-                              width: "100%",
-                              gap: "16px",
-                              padding: "7px 26px 7px 20px",
-                              marginRight: "10px",
-                              border: "2px solid #d9d9d9",
-                            }}
-                          />
-                        </div>
+
                         <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
@@ -827,7 +832,7 @@ export default function Registration() {
         </section>
         {/* {footer} */}
         <section className="position-relative module-box">
-          <p className="module-title">活動支持</p>
+          <p className="module-title">活動主辦</p>
           <div className="module-logos">
             {LogoList.filter((item) => item.name === "Alibaba").map((item) => {
               return (
@@ -844,6 +849,9 @@ export default function Registration() {
               );
             })}
           </div>
+          <p className="module-title" style={{ paddingTop: "24px" }}>
+            支持單位
+          </p>
           <div className="module-logos">
             {LogoList.filter((item) => item.name !== "Alibaba").map((item) => {
               return (

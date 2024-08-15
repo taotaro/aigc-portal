@@ -14,6 +14,7 @@ export default function Judges() {
     { name: "Materia Logic", logo: "/images/ml.png" },
     { name: "HKACE", logo: "/images/hkace.png" },
     { name: "Aitle", logo: "/images/aitle.png" },
+    { name: "SteelSeries", logo: "/images/steelseries.png" },
   ];
 
   const judgeData = [
@@ -109,7 +110,7 @@ export default function Judges() {
         </section>
         {/* {footer} */}
         <section className="position-relative module-box">
-          <p className="module-title">活動支持</p>
+          <p className="module-title">活動主辦</p>
           <div className="module-logos">
             {LogoList.filter((item) => item.name === "Alibaba").map((item) => {
               return (
@@ -126,6 +127,9 @@ export default function Judges() {
               );
             })}
           </div>
+          <p className="module-title" style={{ paddingTop: "24px" }}>
+            支持單位
+          </p>
           <div className="module-logos">
             {LogoList.filter((item) => item.name !== "Alibaba").map((item) => {
               return (

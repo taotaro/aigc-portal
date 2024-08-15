@@ -17,6 +17,7 @@ export default function Terms() {
     { name: "Materia Logic", logo: "/images/ml.png" },
     { name: "HKACE", logo: "/images/hkace.png" },
     { name: "Aitle", logo: "/images/aitle.png" },
+    { name: "SteelSeries", logo: "/images/steelseries.png" },
   ];
 
   function onWindowResize() {
@@ -249,7 +250,7 @@ export default function Terms() {
         </section>
         {/* {footer} */}
         <section className="position-relative module-box">
-          <p className="module-title">活動支持</p>
+          <p className="module-title">活動主辦</p>
           <div className="module-logos">
             {LogoList.filter((item) => item.name === "Alibaba").map((item) => {
               return (
@@ -266,6 +267,9 @@ export default function Terms() {
               );
             })}
           </div>
+          <p className="module-title" style={{ paddingTop: "24px" }}>
+            支持單位
+          </p>
           <div className="module-logos">
             {LogoList.filter((item) => item.name !== "Alibaba").map((item) => {
               return (
