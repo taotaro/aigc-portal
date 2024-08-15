@@ -3,9 +3,19 @@
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Ensure the header is on top */
+  z-index: 2;
   backdrop-filter: blur(10px); /* Check if this makes content hard to read */
 }
+
+/* .index-header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 2;
+	backdrop-filter: blur(10px);
+} */
 
 .navbar {
   width: 100%;
