@@ -712,12 +712,15 @@ export default function Index() {
           <div className="module-content" style={{ padding: "36px" }}>
             <div className="module-content__left">
               {/* <div className="module-content__title">活動資訊</div> */}
-              <div className="module-content__desc">
+              <div
+                className="module-content__desc"
+                style={{ wordWrap: "break-word", overflowWrap: "break-word" }}
+              >
                 如有任何活動問題，歡迎聯絡{" "}
                 <a
                   href="mailto:edu@gamenoodlesoup.com"
                   // target="_blank"
-                  style={{ color: "#ff6a00" }}
+                  style={{ color: "#ff6a00", wordBreak: "break-all" }}
                 >
                   Gamenoodlesoup
                 </a>
