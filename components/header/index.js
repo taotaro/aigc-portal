@@ -15,7 +15,7 @@ export default function Header(props) {
     { label: "比賽要求", current: "INDEX", href: "/#requirementsModule" },
     { label: "日程", current: "INDEX", href: "/#scheduleModule" },
     { label: "立即報名", current: "REGISTRATION", href: "/registration" },
-    { label: "活動評委", current: "JUDGES", href: "/judges" },
+    // { label: "活動評委", current: "JUDGES", href: "/judges" },
     { label: "活動條款及細則", current: "TERMS", href: "/terms" },
   ];
 
