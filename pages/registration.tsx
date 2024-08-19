@@ -128,7 +128,7 @@ export default function Registration() {
 
       for (let field of fieldsToCheck) {
         if (!formValues[field]) {
-          toast.error("Please fill in all required fields.");
+          toast.error(`Please fill in all required fields. ${field}`);
           return false;
         }
       }
