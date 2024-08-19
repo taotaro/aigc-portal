@@ -283,7 +283,7 @@ export default function Registration() {
                     flexDirection: "column",
                     justifyContent: "center",
                     gap: "10px",
-                    paddingBottom: "80px",
+                    paddingBottom: "40px",
                   }}
                 >
                   雲遊通義 – 阿里雲香港10週年校際生成式AI比賽

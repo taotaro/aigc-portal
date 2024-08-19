@@ -11,7 +11,7 @@ export default function Header(props) {
 
   const NavList = [
     { label: "首頁", current: "INDEX", href: "/#indexModule" },
-    { label: "游戏资讯", current: "INDEX", href: "/#gameInfoModule" },
+    // { label: "游戏资讯", current: "INDEX", href: "/#gameInfoModule" },
     { label: "比賽要求", current: "INDEX", href: "/#requirementsModule" },
     { label: "日程", current: "INDEX", href: "/#scheduleModule" },
     { label: "立即報名", current: "REGISTRATION", href: "/registration" },
