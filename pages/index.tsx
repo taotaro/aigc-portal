@@ -194,7 +194,11 @@ export default function Index() {
           </div>
         </section>
         {/* game goal */}
-        <section className="position-relative module-box" id="gameInfoModule">
+        <section
+          className="position-relative module-box"
+          id="gameInfoModule"
+          style={{ scrollMarginTop: "100px" }}
+        >
           <p className="module-title">比賽目標</p>
           <div className="module-content" style={{ padding: "36px" }}>
             <div className="module-content__left">
@@ -217,7 +221,11 @@ export default function Index() {
           </div>
         </section>
         {/* things to note */}
-        <section className="position-relative module-box" id="gameInfoModule">
+        <section
+          className="position-relative module-box"
+          id="gameInfoModule"
+          style={{ scrollMarginTop: "100px" }}
+        >
           <p className="module-title">注意事項</p>
           <div className="module-content" style={{ padding: "36px" }}>
             <div className="module-content__left">
@@ -248,7 +256,7 @@ export default function Index() {
           </div>
         </section>
         {/* certificates and prizes */}
-        <section className="position-relative module-box" id="gameInfoModule">
+        {/* <section className="position-relative module-box" id="gameInfoModule">
           <p className="module-title">證書及獎品</p>
           <p
             style={{
@@ -290,7 +298,6 @@ export default function Index() {
               </div>
             </div>
             <div className="module-content__left">
-              {/* <div className="module-content__title">活動資訊</div> */}
               <div className="module-content__desc">
                 <p>
                   所有合資格的參賽者均可獲得由阿里雲頒發的「阿里雲生成式AI校際比賽」
@@ -309,7 +316,6 @@ export default function Index() {
             學校獎項
           </p>
           <div className="module-content" style={{ padding: "36px" }}>
-            {/* <div className="module-content__title">活動資訊</div> */}
             <div
               className="module-content__desc"
               style={{ marginTop: "-10px" }}
@@ -317,11 +323,12 @@ export default function Index() {
               派出最多同學參賽的學校將獲頒最踴躍參與獎，將得到阿里雲代金券XXX元。
             </div>
           </div>
-        </section>
+        </section> */}
         {/* 精彩內容包括 */}
         <section
           className="position-relative module-box"
           id="requirementsModule"
+          style={{ scrollMarginTop: "100px" }}
         >
           <p className="module-title">比賽要求</p>
           <div className="module-content" style={{ padding: "36px" }}>
@@ -643,6 +650,7 @@ export default function Index() {
               padding: "36px 36px 0px 36px",
               fontWeight: "bold",
               fontSize: "28px",
+              scrollMarginTop: "100px",
             }}
             id="scheduleModule"
           >
@@ -696,7 +704,11 @@ export default function Index() {
           </div>
         </section>
         {/* schedule workshop */}
-        <section className="position-relative module-box" id="scheduleModule">
+        <section
+          className="position-relative module-box"
+          id="scheduleModule"
+          style={{ scrollMarginTop: "100px" }}
+        >
           <p className="module-title">頒獎禮</p>
           <div className="module-content" style={{ padding: "36px" }}>
             <div className="module-content__left">
@@ -718,7 +730,11 @@ export default function Index() {
             </a>
           </div>
         </section>
-        <section className="position-relative module-box" id="gameInfoModule">
+        <section
+          className="position-relative module-box"
+          id="gameInfoModule"
+          style={{ scrollMarginTop: "100px" }}
+        >
           <p className="module-title">活動查詢及聯絡</p>
           <div className="module-content" style={{ padding: "36px" }}>
             <div className="module-content__left">
