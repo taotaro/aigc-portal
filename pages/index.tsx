@@ -644,6 +644,7 @@ export default function Index() {
               fontWeight: "bold",
               fontSize: "28px",
             }}
+            id="scheduleModule"
           >
             比賽日程
           </p>
@@ -681,7 +682,7 @@ export default function Index() {
           </div>
         </section>
         {/* schedule workshop */}
-        <section className="position-relative module-box" id="scheduleModule">
+        <section className="position-relative module-box">
           <p className="module-title">比賽工作坊</p>
           <div className="module-content" style={{ padding: "36px" }}>
             <div className="module-content__left">
