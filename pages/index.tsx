@@ -157,6 +157,10 @@ export default function Index() {
             paddingTop: "80px",
             paddingBottom: "80px",
             marginTop: "0px",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            textAlign: "center", // Ensure the text inside the section is centered
           }}
         >
           {/* <p className="module-title">比賽簡介</p> */}
