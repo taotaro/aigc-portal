@@ -5,6 +5,7 @@ export default function Members({
   memberNumber,
   memberData,
   onMemberDataChange,
+  isSubmitted,
 }) {
   const { t } = useTranslation("common");
 
@@ -93,7 +94,7 @@ export default function Members({
                       border: "2px solid #d9d9d9",
                     }}
                   />
-                  {!memberData.studentNameCN && (
+                  {isSubmitted && !memberData.studentNameCN && (
                     <div
                       style={{
                         color: "red",
@@ -125,7 +126,7 @@ export default function Members({
                       border: "2px solid #d9d9d9",
                     }}
                   />
-                  {!memberData.studentNameEN && (
+                  {isSubmitted && !memberData.studentNameEN && (
                     <div
                       style={{
                         color: "red",
@@ -159,7 +160,7 @@ export default function Members({
                       border: "2px solid #d9d9d9",
                     }}
                   />
-                  {!memberData.studentYearOfBirth && (
+                  {isSubmitted && !memberData.studentYearOfBirth && (
                     <div
                       style={{
                         color: "red",
@@ -196,7 +197,7 @@ export default function Members({
                     <option value="Male">男性</option>
                     <option value="Female">女性</option>
                   </select>
-                  {!memberData.studentGender && (
+                  {isSubmitted && !memberData.studentGender && (
                     <div
                       style={{
                         color: "red",
@@ -230,7 +231,7 @@ export default function Members({
                       border: "2px solid #d9d9d9",
                     }}
                   />
-                  {!memberData.studentGrade && (
+                  {isSubmitted && !memberData.studentGrade && (
                     <div
                       style={{
                         color: "red",

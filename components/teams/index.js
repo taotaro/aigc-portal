@@ -9,6 +9,7 @@ export default function Teams({
   onTeamDataChange,
   reset,
   membersInfo,
+  isSubmitted,
 }) {
   const { t } = useTranslation("common");
   const [members, setMembers] = useState([
@@ -92,6 +93,7 @@ export default function Teams({
               memberNumber={member.id}
               memberData={member.data}
               onMemberDataChange={handleMemberDataChange}
+              isSubmitted={isSubmitted}
             />
             {index === members.length - 1 && members.length > 2 && (
               <div

@@ -29,6 +29,7 @@ export default function Registration() {
     teacherPhone: "",
     teacherEmail: "",
   });
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const LogoList = [
     { name: "Alibaba", logo: "/images/ali.jpeg" },
@@ -109,6 +110,7 @@ export default function Registration() {
   // };
 
   const handleSubmit = async (e) => {
+    setIsSubmitted(true);
     console.log("submit button pressed test");
     e.preventDefault();
 
@@ -387,7 +389,7 @@ export default function Registration() {
                               border: "2px solid #d9d9d9",
                             }}
                           />
-                          {!formValues.schoolNameCN && (
+                          {isSubmitted && !formValues.schoolNameCN && (
                             <div
                               style={{
                                 color: "red",
@@ -419,7 +421,7 @@ export default function Registration() {
                               border: "2px solid #d9d9d9",
                             }}
                           />
-                          {!formValues.schoolNameEN && (
+                          {isSubmitted && !formValues.schoolNameEN && (
                             <div
                               style={{
                                 color: "red",
@@ -453,7 +455,7 @@ export default function Registration() {
                               border: "2px solid #d9d9d9",
                             }}
                           />
-                          {!formValues.schoolAddressCN && (
+                          {isSubmitted && !formValues.schoolAddressCN && (
                             <div
                               style={{
                                 color: "red",
@@ -485,7 +487,7 @@ export default function Registration() {
                               border: "2px solid #d9d9d9",
                             }}
                           />
-                          {!formValues.schoolAddressEN && (
+                          {isSubmitted && !formValues.schoolAddressEN && (
                             <div
                               style={{
                                 color: "red",
@@ -520,7 +522,7 @@ export default function Registration() {
                               border: "2px solid #d9d9d9",
                             }}
                           />
-                          {!formValues.teacherPhone && (
+                          {isSubmitted && !formValues.teacherPhone && (
                             <div
                               style={{
                                 color: "red",
@@ -562,7 +564,7 @@ export default function Registration() {
                             <option value="Prof.">教授</option>
                             <option value="Dr.">博士</option>
                           </select>
-                          {!formValues.teacherTitle && (
+                          {isSubmitted && !formValues.teacherTitle && (
                             <div
                               style={{
                                 color: "red",
@@ -597,7 +599,7 @@ export default function Registration() {
                               border: "2px solid #d9d9d9",
                             }}
                           />
-                          {!formValues.teacherNameCN && (
+                          {isSubmitted && !formValues.teacherNameCN && (
                             <div
                               style={{
                                 color: "red",
@@ -629,7 +631,7 @@ export default function Registration() {
                               border: "2px solid #d9d9d9",
                             }}
                           />
-                          {!formValues.teacherNameEN && (
+                          {isSubmitted && !formValues.teacherNameEN && (
                             <div
                               style={{
                                 color: "red",
@@ -664,7 +666,7 @@ export default function Registration() {
                               border: "2px solid #d9d9d9",
                             }}
                           />
-                          {!formValues.schoolPhone && (
+                          {isSubmitted && !formValues.schoolPhone && (
                             <div
                               style={{
                                 color: "red",
@@ -698,7 +700,7 @@ export default function Registration() {
                               border: "2px solid #d9d9d9",
                             }}
                           />
-                          {!formValues.teacherEmail && (
+                          {isSubmitted && !formValues.teacherEmail && (
                             <div
                               style={{
                                 color: "red",
@@ -759,6 +761,7 @@ export default function Registration() {
                               onTeamDataChange={handleTeamDataChange}
                               membersInfo={team.members}
                               reset={resetAllFields}
+                              isSubmitted={isSubmitted}
                             />
                           </div>
                         </div>
