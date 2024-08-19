@@ -467,7 +467,7 @@ export default function Registration() {
                         <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
-                            5. 電話（學校）
+                            5. 學校電話
                             <span style={{ color: "red" }}>*</span>
                           </label>
                           <input
@@ -493,7 +493,7 @@ export default function Registration() {
                         <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
-                            6. 老師稱謂
+                            6. 聯絡老師稱謂
                             <span style={{ color: "red" }}>*</span>
                           </label>
                           <select
@@ -525,7 +525,7 @@ export default function Registration() {
                         <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
-                            7. 聯絡老師姓名（中文）
+                            7. 聯絡老師手提電話
                             <span style={{ color: "red" }}>*</span>
                           </label>
                           <input
@@ -549,7 +549,7 @@ export default function Registration() {
                         <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
-                            8. 聯絡老師姓名（英文）
+                            8. 聯絡老師電子郵箱
                             <span style={{ color: "red" }}>*</span>
                           </label>
                           <input
@@ -790,7 +790,7 @@ export default function Registration() {
                       htmlFor="agree"
                       style={{ fontSize: "18px", cursor: "pointer" }}
                     >
-                      我同意。
+                      我已經閱讀並同意以上的活動條款及細則。
                     </label>
                   </div>
                 </div>

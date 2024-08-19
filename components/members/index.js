@@ -194,7 +194,7 @@ export default function Members({
                 <div className="input-container">
                   {" "}
                   <label style={{ fontSize: "18px", width: "100%" }}>
-                    6. 手提電話 (不需要)
+                    6. 手提電話 (選填)
                   </label>
                   <input
                     type="text"
@@ -217,7 +217,7 @@ export default function Members({
                 <div className="input-container">
                   {" "}
                   <label style={{ fontSize: "18px", width: "100%" }}>
-                    7. 電子郵箱 (不需要)
+                    7. 電子郵箱 (選填)
                   </label>
                   <input
                     type="text"
