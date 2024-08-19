@@ -317,6 +317,9 @@
 }
 
 @media (max-width: 860px) {
+  .input-container {
+    width: 100%;
+  }
   .title {
     font-size: 32px;
     letter-spacing: 12px;

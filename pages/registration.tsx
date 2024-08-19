@@ -255,8 +255,8 @@ export default function Registration() {
       />
       <div className="module-container">
         {/* Registration form */}
-        <section className="position-relative intro-box">
-          <div className="intro" style={{ margin: "24px" }}>
+        <section className="position-relative module-box">
+          <div className="module-content" style={{ margin: "24px" }}>
             <img
               className="intro-tag intro-tag-left"
               src="/images/tag1.png"

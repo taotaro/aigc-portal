@@ -152,7 +152,7 @@ export default function Index() {
           <p className="module-title">比賽簡介</p>
         </section>
         <section
-          // className="position-relative intro-box"
+          className="position-relative module-box"
           style={{
             paddingTop: "80px",
             paddingBottom: "80px",
@@ -164,14 +164,20 @@ export default function Index() {
           }}
         >
           {/* <p className="module-title">比賽簡介</p> */}
-          <div className="intro" style={{ margin: "24px" }}>
+          <div className="module-content ">
             <img
               className="intro-tag intro-tag-left"
               src="/images/tag1.png"
               alt="tag"
             />
             <div
-              style={{ padding: "24px", fontSize: "24px", fontWeight: "bold" }}
+              // className="module-content__left"
+              style={{
+                fontSize: "24px",
+                fontWeight: "bold",
+                // minWidth: "280px",
+                padding: "36px",
+              }}
             >
               <div className="text-left">
                 阿里雲有幸一直為香港各行各業的數碼轉型盡一分力，積累了豐富的行業經驗。人工智能作為新世代的科技熱點及未來趨勢之一，與雲端科技息息相關，為慶祝在港營運10周年，我們特別舉辦「雲遊通義
