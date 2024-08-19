@@ -525,7 +525,7 @@ export default function Registration() {
                         <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
-                            7. 聯絡老師手提電話
+                            7. 聯絡老師姓名 (中文)
                             <span style={{ color: "red" }}>*</span>
                           </label>
                           <input
@@ -549,7 +549,7 @@ export default function Registration() {
                         <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
-                            8. 聯絡老師電子郵箱
+                            8. 聯絡老師姓名 (英文)
                             <span style={{ color: "red" }}>*</span>
                           </label>
                           <input
@@ -575,7 +575,8 @@ export default function Registration() {
                         <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
-                            9. 手提電話 <span style={{ color: "red" }}>*</span>
+                            9. 聯絡老師手提電話{" "}
+                            <span style={{ color: "red" }}>*</span>
                           </label>
                           <input
                             type="text"
@@ -598,7 +599,8 @@ export default function Registration() {
                         <div className="input-container">
                           {" "}
                           <label style={{ fontSize: "18px", width: "100%" }}>
-                            10. 電子郵箱 <span style={{ color: "red" }}>*</span>
+                            10. 聯絡老師電子郵箱{" "}
+                            <span style={{ color: "red" }}>*</span>
                           </label>
                           <input
                             type="email"
