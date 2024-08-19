@@ -22,7 +22,7 @@ export default function Registration() {
     schoolNameEN: "",
     schoolAddressCN: "",
     schoolAddressEN: "",
-    teacherTitle: "Mr.",
+    teacherTitle: "",
     teacherNameCN: "",
     teacherNameEN: "",
     schoolPhone: "",
@@ -128,7 +128,8 @@ export default function Registration() {
 
       for (let field of fieldsToCheck) {
         if (!formValues[field]) {
-          toast.error(`Please fill in all required fields. ${field}`);
+          toast.error(`請填寫所有必填欄位。`);
+
           return false;
         }
       }
@@ -136,9 +137,7 @@ export default function Registration() {
       for (let team of teams) {
         console.log(team);
         if (team.members.length === 0) {
-          toast.error(
-            "Please fill in atleast one team information to proceed. "
-          );
+          toast.error("請填寫至少一個團隊資訊才能繼續。 ");
           console.log("not members");
           return false;
         }
@@ -153,9 +152,7 @@ export default function Registration() {
 
           for (let field of memberFieldsToCheck) {
             if (!member.data[field]) {
-              toast.error(
-                "Please fill in all required fields for all team members."
-              );
+              toast.error("請填寫所有團隊成員的所有必填欄位。");
               console.log("not filled");
               return false;
             }
@@ -198,7 +195,7 @@ export default function Registration() {
     };
 
     if (!isAgreed) {
-      toast.error("Please agree to the terms and conditions.");
+      toast.error("請同意條款和條件。");
       return;
     }
 
@@ -215,7 +212,7 @@ export default function Registration() {
         toast.error(response.data.data);
         return;
       }
-      toast.success("Registration successful!");
+      toast.success("註冊成功！");
       setFormValues({
         schoolNameCN: "",
         schoolNameEN: "",
@@ -236,7 +233,7 @@ export default function Registration() {
       return;
     } catch (error) {
       console.error(error);
-      toast.error("Registration failed! Please try again");
+      toast.error("註冊失敗！請重試");
     }
   };
 
@@ -390,6 +387,15 @@ export default function Registration() {
                               border: "2px solid #d9d9d9",
                             }}
                           />
+                          {!formValues.schoolNameCN && (
+                            <div
+                              style={{
+                                color: "red",
+                              }}
+                            >
+                              請輸入學校名稱（中文）
+                            </div>
+                          )}
                         </div>
                         <div className="input-container">
                           {" "}
@@ -413,6 +419,15 @@ export default function Registration() {
                               border: "2px solid #d9d9d9",
                             }}
                           />
+                          {!formValues.schoolNameEN && (
+                            <div
+                              style={{
+                                color: "red",
+                              }}
+                            >
+                              請輸入學校名稱（英文）
+                            </div>
+                          )}
                         </div>
                         {/* school address */}
                         <div className="input-container">
@@ -438,6 +453,15 @@ export default function Registration() {
                               border: "2px solid #d9d9d9",
                             }}
                           />
+                          {!formValues.schoolAddressCN && (
+                            <div
+                              style={{
+                                color: "red",
+                              }}
+                            >
+                              請輸入學校地址（中文）
+                            </div>
+                          )}
                         </div>
                         <div className="input-container">
                           {" "}
@@ -461,6 +485,15 @@ export default function Registration() {
                               border: "2px solid #d9d9d9",
                             }}
                           />
+                          {!formValues.schoolAddressEN && (
+                            <div
+                              style={{
+                                color: "red",
+                              }}
+                            >
+                              請輸入學校地址（英文）
+                            </div>
+                          )}
                         </div>
 
                         {/* school phone */}
@@ -471,7 +504,7 @@ export default function Registration() {
                             <span style={{ color: "red" }}>*</span>
                           </label>
                           <input
-                            type="text"
+                            type="number"
                             name="teacherPhone"
                             value={formValues.teacherPhone}
                             onChange={handleInputChange}
@@ -487,6 +520,15 @@ export default function Registration() {
                               border: "2px solid #d9d9d9",
                             }}
                           />
+                          {!formValues.teacherPhone && (
+                            <div
+                              style={{
+                                color: "red",
+                              }}
+                            >
+                              請輸入學校電話
+                            </div>
+                          )}
                         </div>
 
                         {/* title */}
@@ -501,7 +543,7 @@ export default function Registration() {
                             value={formValues.teacherTitle}
                             onChange={handleInputChange}
                             required
-                            placeholder="請輸入"
+                            placeholder=""
                             style={{
                               borderRadius: "10px",
                               height: "50px",
@@ -512,6 +554,7 @@ export default function Registration() {
                               border: "2px solid #d9d9d9",
                             }}
                           >
+                            <option value="">請選擇</option>
                             <option value="Mr.">先生</option>
                             <option value="Mrs.">太太</option>
                             <option value="Ms.">女士</option>
@@ -519,6 +562,15 @@ export default function Registration() {
                             <option value="Prof.">教授</option>
                             <option value="Dr.">博士</option>
                           </select>
+                          {!formValues.teacherTitle && (
+                            <div
+                              style={{
+                                color: "red",
+                              }}
+                            >
+                              請輸入聯絡老師稱謂
+                            </div>
+                          )}
                         </div>
 
                         {/* teacher name */}
@@ -545,6 +597,15 @@ export default function Registration() {
                               border: "2px solid #d9d9d9",
                             }}
                           />
+                          {!formValues.teacherNameCN && (
+                            <div
+                              style={{
+                                color: "red",
+                              }}
+                            >
+                              請輸入聯絡老師姓名 (中文)
+                            </div>
+                          )}
                         </div>
                         <div className="input-container">
                           {" "}
@@ -568,6 +629,15 @@ export default function Registration() {
                               border: "2px solid #d9d9d9",
                             }}
                           />
+                          {!formValues.teacherNameEN && (
+                            <div
+                              style={{
+                                color: "red",
+                              }}
+                            >
+                              請輸入聯絡老師姓名 (英文)
+                            </div>
+                          )}
                         </div>
 
                         {/* contact (telepone and mobile) */}
@@ -579,7 +649,7 @@ export default function Registration() {
                             <span style={{ color: "red" }}>*</span>
                           </label>
                           <input
-                            type="text"
+                            type="number"
                             name="schoolPhone"
                             value={formValues.schoolPhone}
                             onChange={handleInputChange}
@@ -594,6 +664,15 @@ export default function Registration() {
                               border: "2px solid #d9d9d9",
                             }}
                           />
+                          {!formValues.schoolPhone && (
+                            <div
+                              style={{
+                                color: "red",
+                              }}
+                            >
+                              請輸入聯絡老師手提電話
+                            </div>
+                          )}
                         </div>
                         {/* contact (email) */}
                         <div className="input-container">
@@ -619,6 +698,15 @@ export default function Registration() {
                               border: "2px solid #d9d9d9",
                             }}
                           />
+                          {!formValues.teacherEmail && (
+                            <div
+                              style={{
+                                color: "red",
+                              }}
+                            >
+                              請輸入聯絡老師電子郵箱
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -872,7 +960,10 @@ export default function Registration() {
           </div>
         </section>
       </div>
-      <Toaster />
+      <Toaster
+        position="bottom-center" // Set the default position for all toasts
+        reverseOrder={false} // Optional: display the newest toast at the bottom
+      />
     </>
   );
 }

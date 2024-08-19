@@ -93,7 +93,17 @@ export default function Members({
                       border: "2px solid #d9d9d9",
                     }}
                   />
+                  {!memberData.studentNameCN && (
+                    <div
+                      style={{
+                        color: "red",
+                      }}
+                    >
+                      請輸入學生姓名（中文）
+                    </div>
+                  )}
                 </div>
+
                 <div className="input-container">
                   {" "}
                   <label style={{ fontSize: "18px", width: "100%" }}>
@@ -115,7 +125,17 @@ export default function Members({
                       border: "2px solid #d9d9d9",
                     }}
                   />
+                  {!memberData.studentNameEN && (
+                    <div
+                      style={{
+                        color: "red",
+                      }}
+                    >
+                      請輸入學生姓名（英文）
+                    </div>
+                  )}
                 </div>
+
                 {/* year of birth and gender */}
                 <div className="input-container">
                   {" "}
@@ -139,7 +159,17 @@ export default function Members({
                       border: "2px solid #d9d9d9",
                     }}
                   />
+                  {!memberData.studentYearOfBirth && (
+                    <div
+                      style={{
+                        color: "red",
+                      }}
+                    >
+                      請輸入出生年份
+                    </div>
+                  )}
                 </div>
+
                 <div className="input-container">
                   {" "}
                   <label style={{ fontSize: "18px", width: "100%" }}>
@@ -149,7 +179,7 @@ export default function Members({
                     name="studentGender"
                     value={memberData.studentGender || ""}
                     onChange={handleInputChange}
-                    placeholder="請輸入"
+                    placeholder=""
                     style={{
                       borderRadius: "10px",
                       borderWidth: "2px",
@@ -162,9 +192,19 @@ export default function Members({
                     }}
                   >
                     {" "}
+                    <option value="">請選擇</option>
                     <option value="Male">男性</option>
                     <option value="Female">女性</option>
                   </select>
+                  {!memberData.studentGender && (
+                    <div
+                      style={{
+                        color: "red",
+                      }}
+                    >
+                      請選擇性別
+                    </div>
+                  )}
                 </div>
 
                 {/* grade and mobile */}
@@ -190,14 +230,24 @@ export default function Members({
                       border: "2px solid #d9d9d9",
                     }}
                   />
+                  {!memberData.studentGrade && (
+                    <div
+                      style={{
+                        color: "red",
+                      }}
+                    >
+                      請輸入就讀年級
+                    </div>
+                  )}
                 </div>
+
                 <div className="input-container">
                   {" "}
                   <label style={{ fontSize: "18px", width: "100%" }}>
                     6. 手提電話 (選填)
                   </label>
                   <input
-                    type="text"
+                    type="number"
                     name="studentPhone"
                     value={memberData.studentPhone || ""}
                     onChange={handleInputChange}

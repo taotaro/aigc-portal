@@ -49,7 +49,7 @@ export default function Teams({
     if (members.length < 4) {
       setMembers([...members, { id: members.length + 1, data: {} }]);
     } else {
-      toast.error("Can only have a maximum of 4 members per team!");
+      toast.error("每個團隊最多只能有 4 名成員！");
     }
   };
 
@@ -70,7 +70,7 @@ export default function Teams({
       setMembers(updatedMembers);
       onTeamDataChange(teamNumber, updatedMembers);
     } else {
-      toast.error("Need a minimum of 2 members per team!");
+      toast.error("每個團隊至少需要 2 名成員！");
     }
   };
 
