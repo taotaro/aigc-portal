@@ -5,7 +5,7 @@ import { toast, Toaster } from "react-hot-toast";
 import { v4 as uuidv4 } from "uuid";
 
 export default function Teams({
-  members,
+  membersData,
   teamNumber,
   onTeamDataChange,
   reset,
@@ -13,7 +13,7 @@ export default function Teams({
   isSubmitted,
 }) {
   const { t } = useTranslation("common");
-  const [members, setMembers] = useState(members);
+  const [members, setMembers] = useState(membersData);
 
   useEffect(() => {
     console.log("reset: ", reset);

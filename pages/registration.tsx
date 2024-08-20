@@ -485,7 +485,7 @@ export default function Registration() {
                             </div>
 
                             <Teams
-                              members={team.members}
+                              membersData={team.members}
                               key={team.id}
                               teamNumber={team.id}
                               onTeamDataChange={handleTeamDataChange}
