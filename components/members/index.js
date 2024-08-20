@@ -12,6 +12,7 @@ export default function Members({
 
   const MemberList = [
     {
+      key: 1,
       label: "1. 學生姓名（中文）",
       value: memberData.studentNameCN,
       type: "text",
@@ -21,6 +22,7 @@ export default function Members({
       error: "請輸入學生姓名（中文）",
     },
     {
+      key: 2,
       label: "2. 學生姓名（英文）",
       value: memberData.studentNameEN,
       type: "text",
@@ -30,6 +32,7 @@ export default function Members({
       error: "請輸入學生姓名（英文）",
     },
     {
+      key: 3,
       label: "3. 出生年份 ",
       value: memberData.studentYearOfBirth,
       type: "text",
@@ -39,6 +42,7 @@ export default function Members({
       error: "請輸入出生年份",
     },
     {
+      key: 4,
       label: "4. 性別 ",
       value: memberData.studentGender,
       type: "select",
@@ -61,6 +65,7 @@ export default function Members({
       error: "請選擇性別",
     },
     {
+      key: 5,
       label: "5. 就讀年級 ",
       value: memberData.studentGrade,
       type: "number",
@@ -70,6 +75,7 @@ export default function Members({
       error: "請輸入就讀年級",
     },
     {
+      key: 6,
       label: "6. 手提電話 (選填)",
       value: memberData.studentPhone,
       type: "number",
@@ -79,6 +85,7 @@ export default function Members({
       error: "",
     },
     {
+      key: 7,
       label: "7. 電子郵箱 (選填)",
       value: memberData.studentEmail,
       type: "email",
@@ -138,7 +145,7 @@ export default function Members({
                 {/* student name */}
 
                 {MemberList.map((item) => (
-                  <div className="input-container">
+                  <div className="input-container" key={item.key}>
                     <InputField
                       inputLabel={item.label}
                       inputName={item.name}

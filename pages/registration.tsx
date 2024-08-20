@@ -40,6 +40,7 @@ export default function Registration() {
 
   const FormList = [
     {
+      key: 1,
       label: "1. 學校名稱（中文）",
       value: formData.schoolNameCN,
       type: "text",
@@ -49,6 +50,7 @@ export default function Registration() {
       error: "請輸入學校名稱（中文）",
     },
     {
+      key: 2,
       label: "2. 學校名稱（英文）",
       value: formData.schoolNameEN,
       type: "text",
@@ -58,6 +60,7 @@ export default function Registration() {
       error: "請輸入學校名稱（英文）",
     },
     {
+      key: 3,
       label: "3. 學校地址（中文）",
       value: formData.schoolAddressCN,
       type: "text",
@@ -67,6 +70,7 @@ export default function Registration() {
       error: "請輸入學校地址（中文）",
     },
     {
+      key: 4,
       label: "4. 學校地址（英文）",
       value: formData.schoolAddressEN,
       type: "text",
@@ -76,6 +80,7 @@ export default function Registration() {
       error: "請輸入學校地址（英文）",
     },
     {
+      key: 5,
       label: "5. 學校電話 ",
       value: formData.teacherPhone,
       type: "number",
@@ -85,6 +90,7 @@ export default function Registration() {
       error: "請輸入學校電話",
     },
     {
+      key: 6,
       label: "6. 教師職稱 ",
       value: formData.teacherTitle,
       type: "select",
@@ -123,6 +129,7 @@ export default function Registration() {
       error: "請輸入聯絡老師稱謂",
     },
     {
+      key: 7,
       label: "7. 聯絡老師姓名 (中文) ",
       value: formData.teacherNameCN,
       type: "text",
@@ -132,6 +139,7 @@ export default function Registration() {
       error: "請輸入聯絡老師姓名 (中文)",
     },
     {
+      key: 8,
       label: "8. 聯絡老師姓名 (英文) ",
       value: formData.teacherNameEN,
       type: "text",
@@ -141,6 +149,7 @@ export default function Registration() {
       error: "請輸入聯絡老師姓名 (英文)",
     },
     {
+      key: 9,
       label: "9. 聯絡老師手提電話 ",
       value: formData.schoolPhone,
       type: "number",
@@ -150,6 +159,7 @@ export default function Registration() {
       error: "請輸入聯絡老師手提電話",
     },
     {
+      key: 10,
       label: "10. 聯絡老師電子郵箱 ",
       value: formData.teacherEmail,
       type: "email",
@@ -399,7 +409,7 @@ export default function Registration() {
                         {/* school name */}
 
                         {FormList.map((item) => (
-                          <div className="input-container">
+                          <div className="input-container" key={item.key}>
                             <InputField
                               inputLabel={item.label}
                               inputName={item.name}
