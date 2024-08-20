@@ -134,7 +134,10 @@ export default function Teams({
           </div>
         )}
       </div>
-      <Toaster />
+      <Toaster
+        position="bottom-center" // Set the default position for all toasts
+        reverseOrder={false} // Optional: display the newest toast at the bottom
+      />
     </>
   );
 }
