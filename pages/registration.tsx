@@ -336,13 +336,21 @@ export default function Registration() {
         teacherEmail: "",
       });
       setIsSubmitted(false);
-      setTeams([{ id: 1, members: [] }]);
+      setTeams([
+        {
+          id: 1,
+          members: [
+            { id: 1, data: {} },
+            { id: 2, data: {} },
+          ] as any,
+        },
+      ]);
       console.log("team members: ", teams);
       setIsAgreed(false);
       setResetAllFields(true);
-      setTimeout(() => {
-        window.location.reload();
-      }, 3000);
+      //   setTimeout(() => {
+      //     window.location.reload();
+      //   }, 3000);
 
       return;
     } catch (error) {
