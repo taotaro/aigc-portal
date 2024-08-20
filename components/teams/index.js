@@ -49,7 +49,9 @@ export default function Teams({
 
   const addMember = () => {
     if (members.length < 4) {
-      setMembers([...members, { id: members.length + 1, data: {} }]);
+      const updatedMembers = [...members, { id: members.length + 1, data: {} }];
+      setMembers(updatedMembers);
+      onTeamDataChange(teamNumber, updatedMembers);
     } else {
       toast.error("每個團隊最多只能有 4 名成員！");
     }
