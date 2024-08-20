@@ -18,6 +18,7 @@ export default function Teams({
   ]);
 
   useEffect(() => {
+    console.log("reset: ", reset);
     if (reset) {
       setMembers([
         { id: 1, data: {} },
