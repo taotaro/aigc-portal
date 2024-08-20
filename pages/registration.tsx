@@ -227,6 +227,7 @@ export default function Registration() {
         teacherPhone: "",
         teacherEmail: "",
       });
+      setIsSubmitted(false);
       setTeams([{ id: 1, members: [] }]);
       console.log("team members: ", teams);
       setIsAgreed(false);
