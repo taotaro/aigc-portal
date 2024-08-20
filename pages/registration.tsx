@@ -13,7 +13,15 @@ import InputField from "../components/input-field";
 export default function Registration() {
   const { t } = useTranslation("common");
   const [fixedBgHeight, setFixedBgHeight] = useState(200);
-  const [teams, setTeams] = useState([{ id: 1, members: [] }]);
+  const [teams, setTeams] = useState([
+    {
+      id: 1,
+      members: [
+        { id: 1, data: {} },
+        { id: 2, data: {} },
+      ],
+    },
+  ]);
   const [isAgreed, setIsAgreed] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [resetAllFields, setResetAllFields] = useState(false);
@@ -477,6 +485,7 @@ export default function Registration() {
                             </div>
 
                             <Teams
+                              members={team.members}
                               key={team.id}
                               teamNumber={team.id}
                               onTeamDataChange={handleTeamDataChange}
