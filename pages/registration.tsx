@@ -207,8 +207,6 @@ export default function Registration() {
   };
 
   const handleSubmit = async (e) => {
-    e.preventDefault();
-    console.log("form data: ", formData);
     setIsSubmitted(true);
     console.log("submit button pressed test");
     e.preventDefault();
