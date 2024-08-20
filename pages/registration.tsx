@@ -331,7 +331,9 @@ export default function Registration() {
       console.log("team members: ", teams);
       setIsAgreed(false);
       setResetAllFields(true);
-      window.location.reload();
+      setTimeout(() => {
+        window.location.reload();
+      }, 3000);
 
       return;
     } catch (error) {
