@@ -16,6 +16,10 @@ export default function Teams({
   const [members, setMembers] = useState(membersData);
 
   useEffect(() => {
+    setMembers(membersData);
+  }, [membersData]);
+
+  useEffect(() => {
     console.log("reset: ", reset);
     if (reset) {
       setMembers([

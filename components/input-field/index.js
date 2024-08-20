@@ -54,7 +54,7 @@ export default function InputField({
           {" "}
           <input
             type={inputType}
-            value={inputValue}
+            value={inputValue || ""}
             name={inputName}
             required={isRequired}
             onChange={onInputChange}
