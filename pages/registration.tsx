@@ -211,60 +211,60 @@ export default function Registration() {
     console.log("submit button pressed test");
     e.preventDefault();
 
-    // const validateForm = () => {
-    //   console.log("validate");
-    //   const fieldsToCheck = [
-    //     "schoolNameCN",
-    //     "schoolNameEN",
-    //     "schoolAddressCN",
-    //     "schoolAddressEN",
-    //     "teacherNameCN",
-    //     "teacherNameEN",
-    //     "schoolPhone",
-    //     "teacherPhone",
-    //     "teacherEmail",
-    //   ];
+    const validateForm = () => {
+      console.log("validate");
+      const fieldsToCheck = [
+        "schoolNameCN",
+        "schoolNameEN",
+        "schoolAddressCN",
+        "schoolAddressEN",
+        "teacherNameCN",
+        "teacherNameEN",
+        "schoolPhone",
+        "teacherPhone",
+        "teacherEmail",
+      ];
 
-    //   for (let field of fieldsToCheck) {
-    //     if (!formData[field]) {
-    //       toast.error(`請填寫所有必填欄位。`);
+      for (let field of fieldsToCheck) {
+        if (!formData[field]) {
+          toast.error(`請填寫所有必填欄位。`);
 
-    //       return false;
-    //     }
-    //   }
+          return false;
+        }
+      }
 
-    //   for (let team of teams) {
-    //     console.log(team);
-    //     if (team.members.length === 0) {
-    //       toast.error("請填寫至少一個團隊資訊才能繼續。 ");
-    //       console.log("not members");
-    //       return false;
-    //     }
-    //     for (let member of team.members) {
-    //       console.log(member);
-    //       const memberFieldsToCheck = [
-    //         "studentNameCN",
-    //         "studentNameEN",
-    //         "studentYearOfBirth",
-    //         "studentGrade",
-    //       ];
+      for (let team of teams) {
+        console.log(team);
+        if (team.members.length === 0) {
+          toast.error("請填寫至少一個團隊資訊才能繼續。 ");
+          console.log("not members");
+          return false;
+        }
+        for (let member of team.members) {
+          console.log(member);
+          const memberFieldsToCheck = [
+            "studentNameCN",
+            "studentNameEN",
+            "studentYearOfBirth",
+            "studentGrade",
+          ];
 
-    //       for (let field of memberFieldsToCheck) {
-    //         if (!member.data[field]) {
-    //           toast.error("請填寫所有團隊成員的所有必填欄位。");
-    //           console.log("not filled");
-    //           return false;
-    //         }
-    //       }
-    //     }
-    //   }
+          for (let field of memberFieldsToCheck) {
+            if (!member.data[field]) {
+              toast.error("請填寫所有團隊成員的所有必填欄位。");
+              console.log("not filled");
+              return false;
+            }
+          }
+        }
+      }
 
-    //   return true;
-    // };
+      return true;
+    };
 
-    // if (!validateForm()) {
-    //   return;
-    // }
+    if (!validateForm()) {
+      return;
+    }
 
     const teamData = teams.map((team, index) => ({
       team_name: `Team ${index + 1}`,
