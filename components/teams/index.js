@@ -3,6 +3,7 @@ import useTranslation from "next-translate/useTranslation";
 import Members from "../members";
 import { toast, Toaster } from "react-hot-toast";
 import { v4 as uuidv4 } from "uuid";
+import InputField from "../input-field";
 
 export default function Teams({
   membersData,

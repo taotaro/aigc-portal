@@ -20,6 +20,7 @@ export default function Registration() {
         { id: 1, data: {} },
         { id: 2, data: {} },
       ],
+      schoolGroup: "",
     },
   ]);
   const [isAgreed, setIsAgreed] = useState(false);
@@ -192,7 +193,7 @@ export default function Registration() {
 
   useEffect(() => {
     if (resetAllFields) {
-      setTeams([{ id: 1, members: [] }]);
+      setTeams([{ id: 1, members: [], schoolGroup: "" }]);
     }
     window.scrollTo(0, 0);
     onWindowResize();
@@ -203,12 +204,24 @@ export default function Registration() {
   }, []);
 
   const addTeam = () => {
-    setTeams([...teams, { id: teams.length + 1, members: [] }]);
+    setTeams([
+      ...teams,
+      { id: teams.length + 1, members: [], schoolGroup: "" },
+    ]);
   };
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+  };
+
+  const handleTeamInputChange = (e, teamId) => {
+    const { name, value } = e.target;
+    setTeams((prevTeams) =>
+      prevTeams.map((team) =>
+        team.id === teamId ? { ...team, [name]: value } : team
+      )
+    );
   };
 
   const handleTeamDataChange = (teamId, members) => {
@@ -265,7 +278,6 @@ export default function Registration() {
             "studentNameEN",
             "studentYearOfBirth",
             "studentGrade",
-            "schoolGroup",
           ];
 
           for (let field of memberFieldsToCheck) {
@@ -287,12 +299,13 @@ export default function Registration() {
 
     const teamData = teams.map((team, index) => ({
       team_name: `Team ${index + 1}`,
+      school_group: team.schoolGroup,
       team_members: team.members.map((member) => ({
         name_english: member.data.studentNameCN,
         name_chinese: member.data.studentNameEN,
         year_of_birth: member.data.studentYearOfBirth,
         gender: member.data.studentGender ? member.data.studentGender : "Male",
-        school_group: member.data.schoolGroup,
+        // school_group: member.data.schoolGroup,
         grade: member.data.studentGrade,
         mobile_phone: member.data.studentPhone ? member.data.studentPhone : "",
         email: member.data.studentEmail ? member.data.studentEmail : "",
@@ -338,7 +351,7 @@ export default function Registration() {
         schoolNameEN: "",
         schoolAddressCN: "",
         schoolAddressEN: "",
-        teacherTitle: "Mr.",
+        teacherTitle: "",
         teacherNameCN: "",
         teacherNameEN: "",
         schoolPhone: "",
@@ -350,9 +363,10 @@ export default function Registration() {
         {
           id: 1,
           members: [
-            { id: 1, data: {} },
-            { id: 2, data: {} },
+            { id: 1, data: { studentGender: "" } },
+            { id: 2, data: { studentGender: "" } },
           ] as any,
+          schoolGroup: "",
         },
       ]);
       console.log("team members: ", teams);
@@ -484,6 +498,29 @@ export default function Registration() {
                               >
                                 {index > 0 && <FaTrashAlt size={24} />}
                               </div>
+                            </div>
+                            <div className="input-container" key={team.id}>
+                              <InputField
+                                inputLabel="團體 "
+                                inputValue={team.schoolGroup}
+                                inputType="select"
+                                inputName="schoolGroup"
+                                isRequired={true}
+                                inputOptions={[
+                                  {
+                                    label: "請選擇",
+                                    value: "",
+                                  },
+                                  { value: "Primary", label: "小學組" },
+                                  { value: "Secondary", label: "中學組" },
+                                  { value: "Disabled", label: "展能組" },
+                                ]}
+                                errorMessage="請選擇組"
+                                isSubmitted={isSubmitted}
+                                onInputChange={(e) =>
+                                  handleTeamInputChange(e, team.id)
+                                }
+                              />
                             </div>
 
                             <Teams

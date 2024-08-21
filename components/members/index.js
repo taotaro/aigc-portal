@@ -11,27 +11,27 @@ export default function Members({
   const { t } = useTranslation("common");
 
   const MemberList = [
+    // {
+    //   key: 1,
+    //   label: "1. 團體 ",
+    //   value: memberData.schoolGroup,
+    //   type: "select",
+    //   name: "schoolGroup",
+    //   required: true,
+    //   options: [
+    //     {
+    //       label: "請選擇",
+    //       value: "",
+    //     },
+    //     { value: "Primary", label: "小學組" },
+    //     { value: "Secondary", label: "中學組" },
+    //     { value: "Disabled", label: "展能組" },
+    //   ],
+    //   error: "請選擇組",
+    // },
     {
       key: 1,
-      label: "1. 團體 ",
-      value: memberData.schoolGroup,
-      type: "select",
-      name: "schoolGroup",
-      required: true,
-      options: [
-        {
-          label: "請選擇",
-          value: "",
-        },
-        { value: "Primary", label: "小學組" },
-        { value: "Secondary", label: "中學組" },
-        { value: "Disabled", label: "展能組" },
-      ],
-      error: "請選擇組",
-    },
-    {
-      key: 2,
-      label: "2. 學生姓名（中文）",
+      label: "1. 學生姓名（中文）",
       value: memberData.studentNameCN,
       type: "text",
       name: "studentNameCN",
@@ -40,8 +40,8 @@ export default function Members({
       error: "請輸入學生姓名（中文）",
     },
     {
-      key: 3,
-      label: "3. 學生姓名（英文）",
+      key: 2,
+      label: "2. 學生姓名（英文）",
       value: memberData.studentNameEN,
       type: "text",
       name: "studentNameEN",
@@ -50,8 +50,8 @@ export default function Members({
       error: "請輸入學生姓名（英文）",
     },
     {
-      key: 4,
-      label: "4. 出生年份 ",
+      key: 3,
+      label: "3. 出生年份 ",
       value: memberData.studentYearOfBirth,
       type: "number",
       name: "studentYearOfBirth",
@@ -60,8 +60,8 @@ export default function Members({
       error: "請輸入出生年份",
     },
     {
-      key: 5,
-      label: "5. 性別 ",
+      key: 4,
+      label: "4. 性別 ",
       value: memberData.studentGender,
       type: "select",
       name: "studentGender",
@@ -83,8 +83,8 @@ export default function Members({
       error: "請選擇性別",
     },
     {
-      key: 6,
-      label: "6. 就讀年級 ",
+      key: 5,
+      label: "5. 就讀年級 ",
       value: memberData.studentGrade,
       type: "number",
       name: "studentGrade",
@@ -93,8 +93,8 @@ export default function Members({
       error: "請輸入就讀年級",
     },
     {
-      key: 7,
-      label: "7. 手提電話 (選填)",
+      key: 6,
+      label: "6. 手提電話 (選填)",
       value: memberData.studentPhone,
       type: "number",
       name: "studentPhone",
@@ -103,8 +103,8 @@ export default function Members({
       error: "",
     },
     {
-      key: 8,
-      label: "8. 電子郵箱 (選填)",
+      key: 7,
+      label: "7. 電子郵箱 (選填)",
       value: memberData.studentEmail,
       type: "email",
       name: "studentEmail",
