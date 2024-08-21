@@ -265,6 +265,7 @@ export default function Registration() {
             "studentNameEN",
             "studentYearOfBirth",
             "studentGrade",
+            "schoolGroup",
           ];
 
           for (let field of memberFieldsToCheck) {
@@ -291,6 +292,7 @@ export default function Registration() {
         name_chinese: member.data.studentNameEN,
         year_of_birth: member.data.studentYearOfBirth,
         gender: member.data.studentGender ? member.data.studentGender : "Male",
+        school_group: member.data.schoolGroup,
         grade: member.data.studentGrade,
         mobile_phone: member.data.studentPhone ? member.data.studentPhone : "",
         email: member.data.studentEmail ? member.data.studentEmail : "",
@@ -321,8 +323,8 @@ export default function Registration() {
     try {
       console.log("payload: ", payload);
       const response = await axios.post(
-        "https://aigc-backend-dev.materia-logic.com/common/register",
-        // "http://127.0.0.1:8000/common/register",
+        // "https://aigc-backend-dev.materia-logic.com/common/register",
+        "http://127.0.0.1:8000/common/register",
         payload
       );
       console.log(response.data);

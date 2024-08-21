@@ -131,9 +131,8 @@ export default function Index() {
         style={{ height: `${fixedBgHeight}px`, padding: "24px" }}
         id="indexModule"
       >
-        <h1 className="title">
-          雲遊通義 – 阿里雲香港10週年校際生成式AI比賽簡介
-        </h1>
+        <h1 className="title">雲遊通義 – 阿里雲香港10週年校際</h1>
+        <h1 className="title"> 生成式AI比賽簡介</h1>
         {/* <h3 className="subtitle">
           <p>雲遊通義 – 阿里雲香港10週年</p>
           <p>校際生成式AI比賽發佈會</p>
@@ -164,7 +163,7 @@ export default function Index() {
           }}
         >
           {/* <p className="module-title">比賽簡介</p> */}
-          <div className="module-content ">
+          <div className="module-content " style={{ padding: "0px" }}>
             <img
               className="intro-tag intro-tag-left"
               src="/images/tag1.png"
@@ -174,9 +173,10 @@ export default function Index() {
               // className="module-content__left"
               style={{
                 fontSize: "24px",
-                fontWeight: "bold",
+                // fontWeight: "bold",
                 // minWidth: "280px",
-                padding: "36px",
+                paddingRight: "36px",
+                paddingLeft: "36px",
               }}
             >
               <div className="text-left">
@@ -671,7 +671,9 @@ export default function Index() {
                 <div className="module-table__col">開始報名</div>
               </div>
               <div className="module-table__row ">
-                <div className="module-table__col">2024年9月20日（星期五）</div>
+                <div className="module-table__col">
+                  2024年10月12日（星期六）
+                </div>
                 <div className="module-table__col">截止報名</div>
               </div>
               <div className="module-table__row ">
@@ -682,7 +684,7 @@ export default function Index() {
               </div>
               <div className="module-table__row ">
                 <div className="module-table__col">
-                  2024年11月20日（星期三）{" "}
+                  2024年11月1日（星期五）或之前{" "}
                 </div>
                 <div className="module-table__col">比賽結果公佈</div>
               </div>
@@ -743,28 +745,28 @@ export default function Index() {
                 className="module-content__desc"
                 style={{ wordWrap: "break-word", overflowWrap: "break-word" }}
               >
-                如有任何活動問題，歡迎聯絡{" "}
+                如有任何活動問題，歡迎聯絡 Gamenoodlesoup(
                 <a
                   href="mailto:edu@gamenoodlesoup.com"
                   // target="_blank"
                   style={{ color: "#ff6a00", wordBreak: "break-all" }}
                 >
-                  Gamenoodlesoup
-                </a>
-                (edu@gamenoodlesoup.com / 30011280)
+                  edu@gamenoodlesoup.com
+                </a>{" "}
+                / 30011280)
               </div>
             </div>
             <div className="module-content__desc">
               <div style={{ marginBottom: "24px" }}>
-                參賽者必須同意在參與活動時遵守活動條款及細則，
+                參賽者必須同意在參與活動時遵守活動條款及細則，詳情請
                 <a
                   href="https://aigc-portal-dev.materia-logic.com/terms"
                   target="_blank"
                   style={{ color: "#ff6a00" }}
                 >
-                  詳情請按此查閱
+                  按此
                 </a>
-                。
+                查閱。
               </div>
               <div>
                 是次活動所收集的資料只用作活動登記、通訊及相關用途，並只限Alibaba
