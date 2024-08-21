@@ -73,11 +73,11 @@ export default function Members({
         },
         {
           label: "男性",
-          value: "Male",
+          value: "男性",
         },
         {
           label: "女性",
-          value: "Female",
+          value: "女性",
         },
       ],
       error: "請選擇性別",

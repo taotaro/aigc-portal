@@ -304,7 +304,7 @@ export default function Registration() {
         name_english: member.data.studentNameEN,
         name_chinese: member.data.studentNameCN,
         year_of_birth: member.data.studentYearOfBirth,
-        gender: member.data.studentGender ? member.data.studentGender : "Male",
+        gender: member.data.studentGender ? member.data.studentGender : "男性",
         // school_group: member.data.schoolGroup,
         grade: member.data.studentGrade,
         mobile_phone: member.data.studentPhone ? member.data.studentPhone : "",
