@@ -132,7 +132,7 @@ export default function Index() {
         id="indexModule"
       >
         <h1 className="title">雲遊通義 – 阿里雲香港10週年校際</h1>
-        <h1 className="title"> 生成式AI比賽簡介</h1>
+        <h1 className="title"> 生成式AI比賽</h1>
         {/* <h3 className="subtitle">
           <p>雲遊通義 – 阿里雲香港10週年</p>
           <p>校際生成式AI比賽發佈會</p>
