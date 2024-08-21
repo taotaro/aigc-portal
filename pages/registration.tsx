@@ -301,8 +301,8 @@ export default function Registration() {
       team_name: `Team ${index + 1}`,
       school_group: team.schoolGroup,
       team_members: team.members.map((member) => ({
-        name_english: member.data.studentNameCN,
-        name_chinese: member.data.studentNameEN,
+        name_english: member.data.studentNameEN,
+        name_chinese: member.data.studentNameCN,
         year_of_birth: member.data.studentYearOfBirth,
         gender: member.data.studentGender ? member.data.studentGender : "Male",
         // school_group: member.data.schoolGroup,
