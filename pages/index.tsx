@@ -69,7 +69,7 @@ export default function Index() {
     { name: "Alibaba", logo: "/images/ali.jpeg" },
     { name: "GamingNoodleSoup", logo: "/images/gns.png" },
     { name: "Materia Logic", logo: "/images/ml.png" },
-    { name: "HKACE", logo: "/images/hkace.png" },
+    { name: "HKFEW", logo: "/images/teachers.jpeg" },
     { name: "Aitle", logo: "/images/aitle.png" },
     { name: "SteelSeries", logo: "/images/steelseries.png" },
   ];
@@ -693,8 +693,21 @@ export default function Index() {
         </section>
         {/* schedule workshop */}
         <section className="position-relative module-box">
-          <p className="module-title">比賽工作坊</p>
-          <div className="module-content" style={{ padding: "36px" }}>
+          <p
+            style={{
+              padding: "36px 36px 0px 36px",
+              fontWeight: "bold",
+              fontSize: "28px",
+              scrollMarginTop: "100px",
+            }}
+            id="scheduleModule"
+          >
+            比賽工作坊
+          </p>
+          <div
+            className="module-content"
+            style={{ padding: "36px", paddingTop: "0px" }}
+          >
             <div className="module-content__left">
               {/* <div className="module-content__title">活動資訊</div> */}
               <div className="module-content__desc">
@@ -711,8 +724,21 @@ export default function Index() {
           id="scheduleModule"
           style={{ scrollMarginTop: "100px" }}
         >
-          <p className="module-title">頒獎禮</p>
-          <div className="module-content" style={{ padding: "36px" }}>
+          <p
+            style={{
+              padding: "36px 36px 0px 36px",
+              fontWeight: "bold",
+              fontSize: "28px",
+              scrollMarginTop: "100px",
+            }}
+            id="scheduleModule"
+          >
+            頒獎禮
+          </p>
+          <div
+            className="module-content"
+            style={{ padding: "36px", paddingTop: "0px" }}
+          >
             <div className="module-content__left">
               {/* <div className="module-content__title">活動資訊</div> */}
               <div className="module-content__desc">
