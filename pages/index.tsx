@@ -75,14 +75,22 @@ export default function Index() {
     ];
 
     const PhotoList = [
-        { name: "Photo 1", url: "/images/activity1.png" },
-        { name: "Photo 1", url: "/images/activity1.png" },
-        { name: "Photo 1", url: "/images/activity1.png" },
-        { name: "Photo 1", url: "/images/activity1.png" },
-        { name: "Photo 1", url: "/images/activity1.png" },
-        { name: "Photo 1", url: "/images/activity1.png" },
-        { name: "Photo 1", url: "/images/activity1.png" },
-        { name: "Photo 1", url: "/images/activity1.png" },
+        { name: "Photo 1", url: "/images/photo1.jpeg" },
+        { name: "Photo 2", url: "/images/photo2.jpeg" },
+        { name: "Photo 3", url: "/images/photo3.jpeg" },
+        { name: "Photo 4", url: "/images/photo4.jpeg" },
+        { name: "Photo 5", url: "/images/photo5.jpeg" },
+        { name: "Photo 6", url: "/images/photo6.jpeg" },
+        { name: "Photo 7", url: "/images/photo7.jpeg" },
+        { name: "Photo 8", url: "/images/photo8.jpeg" },
+        { name: "Photo 9", url: "/images/photo9.jpeg" },
+        { name: "Photo 10", url: "/images/photo10.jpeg" },
+        { name: "Photo 11", url: "/images/photo11.jpeg" },
+        { name: "Photo 12", url: "/images/photo12.jpeg" },
+        { name: "Photo 13", url: "/images/photo13.jpeg" },
+        { name: "Photo 14", url: "/images/photo14.jpeg" },
+        { name: "Photo 15", url: "/images/photo15.jpeg" },
+        { name: "Photo 16", url: "/images/photo16.jpeg" },
     ];
 
     function onWindowResize() {
@@ -136,7 +144,12 @@ export default function Index() {
                 onLoad={onWindowResize}
                 src="https://cri-jh0uqm2iyt2q8ku4-registry.oss-cn-hongkong.aliyuncs.com/IMG_8739_animation.gif"
                 alt=""
-                style={{ width: "100%", height: "auto" }}
+                style={{
+                    width: "100%",
+                    height: "auto",
+                    // objectFit: "contain", // Ensures the image covers the container without distortion
+                    // maxHeight: "100vh", // Limits height to viewport height
+                }}
             />
             {/* slogan */}
             <section
@@ -146,17 +159,17 @@ export default function Index() {
             >
                 <h1 className="title">雲遊通義 - </h1>
                 <h1 className="title">阿里雲香港10週年</h1>
-                <h1 className="title" style={{ paddingBottom: "200px" }}>
+                <h1 className="title" style={{ paddingBottom: "100px" }}>
                     {" "}
                     校際生成式AI比賽
                 </h1>
+                {/* <section className="position-relative module-box"> */}
                 <div className="module-button">
-                    <a href="/registration">立即報名</a>
+                    <a href="/registration" target="__blank">
+                        立即報名
+                    </a>
                 </div>
-                {/* <h3 className="subtitle">
-          <p>雲遊通義 – 阿里雲香港10週年</p>
-          <p>校際生成式AI比賽發佈會</p>
-        </h3> */}
+                {/* </section> */}
             </section>
             <div className="module-container">
                 {/* 介绍 */}
@@ -237,14 +250,15 @@ export default function Index() {
                             return (
                                 <div
                                     style={{
-                                        padding: "40px",
+                                        // padding: "40px",
                                         textAlign: "center",
                                         borderColor: "black",
-                                        border: "1px solid black",
+                                        // border: "1px solid black",
                                         borderRadius: "8px",
                                         borderWidth: "1px",
                                         maxWidth: "20%",
                                         minWidth: "250px",
+                                        boxSizing: "border-box",
                                         // background: "black",
                                     }}
                                 >
@@ -254,6 +268,12 @@ export default function Index() {
                                         // onLoad={onWindowResize}
                                         src={item.url}
                                         alt=""
+                                        style={{
+                                            width: "100%", // Fill the width of the div
+                                            height: "100%", // Fill the height of the div
+                                            objectFit: "cover", // Cover the entire div while maintaining aspect ratio
+                                            borderRadius: "8px", // Apply the same border radius as the div for a seamless look
+                                        }}
                                         // style={{ width: "100%", height: "auto" }}
                                     />
                                 </div>
@@ -1027,7 +1047,22 @@ export default function Index() {
                                 >
                                     Alibaba Cloud的私隱政策
                                 </a>{" "}
-                                。
+                                、通義產品的
+                                <a
+                                    href="https://terms.alicdn.com/legal-agreement/terms/c_end_product_protocol/20231011201348415/20231011201348415.html"
+                                    target="_blank"
+                                    style={{ color: "#ff6a00" }}
+                                >
+                                    用戶協議
+                                </a>
+                                和
+                                <a
+                                    href="https://terms.alicdn.com/legal-agreement/terms/privacy_policy_full/20231011201849846/20231011201849846.html"
+                                    target="_blank"
+                                    style={{ color: "#ff6a00" }}
+                                >
+                                    私隱政策。
+                                </a>
                             </div>
                         </div>
                     </div>

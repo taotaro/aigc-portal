@@ -715,7 +715,22 @@ export default function CompetitionGuide() {
                                 >
                                     Alibaba Cloud的私隱政策
                                 </a>{" "}
-                                。
+                                、通義產品的
+                                <a
+                                    href="https://terms.alicdn.com/legal-agreement/terms/c_end_product_protocol/20231011201348415/20231011201348415.html"
+                                    target="_blank"
+                                    style={{ color: "#ff6a00" }}
+                                >
+                                    用戶協議
+                                </a>
+                                和
+                                <a
+                                    href="https://terms.alicdn.com/legal-agreement/terms/privacy_policy_full/20231011201849846/20231011201849846.html"
+                                    target="_blank"
+                                    style={{ color: "#ff6a00" }}
+                                >
+                                    私隱政策。
+                                </a>
                             </div>
                         </div>
                     </div>

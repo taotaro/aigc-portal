@@ -8,6 +8,7 @@ export default function Header(props) {
     const { current, hideDot = false } = props || {};
     const [navLinkStyle, setNavLinkStyle] = useState({ color: "#fff" });
     const [menuOpen, setMenuOpen] = useState(false);
+    const [scrolled, setScrolled] = useState(false);
 
     const NavList = [
         { label: "首頁", current: "INDEX", href: "/#indexModule" },
@@ -103,10 +104,14 @@ export default function Header(props) {
             window.pageYOffset ||
             document.documentElement.scrollTop ||
             document.body.scrollTop;
-        if (scrollHeight > 980) {
+
+        // Change styles when scrolled down on mobile view
+        if (scrollHeight > 500) {
             setNavLinkStyle({ color: "#333" });
+            setScrolled(true);
         } else {
             setNavLinkStyle({ color: "#fff" });
+            setScrolled(false);
         }
     }
 
@@ -120,12 +125,21 @@ export default function Header(props) {
     }, []);
 
     return (
-        <header className="index-header">
+        <header
+            className="index-header"
+            style={{
+                backgroundColor: scrolled && isMobile ? "#888" : "transparent",
+                transition: "background-color 0.3s ease",
+            }}
+        >
             <nav className="navbar navbar-expand-lg navbar-light border-bottom-3">
                 <button
                     className="navbar-toggler"
                     type="button"
                     onClick={() => setMenuOpen(!menuOpen)}
+                    style={{
+                        color: scrolled && isMobile ? "black" : "#fff", // Burger menu color change
+                    }}
                 >
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -136,7 +150,13 @@ export default function Header(props) {
                 >
                     <ul
                         className="navbar-nav navbar-main"
-                        style={{ color: "black" }}
+                        style={{
+                            color: scrolled && isMobile ? "#333" : "black", // Text color change based on scroll
+                            backgroundColor:
+                                isMobile && scrolled
+                                    ? "#f0f0f0"
+                                    : "transparent", // Transparent on desktop, changes on mobile scroll
+                        }}
                     >
                         {tabs}
                     </ul>
