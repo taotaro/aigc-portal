@@ -128,7 +128,7 @@ export default function Header(props) {
         <header
             className="index-header"
             style={{
-                backgroundColor: scrolled && isMobile ? "#888" : "transparent",
+                backgroundColor: isMobile && scrolled ? "#888" : "transparent",
                 transition: "background-color 0.3s ease",
             }}
         >
