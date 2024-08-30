@@ -75,21 +75,21 @@ export default function Index() {
     ];
 
     const PhotoList = [
-        { name: "Photo 1", url: "/images/photo1.jpeg" },
+        // { name: "Photo 1", url: "/images/photo1.jpeg" },
         { name: "Photo 2", url: "/images/photo2.jpeg" },
         { name: "Photo 3", url: "/images/photo3.jpeg" },
-        { name: "Photo 4", url: "/images/photo4.jpeg" },
+        // { name: "Photo 4", url: "/images/photo4.jpeg" },
         { name: "Photo 5", url: "/images/photo5.jpeg" },
         { name: "Photo 6", url: "/images/photo6.jpeg" },
-        { name: "Photo 7", url: "/images/photo7.jpeg" },
-        { name: "Photo 8", url: "/images/photo8.jpeg" },
-        { name: "Photo 9", url: "/images/photo9.jpeg" },
-        { name: "Photo 10", url: "/images/photo10.jpeg" },
+        // { name: "Photo 7", url: "/images/photo7.jpeg" },
+        // { name: "Photo 8", url: "/images/photo8.jpeg" },
+        // { name: "Photo 9", url: "/images/photo9.jpeg" },
+        // { name: "Photo 10", url: "/images/photo10.jpeg" },
         { name: "Photo 11", url: "/images/photo11.jpeg" },
-        { name: "Photo 12", url: "/images/photo12.jpeg" },
+        // { name: "Photo 12", url: "/images/photo12.jpeg" },
         { name: "Photo 13", url: "/images/photo13.jpeg" },
         { name: "Photo 14", url: "/images/photo14.jpeg" },
-        { name: "Photo 15", url: "/images/photo15.jpeg" },
+        // { name: "Photo 15", url: "/images/photo15.jpeg" },
         { name: "Photo 16", url: "/images/photo16.jpeg" },
     ];
 
