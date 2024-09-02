@@ -851,7 +851,7 @@ export default function Index() {
                         <div className="module-content__left">
                             <div className="module-content__desc">
                                 <p>
-                                    注：參賽作品須為原創，禁止抄襲。違者有可能被取消資格。
+                                    {/* 注：參賽作品須為原創，禁止抄襲。違者有可能被取消資格。 */}
                                 </p>
                             </div>
                         </div>
@@ -988,13 +988,13 @@ export default function Index() {
                     </div>
                 </section>
 
-                {/* <section className="position-relative module-box">
+                <section className="position-relative module-box">
                     <div className="module-button">
                         <a href="/registration" target="__blank">
                             立即報名
                         </a>
                     </div>
-                </section> */}
+                </section>
                 <section
                     className="position-relative module-box"
                     id="gameInfoModule"

@@ -35,7 +35,12 @@ export default function Header(props) {
                 },
             ],
         },
-        { label: "網上報名", current: "REGISTRATION", href: "/registration" },
+        {
+            label: "網上報名",
+            current: "REGISTRATION",
+            href: "/registration",
+            style: { color: "#ff6a00" },
+        },
     ];
 
     function SubMenu({ item }) {
@@ -88,7 +93,11 @@ export default function Header(props) {
 
         return (
             <li className="nav-item">
-                <a href={item.href} className="nav-link" style={navLinkStyle}>
+                <a
+                    href={item.href}
+                    className="nav-link"
+                    style={{ ...navLinkStyle, ...item.style }}
+                >
                     {item.label}
                 </a>
             </li>
