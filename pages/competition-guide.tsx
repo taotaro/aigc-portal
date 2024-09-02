@@ -67,10 +67,12 @@ export default function CompetitionGuide() {
 
     const LogoList = [
         { name: "Alibaba", logo: "/images/ali.jpeg" },
-        { name: "GamingNoodleSoup", logo: "/images/gns.png" },
+
         { name: "Materia Logic", logo: "/images/ml.png" },
+        { name: "GamingNoodleSoup", logo: "/images/gns.png" },
         { name: "HKFEW", logo: "/images/teachers.jpeg" },
         { name: "Aitle", logo: "/images/aitle.png" },
+
         { name: "SteelSeries", logo: "/images/steelseries.png" },
     ];
 
