@@ -40,10 +40,23 @@ export default function Registration() {
     });
     const LogoList = [
         { name: "Alibaba", logo: "/images/ali.jpeg" },
+
+        { name: "Materia Logic", logo: "/images/MateriaLogic.png" },
         { name: "GamingNoodleSoup", logo: "/images/gns.png" },
-        { name: "Materia Logic", logo: "/images/ml.png" },
         { name: "HKFEW", logo: "/images/teachers.jpeg" },
+        { name: "HKACE", logo: "/images/hkace.png" },
         { name: "Aitle", logo: "/images/aitle.png" },
+        { name: "HKISHA", logo: "/images/HKISHA.jpg" },
+        { name: "KSHA", logo: "/images/KSHA.png" },
+        { name: "NTSHA", logo: "/images/NTSHA.png" },
+        { name: "hkhxei", logo: "/images/hkhxei.jpg" },
+        { name: "pauls", logo: "/images/Pauls.png" },
+        { name: "HKSSSC", logo: "/images/HKSSSC.jpg" },
+        { name: "DSSSC", logo: "/images/DSSSC.png" },
+        { name: "ahss", logo: "/images/ahss.jpg" },
+        { name: "HKCMSA", logo: "/images/HKCMSA.png" },
+        { name: "APSHA", logo: "/images/APSHA.png" },
+
         { name: "SteelSeries", logo: "/images/steelseries.png" },
     ];
 
@@ -850,16 +863,34 @@ export default function Registration() {
                     <p className="module-title" style={{ paddingTop: "24px" }}>
                         支持單位
                     </p>
-                    <div className="module-logos">
+                    <div
+                        style={{
+                            display: "flex",
+                            flexWrap: "wrap",
+                            gap: "20px",
+                            paddingTop: "24px",
+                        }}
+                    >
                         {LogoList.filter((item) => item.name !== "Alibaba").map(
-                            (item) => {
+                            (item, index) => {
                                 return (
                                     <div
-                                        className={`module-logo module-logo-${item.name}`}
+                                        style={{
+                                            flex: "1 1 23.5%",
+                                            maxWidth: "23.5%",
+                                            boxSizing: "border-box",
+                                            textAlign: "center",
+                                            justifyContent: "center",
+                                            alignContent: "center",
+                                        }}
                                         key={item.name}
                                     >
                                         <img
-                                            className="module-logo__img"
+                                            style={{
+                                                maxWidth: "100%",
+                                                width: "auto",
+                                                maxHeight: "100px",
+                                            }}
                                             src={item.logo}
                                             alt={item.name}
                                         />
