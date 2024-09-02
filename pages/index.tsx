@@ -151,6 +151,7 @@ export default function Index() {
                     // maxHeight: "100vh", // Limits height to viewport height
                 }}
             />
+
             {/* slogan */}
             <section
                 className="title-section position-relative"
