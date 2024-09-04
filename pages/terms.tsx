@@ -247,9 +247,9 @@ export default function Terms() {
                                     </div>
                                     <div>
                                         5.8. 參賽者及報名者須仔細閱讀比賽條款及細則。參賽隊伍的報名者遞交報名後即表示同意遵守及接受
-                                        <a href="https://www.alibabacloud.com/help/tc/legal/latest/alibaba-cloud-international-website-privacy-policy" target="_blank" rel="noopener noreferrer">Alibaba Cloud私隱政策</a>、
-                                        <a href="https://terms.alicdn.com/legal-agreement/terms/c_end_product_protocol/20231011201348415/20231011201348415.html" target="_blank" rel="noopener noreferrer">通義平台用戶協議</a>和
-                                        <a href="https://terms.alicdn.com/legal-agreement/terms/privacy_policy_full/20231011201849846/20231011201849846.html" target="_blank" rel="noopener noreferrer">私隱政策</a>
+                                        <a href="https://www.alibabacloud.com/help/tc/legal/latest/alibaba-cloud-international-website-privacy-policy" target="_blank" rel="noopener noreferrer" style={{ color: "#ff6a00" }}>Alibaba Cloud私隱政策</a>、
+                                        <a href="https://terms.alicdn.com/legal-agreement/terms/c_end_product_protocol/20231011201348415/20231011201348415.html" target="_blank" rel="noopener noreferrer" style={{ color: "#ff6a00" }}>通義平台用戶協議</a>和
+                                        <a href="https://terms.alicdn.com/legal-agreement/terms/privacy_policy_full/20231011201849846/20231011201849846.html" target="_blank" rel="noopener noreferrer" style={{ color: "#ff6a00" }}>私隱政策</a>
                                         及有關參賽條款及安排。
                                     </div>
                                 </div>
