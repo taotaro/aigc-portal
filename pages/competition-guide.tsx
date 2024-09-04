@@ -83,9 +83,11 @@ export default function CompetitionGuide() {
         { name: "ahss", logo: "/images/ahss.jpg" },
         { name: "HKCMSA", logo: "/images/HKCMSA.png" },
         { name: "APSHA", logo: "/images/APSHA.png" },
-
-        { name: "SteelSeries", logo: "/images/steelseries.png" },
     ];
+
+    const sponsorList = [
+        { name: "SteelSeries", logo: "/images/steelseries.png" },
+    ]
 
     function onWindowResize() {
         const $fixedBg = document.getElementById("fixed-bg");
@@ -642,7 +644,7 @@ export default function CompetitionGuide() {
                                         參賽組別分為小學組、中學組及展能組（為特殊學校學生開設）。
                                     </li>
                                     <li>
-                                        參賽者由學校老師代表提名，並以隊際形式報名。
+                                        參賽者將以隊際形式報名，參賽隊伍將由學校老師代表報名。
                                     </li>
                                     <li>
                                         參賽者必須為2024至2025學年仍然就讀該校的全日制學生。
@@ -827,6 +829,25 @@ export default function CompetitionGuide() {
                             }
                         )}
                     </div> */}
+                    <p className="module-title" style={{ paddingTop: "24px" }}>
+                        活動贊助
+                    </p>
+                    <div className="module-logos">
+                        {sponsorList.filter((item) => item.name !== "Alibaba").map((item) => {
+                            return (
+                                <div
+                                    className={`module-logo module-logo-${item.name}`}
+                                    key={item.name}
+                                >
+                                    <img
+                                        className="module-logo__img"
+                                        src={item.logo}
+                                        alt={item.name}
+                                    />
+                                </div>
+                            );
+                        })}
+                    </div>
                 </section>
                 {/* footer */}
             </div>

@@ -56,9 +56,11 @@ export default function Registration() {
         { name: "ahss", logo: "/images/ahss.jpg" },
         { name: "HKCMSA", logo: "/images/HKCMSA.png" },
         { name: "APSHA", logo: "/images/APSHA.png" },
-
-        { name: "SteelSeries", logo: "/images/steelseries.png" },
     ];
+
+    const sponsorList = [
+        { name: "SteelSeries", logo: "/images/steelseries.png" },
+    ]
 
     const FormList = [
         {
@@ -898,6 +900,31 @@ export default function Registration() {
                                 );
                             }
                         )}
+                    </div>
+                    <p className="module-title" style={{ paddingTop: "24px" }}>
+                        活動贊助
+                    </p>
+                    <div style={{
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        gap: "20px",
+                        paddingTop: "24px",
+                    }}>
+                        {sponsorList.filter((item) => item.name !== "Alibaba").map((item) => {
+                            return (
+                                <div
+                                    className={`module-logo module-logo-${item.name}`}
+                                    key={item.name}
+                                >
+                                    <img
+                                        className="module-logo__img"
+                                        src={item.logo}
+                                        alt={item.name}
+                                    />
+                                </div>
+                            );
+                        })}
                     </div>
                 </section>
             </div>

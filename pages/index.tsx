@@ -83,9 +83,11 @@ export default function Index() {
         { name: "ahss", logo: "/images/ahss.jpg" },
         { name: "HKCMSA", logo: "/images/HKCMSA.png" },
         { name: "APSHA", logo: "/images/APSHA.png" },
-
-        { name: "SteelSeries", logo: "/images/steelseries.png" },
     ];
+
+    const sponsorList = [
+        { name: "SteelSeries", logo: "/images/steelseries.png" },
+    ]
 
     const PhotoList = [
         // { name: "Photo 1", url: "/images/photo1.jpeg" },
@@ -288,7 +290,7 @@ export default function Index() {
                                             objectFit: "cover", // Cover the entire div while maintaining aspect ratio
                                             borderRadius: "8px", // Apply the same border radius as the div for a seamless look
                                         }}
-                                        // style={{ width: "100%", height: "auto" }}
+                                    // style={{ width: "100%", height: "auto" }}
                                     />
                                 </div>
                             );
@@ -1143,6 +1145,25 @@ export default function Index() {
                                 );
                             }
                         )}
+                    </div>
+                    <p className="module-title" style={{ paddingTop: "24px" }}>
+                        活動贊助
+                    </p>
+                    <div className="module-logos">
+                        {sponsorList.filter((item) => item.name !== "Alibaba").map((item) => {
+                            return (
+                                <div
+                                    className={`module-logo module-logo-${item.name}`}
+                                    key={item.name}
+                                >
+                                    <img
+                                        className="module-logo__img"
+                                        src={item.logo}
+                                        alt={item.name}
+                                    />
+                                </div>
+                            );
+                        })}
                     </div>
                 </section>
                 {/* footer */}

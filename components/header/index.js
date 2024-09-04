@@ -21,19 +21,7 @@ export default function Header(props) {
         {
             label: "通義平台",
             current: "",
-            href: "",
-            children: [
-                {
-                    label: "通義千問",
-                    current: "QIANWEN",
-                    href: "https://tongyi.aliyun.com/qianwen/",
-                },
-                {
-                    label: "通義萬相",
-                    current: "WANXIANG",
-                    href: "https://tongyi.aliyun.com/wanxiang/",
-                },
-            ],
+            href: "https://tongyi.aliyun.com",
         },
         {
             label: "網上報名",
