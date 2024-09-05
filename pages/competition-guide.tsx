@@ -174,7 +174,7 @@ export default function CompetitionGuide() {
                             className="module-content__desc"
                             style={{ marginTop: "-10px" }}
                         >
-                            創作AI互動式小說
+                            創作AI故事圖書：
                             <ul
                                 style={{
                                     paddingLeft: "20px",
@@ -245,7 +245,7 @@ export default function CompetitionGuide() {
                             className="module-content__desc"
                             style={{ marginTop: "-10px" }}
                         >
-                            創作AI小說圖集：
+                            創作AI互動式小說：
                             <ul
                                 style={{
                                     paddingLeft: "20px",
@@ -319,7 +319,7 @@ export default function CompetitionGuide() {
                             className="module-content__desc"
                             style={{ marginTop: "-10px" }}
                         >
-                            創作AI小說圖集：
+                            創作AI圖像作品：
                             <ul
                                 style={{
                                     paddingLeft: "20px",
