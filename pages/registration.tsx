@@ -441,14 +441,14 @@ export default function Registration() {
                                     <div>
                                         參賽組別分為小學組、中學組及展能組（為特殊學校學生開設）。
                                     </div>
-                                    <div>
-                                        參賽者由學校老師代表提名，並以隊際形式報名。
+                                    <div style={{ color: "#ff6a00" }}>
+                                        參賽者將以隊際形式參加，參賽隊伍將由學校老師代表報名。
                                     </div>
                                     <div>
                                         參賽者必須為2024至2025學年仍然就讀該校的全日制學生。
                                     </div>
                                     <div>
-                                        每隊隊伍由 2 – 4
+                                        每隊隊伍由 2 - 4
                                         人組成，每間學校不限報名隊伍數量。
                                     </div>
                                     <div>
@@ -458,7 +458,9 @@ export default function Registration() {
                                         工作坊及賽事作品內容均以中文進行。
                                     </div>
                                     <div>參賽費用全免。</div>
-                                    {/* <div style={{ fontWeight: "bold" }}>
+                                    {/* <div
+                                    // style={{ fontWeight: "bold" }}
+                                    >
                                         截止報名為2024年9月20日23:59。
                                     </div> */}
                                     <div>

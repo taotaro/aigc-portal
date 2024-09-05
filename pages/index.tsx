@@ -450,7 +450,7 @@ export default function Index() {
                                             marginTop: "0px",
                                         }}
                                     >
-                                        <p>SteelSeries Apex 3電競鍵盤x 3</p>
+                                        <p>SteelSeries Apex 3 電競鍵盤 3份</p>
                                         <p>
                                             <li>比賽獎盃及證書</li>
                                         </p>
@@ -471,8 +471,8 @@ export default function Index() {
                                     >
                                         <p>
                                             <li>
-                                                SteelSeries Rival 3
-                                                無線電競滑鼠x 3
+                                                SteelSeries Rival 3 無線電競滑鼠
+                                                3份
                                             </li>
                                         </p>
                                         <p>
@@ -564,7 +564,7 @@ export default function Index() {
                                             marginTop: "0px",
                                         }}
                                     >
-                                        <p>SteelSeries Apex 3電競鍵盤x 3</p>
+                                        <p>SteelSeries Apex 3 電競鍵盤 3份</p>
                                         <p>
                                             <li>比賽獎盃及證書</li>
                                         </p>
@@ -585,8 +585,8 @@ export default function Index() {
                                     >
                                         <p>
                                             <li>
-                                                SteelSeries Rival 3
-                                                無線電競滑鼠x 3
+                                                SteelSeries Rival 3 無線電競滑鼠
+                                                3份
                                             </li>
                                         </p>
                                         <p>
@@ -678,7 +678,7 @@ export default function Index() {
                                             marginTop: "0px",
                                         }}
                                     >
-                                        <p>SteelSeries Apex 3電競鍵盤x 3</p>
+                                        <p>SteelSeries Apex 3 電競鍵盤 3份</p>
                                         <p>
                                             <li>比賽獎盃及證書</li>
                                         </p>
@@ -699,8 +699,8 @@ export default function Index() {
                                     >
                                         <p>
                                             <li>
-                                                SteelSeries Rival 3
-                                                無線電競滑鼠x 3
+                                                SteelSeries Rival 3 無線電競滑鼠
+                                                3份
                                             </li>
                                         </p>
                                         <p>
