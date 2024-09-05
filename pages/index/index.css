@@ -103,6 +103,16 @@
     min-width: 660px;
 }
 
+.module-container-title {
+    /* background-color: #fff; */
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 660px;
+}
+
 .module-box {
     box-sizing: border-box;
     padding: 0 140px 80px;

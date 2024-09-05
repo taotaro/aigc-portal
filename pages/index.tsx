@@ -87,7 +87,7 @@ export default function Index() {
 
     const sponsorList = [
         { name: "SteelSeries", logo: "/images/steelseries.png" },
-    ]
+    ];
 
     const PhotoList = [
         // { name: "Photo 1", url: "/images/photo1.jpeg" },
@@ -168,25 +168,31 @@ export default function Index() {
             />
 
             {/* slogan */}
-            <section
-                className="title-section position-relative"
-                style={{ height: `${fixedBgHeight}px`, padding: "24px" }}
-                id="indexModule"
-            >
-                <h1 className="title">雲遊通義 - </h1>
-                <h1 className="title">阿里雲香港10週年</h1>
-                <h1 className="title" style={{ paddingBottom: "100px" }}>
-                    {" "}
-                    校際生成式AI比賽
-                </h1>
-                {/* <section className="position-relative module-box"> */}
-                <div className="module-button">
-                    <a href="/registration" target="__blank">
-                        立即報名
-                    </a>
-                </div>
-                {/* </section> */}
-            </section>
+            <div className="module-container-title">
+                <section
+                    className="title-section position-relative"
+                    style={{
+                        height: `${fixedBgHeight}px`,
+                        padding: "24px",
+                        minWidth: "100%",
+                    }}
+                    id="indexModule"
+                >
+                    <h1 className="title">雲遊通義 - </h1>
+                    <h1 className="title">阿里雲香港10週年</h1>
+                    <h1 className="title" style={{ paddingBottom: "100px" }}>
+                        {" "}
+                        校際生成式AI比賽
+                    </h1>
+                    {/* <section className="position-relative module-box"> */}
+                    <div className="module-button">
+                        <a href="/registration" target="__blank">
+                            立即報名
+                        </a>
+                    </div>
+                    {/* </section> */}
+                </section>
+            </div>
             <div className="module-container">
                 {/* 介绍 */}
                 <section
@@ -290,7 +296,7 @@ export default function Index() {
                                             objectFit: "cover", // Cover the entire div while maintaining aspect ratio
                                             borderRadius: "8px", // Apply the same border radius as the div for a seamless look
                                         }}
-                                    // style={{ width: "100%", height: "auto" }}
+                                        // style={{ width: "100%", height: "auto" }}
                                     />
                                 </div>
                             );
@@ -1150,20 +1156,22 @@ export default function Index() {
                         活動贊助
                     </p>
                     <div className="module-logos">
-                        {sponsorList.filter((item) => item.name !== "Alibaba").map((item) => {
-                            return (
-                                <div
-                                    className={`module-logo module-logo-${item.name}`}
-                                    key={item.name}
-                                >
-                                    <img
-                                        className="module-logo__img"
-                                        src={item.logo}
-                                        alt={item.name}
-                                    />
-                                </div>
-                            );
-                        })}
+                        {sponsorList
+                            .filter((item) => item.name !== "Alibaba")
+                            .map((item) => {
+                                return (
+                                    <div
+                                        className={`module-logo module-logo-${item.name}`}
+                                        key={item.name}
+                                    >
+                                        <img
+                                            className="module-logo__img"
+                                            src={item.logo}
+                                            alt={item.name}
+                                        />
+                                    </div>
+                                );
+                            })}
                     </div>
                 </section>
                 {/* footer */}
