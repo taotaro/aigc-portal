@@ -2,6 +2,10 @@
     min-width: 660px;
 }
 
+.input-container {
+    width: 48%;
+}
+
 .title-section {
     width: 100%;
     display: flex;
@@ -11,7 +15,7 @@
 }
 
 .title {
-    color: #FFF;
+    color: #fff;
     font-size: 48px;
     font-style: normal;
     font-weight: 600;
@@ -37,7 +41,7 @@
     justify-content: center;
 }
 
-.subtitle>p {
+.subtitle > p {
     margin-top: 12px;
     text-align: center;
 }
@@ -53,15 +57,18 @@
 }
 
 .intro {
-    width: 1040px;
+    /* width: 1100px; */
+    max-width: 1400px;
     margin: 0 auto;
     text-align: center;
     position: relative;
     box-sizing: border-box;
-    padding: 54px 48px;
+    padding: 80px 140px 80px;
+    /* padding: 54px 48px; */
+    /* padding: 24px; */
 }
 
-.intro>p {
+.intro > p {
     color: #242424;
     text-align: center;
     font-family: "PingFang HK";
@@ -90,6 +97,20 @@
     background-color: #fff;
     position: relative;
     z-index: 2;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 660px;
+}
+
+.module-container-title {
+    /* background-color: #fff; */
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    min-width: 660px;
 }
 
 .module-box {
@@ -99,7 +120,7 @@
     margin: 0 auto;
 }
 
-.module-box>.module-title {
+.module-box > .module-title-no-underline {
     text-align: center;
     color: #242424;
     font-size: 32px;
@@ -109,20 +130,39 @@
     align-items: center;
 }
 
-.module-box>.module-title::after {
+/* .module-box > .module-title::after {
+  content: " ";
+  width: 75px;
+  height: 4px;
+  background: #ff6a00;
+  margin-top: 12px;
+} */
+
+.module-box > .module-title {
+    text-align: center;
+    color: #242424;
+    font-size: 32px;
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.module-box > .module-title::after {
     content: " ";
     width: 75px;
     height: 4px;
-    background: #FF6A00;
+    background: #ff6a00;
     margin-top: 12px;
 }
 
-.module-box>.module-content {
+.module-box > .module-content {
     display: flex;
     align-items: center;
     box-sizing: border-box;
     padding: 40px 0;
     flex-wrap: wrap;
+    margin: 24px;
 }
 
 .module-content__left {
@@ -134,8 +174,8 @@
     height: 63px;
     padding: 12px 24px;
     box-sizing: border-box;
-    background: #FF6A00;
-    color: #FFF;
+    background: #ff6a00;
+    color: #fff;
     font-size: 28px;
     font-weight: 600;
     display: flex;
@@ -159,23 +199,23 @@
     height: 320px;
 }
 
-.module-box>.module-content-reverse {
+.module-box > .module-content-reverse {
     flex-direction: row-reverse;
 }
 
-.module-box>.module-content-reverse>.module-content__right {
+.module-box > .module-content-reverse > .module-content__right {
     margin-right: 60px;
     margin-left: 0;
 }
 
 .module-table {
     width: 100%;
-    margin: 80px auto 0;
+    /* margin: 80px auto 0; */
 }
 
 .module-table__row {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     border-bottom: 1px solid #242424;
     border-left: 1px solid #242424;
     border-right: 1px solid #242424;
@@ -199,26 +239,28 @@
     align-items: center;
     padding: 10px 24px;
     box-sizing: border-box;
+    border-right: 1px solid #242424;
     min-height: 52px;
     color: #242424;
     font-size: 20px;
 }
 
-.module-table__row>.module-table__col:last-child {
+.module-table__row > .module-table__col:last-child {
     border-right: none;
 }
 
 .module-table__header {
-    background: #3E3E3E;
+    /* background: #3E3E3E; */
+    background: #ff6a00;
 }
 
-.module-table__header>.module-table__col {
-    color: #FFF;
+.module-table__header > .module-table__col {
+    color: #fff;
     font-weight: 600;
     border: none;
 }
 
-.module-table__col-mul>ul {
+.module-table__col-mul > ul {
     box-sizing: border-box;
     padding-left: 32px;
 }
@@ -258,7 +300,6 @@
     width: 292px;
     height: 108px;
     border-radius: 12px;
-    border: 1px solid #CCC;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -269,7 +310,7 @@
     margin-bottom: 12px;
 }
 
-.module-logo>.module-logo__img {
+.module-logo > .module-logo__img {
     width: 100%;
     height: auto;
 }
@@ -283,8 +324,8 @@
     height: 63px;
     padding: 12px 24px;
     box-sizing: border-box;
-    background: #FF6A00;
-    color: #FFF;
+    background: #ff6a00;
+    color: #fff;
     font-size: 28px;
     font-weight: 600;
     margin: 0 auto;
@@ -292,7 +333,7 @@
     cursor: pointer;
 }
 
-.module-button>a {
+.module-button > a {
     color: #fff;
 }
 
@@ -307,7 +348,63 @@
     margin: 0 auto;
 }
 
+.registration-form {
+    padding-top: 24px;
+    margin-top: 30px;
+}
+
+.registration-info {
+    padding-bottom: 80px;
+    align-self: stretch;
+}
+
+.registration-title {
+    text-align: center;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+.registration-subtitle {
+    text-align: left;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    gap: 10px;
+}
+
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    gap: 24px;
+    text-align: left;
+}
+
+.registration-form__label {
+    font-size: 24px;
+    padding-bottom: 24px;
+}
+
+.registration-form__items {
+    display: flex;
+    padding-bottom: 80px;
+    gap: 24px;
+    align-self: stretch;
+    align-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
 @media (max-width: 860px) {
+    .input-container {
+        width: 100%;
+    }
     .title {
         font-size: 32px;
         letter-spacing: 12px;
@@ -325,7 +422,7 @@
         padding: 40px 0;
     }
 
-    .intro-box>.intro>p {
+    .intro-box > .intro > p {
         font-size: 22px;
     }
 
@@ -353,6 +450,9 @@
 }
 
 @media (max-width: 500px) {
+    .input-container {
+        width: 100%;
+    }
     .title {
         font-size: 20px;
         letter-spacing: 12px;
@@ -370,7 +470,7 @@
         padding: 20px 0;
     }
 
-    .intro-box>.intro>p {
+    .intro-box > .intro > p {
         font-size: 18px;
     }
 
@@ -381,13 +481,13 @@
         width: 148px;
     }
 
-    .module-box>.module-content {
+    .module-box > .module-content {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
 
-    .module-box>.module-content-reverse>.module-content__right {
+    .module-box > .module-content-reverse > .module-content__right {
         margin-right: 0;
     }
 
@@ -411,5 +511,4 @@
     .module-title {
         font-size: 24px;
     }
-
 }
