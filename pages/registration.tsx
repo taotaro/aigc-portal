@@ -614,15 +614,15 @@ export default function Registration() {
                                                                         value: "",
                                                                     },
                                                                     {
-                                                                        value: "Primary",
+                                                                        value: "小學組",
                                                                         label: "小學組",
                                                                     },
                                                                     {
-                                                                        value: "Secondary",
+                                                                        value: "中學組",
                                                                         label: "中學組",
                                                                     },
                                                                     {
-                                                                        value: "Disabled",
+                                                                        value: "展能組",
                                                                         label: "展能組",
                                                                     },
                                                                 ]}
