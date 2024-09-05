@@ -103,7 +103,10 @@ export default function Header(props) {
             document.body.scrollTop;
 
         // Change styles when scrolled down on mobile view
-        if (scrollHeight > 800) {
+        if (scrollHeight > 800 && !isMobile) {
+            setNavLinkStyle({ color: "#333" });
+            setScrolled(true);
+        } else if (scrollHeight > 200 && isMobile) {
             setNavLinkStyle({ color: "#333" });
             setScrolled(true);
         } else {
