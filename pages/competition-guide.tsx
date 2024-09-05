@@ -137,10 +137,18 @@ export default function CompetitionGuide() {
             <div
                 style={{
                     width: "100%",
+                    // minWidth: "50%",
                     height: "80px",
                     backgroundImage: `url('/images/index-bg.jpeg')`,
+                    // backgroundColor: "red",
                 }}
+                id="fixed-bg"
             />
+            {/* <img
+                id="fixed-bg"
+                src="/images/index-bg.jpeg"
+                style={{ width: "100%", height: "80px" }}
+            /> */}
 
             <div className="module-container">
                 {/* 介绍 */}
@@ -780,6 +788,8 @@ export default function CompetitionGuide() {
                             flexWrap: "wrap",
                             gap: "20px",
                             paddingTop: "24px",
+                            justifyContent: "center", // Centers the items horizontally
+                            alignItems: "center", // Centers the items vertically
                         }}
                     >
                         {LogoList.filter((item) => item.name !== "Alibaba").map(
@@ -791,8 +801,9 @@ export default function CompetitionGuide() {
                                             maxWidth: "23.5%",
                                             boxSizing: "border-box",
                                             textAlign: "center",
-                                            justifyContent: "center",
-                                            alignContent: "center",
+                                            display: "flex", // Add display flex to the item container
+                                            justifyContent: "center", // Center the image horizontally
+                                            alignItems: "center", // Center the image vertically
                                         }}
                                         key={item.name}
                                     >

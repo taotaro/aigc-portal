@@ -360,6 +360,8 @@ export default function Terms() {
                             flexWrap: "wrap",
                             gap: "20px",
                             paddingTop: "24px",
+                            justifyContent: "center", // Centers the items horizontally
+                            alignItems: "center", // Centers the items vertically
                         }}
                     >
                         {LogoList.filter((item) => item.name !== "Alibaba").map(
@@ -371,8 +373,9 @@ export default function Terms() {
                                             maxWidth: "23.5%",
                                             boxSizing: "border-box",
                                             textAlign: "center",
-                                            justifyContent: "center",
-                                            alignContent: "center",
+                                            display: "flex", // Add display flex to the item container
+                                            justifyContent: "center", // Center the image horizontally
+                                            alignItems: "center", // Center the image vertically
                                         }}
                                         key={item.name}
                                     >
