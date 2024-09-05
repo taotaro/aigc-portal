@@ -87,7 +87,7 @@ export default function CompetitionGuide() {
 
     const sponsorList = [
         { name: "SteelSeries", logo: "/images/steelseries.png" },
-    ]
+    ];
 
     function onWindowResize() {
         const $fixedBg = document.getElementById("fixed-bg");
@@ -166,7 +166,7 @@ export default function CompetitionGuide() {
                             className="module-content__desc"
                             style={{ marginTop: "-10px" }}
                         >
-                            創作AI 故事圖書：
+                            創作AI互動式小說
                             <ul
                                 style={{
                                     paddingLeft: "20px",
@@ -730,7 +730,7 @@ export default function CompetitionGuide() {
                                 >
                                     Alibaba Cloud的私隱政策
                                 </a>{" "}
-                                、通義產品的
+                                、通義平台的
                                 <a
                                     href="https://terms.alicdn.com/legal-agreement/terms/c_end_product_protocol/20231011201348415/20231011201348415.html"
                                     target="_blank"
@@ -833,20 +833,22 @@ export default function CompetitionGuide() {
                         活動贊助
                     </p>
                     <div className="module-logos">
-                        {sponsorList.filter((item) => item.name !== "Alibaba").map((item) => {
-                            return (
-                                <div
-                                    className={`module-logo module-logo-${item.name}`}
-                                    key={item.name}
-                                >
-                                    <img
-                                        className="module-logo__img"
-                                        src={item.logo}
-                                        alt={item.name}
-                                    />
-                                </div>
-                            );
-                        })}
+                        {sponsorList
+                            .filter((item) => item.name !== "Alibaba")
+                            .map((item) => {
+                                return (
+                                    <div
+                                        className={`module-logo module-logo-${item.name}`}
+                                        key={item.name}
+                                    >
+                                        <img
+                                            className="module-logo__img"
+                                            src={item.logo}
+                                            alt={item.name}
+                                        />
+                                    </div>
+                                );
+                            })}
                     </div>
                 </section>
                 {/* footer */}

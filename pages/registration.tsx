@@ -60,7 +60,7 @@ export default function Registration() {
 
     const sponsorList = [
         { name: "SteelSeries", logo: "/images/steelseries.png" },
-    ]
+    ];
 
     const FormList = [
         {
@@ -759,7 +759,7 @@ export default function Registration() {
                                             >
                                                 Alibaba Cloud的私隱政策
                                             </a>{" "}
-                                            、通義產品的
+                                            、通義平台的
                                             <a
                                                 href="https://terms.alicdn.com/legal-agreement/terms/c_end_product_protocol/20231011201348415/20231011201348415.html"
                                                 target="_blank"
@@ -904,27 +904,31 @@ export default function Registration() {
                     <p className="module-title" style={{ paddingTop: "24px" }}>
                         活動贊助
                     </p>
-                    <div style={{
-                        display: "flex",
-                        alignItems: "center",
-                        justifyContent: "center",
-                        gap: "20px",
-                        paddingTop: "24px",
-                    }}>
-                        {sponsorList.filter((item) => item.name !== "Alibaba").map((item) => {
-                            return (
-                                <div
-                                    className={`module-logo module-logo-${item.name}`}
-                                    key={item.name}
-                                >
-                                    <img
-                                        className="module-logo__img"
-                                        src={item.logo}
-                                        alt={item.name}
-                                    />
-                                </div>
-                            );
-                        })}
+                    <div
+                        style={{
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            gap: "20px",
+                            paddingTop: "24px",
+                        }}
+                    >
+                        {sponsorList
+                            .filter((item) => item.name !== "Alibaba")
+                            .map((item) => {
+                                return (
+                                    <div
+                                        className={`module-logo module-logo-${item.name}`}
+                                        key={item.name}
+                                    >
+                                        <img
+                                            className="module-logo__img"
+                                            src={item.logo}
+                                            alt={item.name}
+                                        />
+                                    </div>
+                                );
+                            })}
                     </div>
                 </section>
             </div>

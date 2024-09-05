@@ -173,7 +173,7 @@ export default function Index() {
                     className="title-section position-relative"
                     style={{
                         height: `${fixedBgHeight}px`,
-                        padding: "24px",
+                        // padding: "24px",
                         minWidth: "100%",
                     }}
                     id="indexModule"
@@ -409,7 +409,7 @@ export default function Index() {
                             </div>
                             <div className="module-table__row ">
                                 <div className="module-table__col">
-                                    冠軍（1名）
+                                    冠軍 (1隊)
                                 </div>
                                 <div className="module-table__col">
                                     <div
@@ -420,20 +420,27 @@ export default function Index() {
                                         }}
                                     >
                                         <p>
-                                            1） SteelSeries - Nova 5 Headset 3份
+                                            <li>
+                                                阿里巴巴杭州總部參觀團
+                                                (3日2夜機票連住宿3日2夜 -
+                                                學生連同一位帶隊老師)*
+                                            </li>
                                         </p>
-                                        <p>2）獎盃 及 證書</p>
                                         <p>
-                                            3） 阿里巴巴杭州總部參觀團
-                                            (3日2夜機票連住宿 -
-                                            學生連同一位帶隊老師 )
+                                            <li>
+                                                SteelSeries Arctis Nova 5
+                                                無線電競耳機 3份
+                                            </li>
+                                        </p>
+                                        <p>
+                                            <li>比賽獎盃及證書</li>
                                         </p>
                                     </div>
                                 </div>
                             </div>
                             <div className="module-table__row ">
                                 <div className="module-table__col">
-                                    亞軍（1名）
+                                    亞軍 (1隊)
                                 </div>
                                 <div className="module-table__col">
                                     <div
@@ -443,16 +450,16 @@ export default function Index() {
                                             marginTop: "0px",
                                         }}
                                     >
+                                        <p>SteelSeries Apex 3電競鍵盤x 3</p>
                                         <p>
-                                            1) SteelSeries – Apex 3 Keyboard 3份
+                                            <li>比賽獎盃及證書</li>
                                         </p>
-                                        <p>2) 獎盃＋證書</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="module-table__row ">
                                 <div className="module-table__col">
-                                    季軍（1名）
+                                    季軍 (1隊)
                                 </div>
                                 <div className="module-table__col">
                                     <div
@@ -463,9 +470,14 @@ export default function Index() {
                                         }}
                                     >
                                         <p>
-                                            1) SteelSeries – Rival 3 Mouse 3份
+                                            <li>
+                                                SteelSeries Rival 3
+                                                無線電競滑鼠x 3
+                                            </li>
                                         </p>
-                                        <p>2) 獎盃＋證書</p>
+                                        <p>
+                                            <li>比賽獎盃及證書</li>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -481,7 +493,12 @@ export default function Index() {
                                             marginTop: "0px",
                                         }}
                                     >
-                                        <p>阿里雲 USD1000 代金券 (無影雲)</p>
+                                        <p>
+                                            <li>
+                                                阿里雲 USD1000 代金券
+                                                (無影雲適用)
+                                            </li>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -506,7 +523,7 @@ export default function Index() {
                             </div>
                             <div className="module-table__row ">
                                 <div className="module-table__col">
-                                    冠軍（1名）
+                                    冠軍 (1隊)
                                 </div>
                                 <div className="module-table__col">
                                     <div
@@ -517,20 +534,27 @@ export default function Index() {
                                         }}
                                     >
                                         <p>
-                                            1） SteelSeries - Nova 5 Headset 3份
+                                            <li>
+                                                阿里巴巴杭州總部參觀團
+                                                (3日2夜機票連住宿3日2夜 -
+                                                學生連同一位帶隊老師)*
+                                            </li>
                                         </p>
-                                        <p>2）獎盃 及 證書</p>
                                         <p>
-                                            3） 阿里巴巴杭州總部參觀團
-                                            (3日2夜機票連住宿 -
-                                            學生連同一位帶隊老師 )
+                                            <li>
+                                                SteelSeries Arctis Nova 5
+                                                無線電競耳機 3份
+                                            </li>
+                                        </p>
+                                        <p>
+                                            <li>比賽獎盃及證書</li>
                                         </p>
                                     </div>
                                 </div>
                             </div>
                             <div className="module-table__row ">
                                 <div className="module-table__col">
-                                    亞軍（1名）
+                                    亞軍 (1隊)
                                 </div>
                                 <div className="module-table__col">
                                     <div
@@ -540,16 +564,16 @@ export default function Index() {
                                             marginTop: "0px",
                                         }}
                                     >
+                                        <p>SteelSeries Apex 3電競鍵盤x 3</p>
                                         <p>
-                                            1) SteelSeries – Apex 3 Keyboard 3份
+                                            <li>比賽獎盃及證書</li>
                                         </p>
-                                        <p>2) 獎盃＋證書</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="module-table__row ">
                                 <div className="module-table__col">
-                                    季軍（1名）
+                                    季軍 (1隊)
                                 </div>
                                 <div className="module-table__col">
                                     <div
@@ -560,9 +584,14 @@ export default function Index() {
                                         }}
                                     >
                                         <p>
-                                            1) SteelSeries – Rival 3 Mouse 3份
+                                            <li>
+                                                SteelSeries Rival 3
+                                                無線電競滑鼠x 3
+                                            </li>
                                         </p>
-                                        <p>2) 獎盃＋證書</p>
+                                        <p>
+                                            <li>比賽獎盃及證書</li>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -578,7 +607,12 @@ export default function Index() {
                                             marginTop: "0px",
                                         }}
                                     >
-                                        <p>阿里雲 USD1000 代金券 (無影雲)</p>
+                                        <p>
+                                            <li>
+                                                阿里雲 USD1000 代金券
+                                                (無影雲適用)
+                                            </li>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -603,7 +637,7 @@ export default function Index() {
                             </div>
                             <div className="module-table__row ">
                                 <div className="module-table__col">
-                                    冠軍（1名）
+                                    冠軍 (1隊)
                                 </div>
                                 <div className="module-table__col">
                                     <div
@@ -614,20 +648,27 @@ export default function Index() {
                                         }}
                                     >
                                         <p>
-                                            1） SteelSeries - Nova 5 Headset 3份
+                                            <li>
+                                                阿里巴巴杭州總部參觀團
+                                                (3日2夜機票連住宿3日2夜 -
+                                                學生連同一位帶隊老師)*
+                                            </li>
                                         </p>
-                                        <p>2）獎盃 及 證書</p>
                                         <p>
-                                            3） 阿里巴巴杭州總部參觀團
-                                            (3日2夜機票連住宿 -
-                                            學生連同一位帶隊老師 )
+                                            <li>
+                                                SteelSeries Arctis Nova 5
+                                                無線電競耳機 3份
+                                            </li>
+                                        </p>
+                                        <p>
+                                            <li>比賽獎盃及證書</li>
                                         </p>
                                     </div>
                                 </div>
                             </div>
                             <div className="module-table__row ">
                                 <div className="module-table__col">
-                                    亞軍（1名）
+                                    亞軍 (1隊)
                                 </div>
                                 <div className="module-table__col">
                                     <div
@@ -637,16 +678,16 @@ export default function Index() {
                                             marginTop: "0px",
                                         }}
                                     >
+                                        <p>SteelSeries Apex 3電競鍵盤x 3</p>
                                         <p>
-                                            1) SteelSeries – Apex 3 Keyboard 3份
+                                            <li>比賽獎盃及證書</li>
                                         </p>
-                                        <p>2) 獎盃＋證書</p>
                                     </div>
                                 </div>
                             </div>
                             <div className="module-table__row ">
                                 <div className="module-table__col">
-                                    季軍（1名）
+                                    季軍 (1隊)
                                 </div>
                                 <div className="module-table__col">
                                     <div
@@ -657,9 +698,14 @@ export default function Index() {
                                         }}
                                     >
                                         <p>
-                                            1) SteelSeries – Rival 3 Mouse 3份
+                                            <li>
+                                                SteelSeries Rival 3
+                                                無線電競滑鼠x 3
+                                            </li>
                                         </p>
-                                        <p>2) 獎盃＋證書</p>
+                                        <p>
+                                            <li>比賽獎盃及證書</li>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -675,7 +721,12 @@ export default function Index() {
                                             marginTop: "0px",
                                         }}
                                     >
-                                        <p>阿里雲 USD1000 代金券 (無影雲)</p>
+                                        <p>
+                                            <li>
+                                                阿里雲 USD1000 代金券
+                                                (無影雲適用)
+                                            </li>
+                                        </p>
                                     </div>
                                 </div>
                             </div>
@@ -939,14 +990,14 @@ export default function Index() {
                                     「阿里雲香港峰會」作品展示
                                 </div>
                             </div>
-                            <div className="module-table__row ">
+                            {/* <div className="module-table__row ">
                                 <div className="module-table__col">
                                     2024年11月下旬至12月
                                 </div>
                                 <div className="module-table__col">
                                     （待定）於展覽場地舉行作品展覽
                                 </div>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </section>
@@ -961,7 +1012,7 @@ export default function Index() {
                         }}
                         id="scheduleModule"
                     >
-                        比賽工作坊
+                        比賽開幕禮及工作坊
                     </p>
                     <div
                         className="module-content"
@@ -971,8 +1022,8 @@ export default function Index() {
                             {/* <div className="module-content__title">活動資訊</div> */}
                             <div className="module-content__desc">
                                 <div>日期：2024年9月28日（星期六） </div>
-                                <div>時間：待定</div>
-                                <div>地點：待定</div>
+                                <div>時間：上午9時半至中午12時半</div>
+                                <div>地點：香港銅鑼灣禮頓道140號聖保祿學校</div>
                             </div>
                         </div>
                     </div>
@@ -1069,7 +1120,7 @@ export default function Index() {
                                 >
                                     Alibaba Cloud的私隱政策
                                 </a>{" "}
-                                、通義產品的
+                                、通義平台的
                                 <a
                                     href="https://terms.alicdn.com/legal-agreement/terms/c_end_product_protocol/20231011201348415/20231011201348415.html"
                                     target="_blank"
