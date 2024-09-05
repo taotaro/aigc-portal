@@ -86,7 +86,7 @@ export default function Members({
             key: 2,
             label: "2. 就讀年級 ",
             value: memberData.studentGrade,
-            type: "number",
+            type: "text",
             name: "studentGrade",
             required: true,
             options: [],
