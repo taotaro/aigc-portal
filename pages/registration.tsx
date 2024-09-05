@@ -458,9 +458,9 @@ export default function Registration() {
                                         工作坊及賽事作品內容均以中文進行。
                                     </div>
                                     <div>參賽費用全免。</div>
-                                    <div style={{ fontWeight: "bold" }}>
+                                    {/* <div style={{ fontWeight: "bold" }}>
                                         截止報名為2024年9月20日23:59。
-                                    </div>
+                                    </div> */}
                                     <div>
                                         如學校需要為5隊或以上報名，請聯絡
                                         Gamenoodlesoup (
