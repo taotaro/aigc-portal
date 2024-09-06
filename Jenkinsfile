@@ -55,7 +55,6 @@ pipeline {
         stage("Build Image") {
             steps {
                 script {
-                    sh "sudo cp -f /mnt/data/runtime-env/${PROJECT_NAME}-${NODE_ENV}-env ./.env"
 
                     def projectDockerImageExists = !sh(returnStatus: true, script: "sudo docker inspect ${PROJECT_NAME}-${NODE_ENV}:latest")
                     println "Project Docker Image Exists: ${projectDockerImageExists}"
