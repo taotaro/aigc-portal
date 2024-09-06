@@ -18,7 +18,7 @@ export default function Judges() {
 
     const sponsorList = [
         { name: "SteelSeries", logo: "/images/steelseries.png" },
-    ]
+    ];
 
     const judgeData = [
         {
@@ -73,8 +73,10 @@ export default function Judges() {
     return (
         <>
             <NextSeo
-                title={"阿里雲AI未來教室"}
-                description={"雲遊通義 – 阿里雲香港10週年校際生成式AI比賽發佈會"}
+                title={"雲遊通義 阿里雲校際AI比賽"}
+                description={
+                    "雲遊通義 – 阿里雲香港10週年校際生成式AI比賽發佈會"
+                }
             />
             <div
                 style={{
@@ -115,58 +117,64 @@ export default function Judges() {
                 <section className="position-relative module-box">
                     <p className="module-title">活動主辦</p>
                     <div className="module-logos">
-                        {LogoList.filter((item) => item.name === "Alibaba").map((item) => {
-                            return (
-                                <div
-                                    className={`module-logo module-logo-${item.name}`}
-                                    key={item.name}
-                                >
-                                    <img
-                                        className="module-logo__img"
-                                        src={item.logo}
-                                        alt={item.name}
-                                    />
-                                </div>
-                            );
-                        })}
+                        {LogoList.filter((item) => item.name === "Alibaba").map(
+                            (item) => {
+                                return (
+                                    <div
+                                        className={`module-logo module-logo-${item.name}`}
+                                        key={item.name}
+                                    >
+                                        <img
+                                            className="module-logo__img"
+                                            src={item.logo}
+                                            alt={item.name}
+                                        />
+                                    </div>
+                                );
+                            }
+                        )}
                     </div>
                     <p className="module-title" style={{ paddingTop: "24px" }}>
                         支持單位
                     </p>
                     <div className="module-logos">
-                        {LogoList.filter((item) => item.name !== "Alibaba").map((item) => {
-                            return (
-                                <div
-                                    className={`module-logo module-logo-${item.name}`}
-                                    key={item.name}
-                                >
-                                    <img
-                                        className="module-logo__img"
-                                        src={item.logo}
-                                        alt={item.name}
-                                    />
-                                </div>
-                            );
-                        })}
+                        {LogoList.filter((item) => item.name !== "Alibaba").map(
+                            (item) => {
+                                return (
+                                    <div
+                                        className={`module-logo module-logo-${item.name}`}
+                                        key={item.name}
+                                    >
+                                        <img
+                                            className="module-logo__img"
+                                            src={item.logo}
+                                            alt={item.name}
+                                        />
+                                    </div>
+                                );
+                            }
+                        )}
                     </div>
                     <p className="module-title" style={{ paddingTop: "24px" }}>
                         活動贊助
                     </p>
                     <div className="module-logos">
-                        {sponsorList.filter((item) => item.name !== "Alibaba").map((item) => {
-                            return (
-                                <div
-                                    className={`module-logo module-logo-${item.name}`}
-                                    key={item.name}
-                                >
-                                    <img
-                                        className="module-logo__img"
-                                        src={item.logo}
-                                        alt={item.name}
-                                    />
-                                </div>
-                            );
-                        })}
+                        {sponsorList
+                            .filter((item) => item.name !== "Alibaba")
+                            .map((item) => {
+                                return (
+                                    <div
+                                        className={`module-logo module-logo-${item.name}`}
+                                        key={item.name}
+                                    >
+                                        <img
+                                            className="module-logo__img"
+                                            src={item.logo}
+                                            alt={item.name}
+                                        />
+                                    </div>
+                                );
+                            })}
                     </div>
                 </section>
             </div>
