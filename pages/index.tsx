@@ -148,7 +148,7 @@ export default function Index() {
     return (
         <>
             <NextSeo
-                title={"阿里雲AI未來教室"}
+                title={"雲遊通義 阿里雲校際AI比賽"}
                 description={
                     "雲遊通義 – 阿里雲香港10週年校際生成式AI比賽發佈會"
                 }
@@ -381,7 +381,7 @@ export default function Index() {
                     id="gameInfoModule"
                 >
                     <p className="module-title">證書及獎品</p>
-                    <p
+                    {/* <p
                         style={{
                             padding: "36px 36px 0px 36px",
                             fontWeight: "bold",
@@ -389,7 +389,7 @@ export default function Index() {
                         }}
                     >
                         隊伍獎項
-                    </p>
+                    </p> */}
                     <div className="module-content" style={{ padding: "36px" }}>
                         <div className="module-table">
                             {" "}
@@ -450,7 +450,11 @@ export default function Index() {
                                             marginTop: "0px",
                                         }}
                                     >
-                                        <p>SteelSeries Apex 3 電競鍵盤 3份</p>
+                                        <p>
+                                            <li>
+                                                SteelSeries Apex 3 電競鍵盤 3份
+                                            </li>
+                                        </p>
                                         <p>
                                             <li>比賽獎盃及證書</li>
                                         </p>
@@ -483,7 +487,7 @@ export default function Index() {
                             </div>
                             <div className="module-table__row ">
                                 <div className="module-table__col">
-                                    最踴躍參與獎 （共3名）
+                                    最踴躍參與學校獎 (共3名)
                                 </div>
                                 <div className="module-table__col">
                                     <div
@@ -495,8 +499,8 @@ export default function Index() {
                                     >
                                         <p>
                                             <li>
-                                                阿里雲 USD1000 代金券
-                                                (無影雲適用)
+                                                每組別最多參與隊伍的三間學校將獲得阿里雲
+                                                USD1000 代金券
                                             </li>
                                         </p>
                                     </div>
@@ -564,7 +568,11 @@ export default function Index() {
                                             marginTop: "0px",
                                         }}
                                     >
-                                        <p>SteelSeries Apex 3 電競鍵盤 3份</p>
+                                        <p>
+                                            <li>
+                                                SteelSeries Apex 3 電競鍵盤 3份
+                                            </li>
+                                        </p>
                                         <p>
                                             <li>比賽獎盃及證書</li>
                                         </p>
@@ -597,7 +605,7 @@ export default function Index() {
                             </div>
                             <div className="module-table__row ">
                                 <div className="module-table__col">
-                                    最踴躍參與獎 （共3名）
+                                    最踴躍參與學校獎 (共3名)
                                 </div>
                                 <div className="module-table__col">
                                     <div
@@ -609,8 +617,8 @@ export default function Index() {
                                     >
                                         <p>
                                             <li>
-                                                阿里雲 USD1000 代金券
-                                                (無影雲適用)
+                                                每組別最多參與隊伍的三間學校將獲得阿里雲
+                                                USD1000 代金券
                                             </li>
                                         </p>
                                     </div>
@@ -678,7 +686,11 @@ export default function Index() {
                                             marginTop: "0px",
                                         }}
                                     >
-                                        <p>SteelSeries Apex 3 電競鍵盤 3份</p>
+                                        <p>
+                                            <li>
+                                                SteelSeries Apex 3 電競鍵盤 3份
+                                            </li>
+                                        </p>
                                         <p>
                                             <li>比賽獎盃及證書</li>
                                         </p>
@@ -711,7 +723,7 @@ export default function Index() {
                             </div>
                             <div className="module-table__row ">
                                 <div className="module-table__col">
-                                    最踴躍參與獎 （共3名）
+                                    最踴躍參與學校獎 (共3名)
                                 </div>
                                 <div className="module-table__col">
                                     <div
@@ -723,8 +735,8 @@ export default function Index() {
                                     >
                                         <p>
                                             <li>
-                                                阿里雲 USD1000 代金券
-                                                (無影雲適用)
+                                                每組別最多參與隊伍的三間學校將獲得阿里雲
+                                                USD1000 代金券
                                             </li>
                                         </p>
                                     </div>

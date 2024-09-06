@@ -129,7 +129,7 @@ export default function CompetitionGuide() {
     return (
         <>
             <NextSeo
-                title={"阿里雲AI未來教室"}
+                title={"雲遊通義 阿里雲校際AI比賽"}
                 description={
                     "雲遊通義 – 阿里雲香港10週年校際生成式AI比賽發佈會"
                 }
