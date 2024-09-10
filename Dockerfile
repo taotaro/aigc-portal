@@ -1,13 +1,24 @@
-FROM PROJECT_NAME-runtime:latest
-
-WORKDIR /home/project
-
-COPY . /home/project/
+# FROM PROJECT_NAME-runtime:latest
+FROM node:18
 
 RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 RUN echo 'Asia/Shanghai' > /etc/timezone
 
-RUN npm install 
-RUN npm run build
+WORKDIR /home/project
 
-CMD ["pm2-runtime", "start", "--name", "aigc-portal", "npm", "--", "run", "start"]
+# COPY . /home/project/
+COPY . .
+
+
+# RUN npm install 
+# RUN npm run build
+
+# CMD ["pm2-runtime", "start", "--name", "aigc-portal", "npm", "--", "run", "start"]
+
+RUN yarn install
+
+# build project
+RUN yarn run build
+
+# launch core js, to use pm2 for docker container, it needs to use pm2-runtime to keep the container running continued
+CMD ["pm2-runtime", "start", "/home/project/dist/index.js"]
