@@ -5,11 +5,13 @@ on:
   push:
     branches:
       - staging
+      - development
   pull_request:
     branches:
       - development
       - preview
       - main
+      - production
 
 jobs:
   build:
