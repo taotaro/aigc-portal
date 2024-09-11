@@ -1,4 +1,13 @@
 .index-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10000000;
+    backdrop-filter: blur(10px); /* Check if this makes content hard to read */
+}
+
+/* .index-header {
 	width: 100%;
 	position: fixed;
 	top: 0;
@@ -6,4 +15,77 @@
 	width: 100%;
 	z-index: 2;
 	backdrop-filter: blur(10px);
+} */
+
+.navbar {
+    width: 100%;
+}
+
+.navbar-toggler {
+    border: none;
+    background: none;
+    margin-left: auto;
+}
+
+.navbar-toggler:focus,
+.navbar-toggler:active {
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-collapse.show {
+    display: block;
+    width: 100%;
+    background-color: #333; /* Dark background for the mobile menu */
+    /* background-image: url("/images/index-bg.jpeg");
+  background-size: cover;
+  background-position: center; */
+    color: #fff; /* Ensure text is white for contrast */
+    position: absolute;
+    top: 56px; /* Adjust based on your navbar height */
+    left: 0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); /* Add shadow for better separation */
+}
+
+.navbar-nav {
+    width: 100%;
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Stack items vertically in mobile view */
+}
+
+.nav-item .nav-link {
+    color: #fff; /* White text for better visibility */
+    padding: 8px 16px; /* Add padding for better tap targets */
+    display: block; /* Make links full-width for easier navigation */
+}
+
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-toggler {
+        display: none; /* Hide the hamburger icon in desktop view */
+    }
+
+    .navbar-expand-lg .navbar-collapse {
+        display: flex !important;
+        flex-basis: auto;
+        align-items: center;
+    }
+
+    .navbar-nav {
+        flex-direction: row; /* Align items horizontally in desktop view */
+        justify-content: flex-end; /* Align nav items to the right */
+    }
+
+    .nav-item {
+        margin-right: 1rem; /* Spacing between items */
+    }
+
+    .nav-item:last-child {
+        margin-right: 0;
+    }
 }
