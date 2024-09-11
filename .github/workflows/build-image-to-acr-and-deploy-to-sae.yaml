@@ -33,6 +33,9 @@ jobs:
       - name: Record start time
         run: echo "START_TIME=$(date +%s)" >> $GITHUB_ENV
 
+      - name: Set timezone to Asia/Shanghai
+        run: sudo timedatectl set-timezone Asia/Shanghai && date
+
       # 拉取最新代码
       - uses: actions/checkout@v4
 
