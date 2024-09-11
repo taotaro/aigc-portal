@@ -21,7 +21,19 @@ export default function Header(props) {
         {
             label: "通義平台",
             current: "",
-            href: "https://tongyi.aliyun.com",
+            // href: "https://tongyi.aliyun.com",
+            children: [
+                {
+                    label: "平台網頁",
+                    current: "",
+                    href: "https://tongyi.aliyun.com",
+                },
+                {
+                    label: "登入教程",
+                    current: "",
+                    href: "https://cri-jh0uqm2iyt2q8ku4-registry.oss-cn-hongkong.aliyuncs.com/Tongyiwanxiang%20Login%20Instructions.pdf",
+                },
+            ],
         },
         {
             label: "網上報名",
