@@ -9,11 +9,10 @@ WORKDIR /home/project
 # COPY . /home/project/
 COPY . .
 
-
+RUN npm i pm2 -g
 RUN npm install 
 RUN npm run build
 
-RUN npm i pm2 -g
 
 # CMD ["pm2-runtime", "start", "--name", "aigc-portal", "npm", "--", "run", "start"]
 
