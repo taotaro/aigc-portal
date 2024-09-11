@@ -86,6 +86,7 @@ jobs:
           icon: ${{ vars.LARK_NOTIFICATION_ICON }}
           title: 'Github Actions Automatic Deployment Job Build Result'
           trigger: ${{ github.actor }}
+          project-name: '${{ vars.PROJECT_DISPLAY_NAME }}'
           start-time: ${{ env.START_TIME }}
           end-time: ${{ env.END_TIME }}
           repository: '${{ github.repository }}'
