@@ -7,13 +7,13 @@ on:
       - staging
       - development
       - main
-  pull_request:
-    branches:
-      - development
-      - preview
-      - main
-      - production
-      - main
+  # pull_request:
+  #   branches:
+  #     - development
+  #     - preview
+  #     - main
+  #     - production
+  #     - main
 
 jobs:
   build:
@@ -54,7 +54,9 @@ jobs:
 
       # 编译并提交镜像到ACR
       - name: Build and Push Docker Image
-        run: docker buildx build --platform linux/amd64 -t $IMAGE_URL:$IMAGE_TAG -f ./Dockerfile --push .
+        env:
+          FINAL_IMAGE_URL: ${{ env.IMAGE_URL }}:${{ env.IMAGE_TAG }}
+        run: docker buildx build --platform linux/amd64 -t $FINAL_IMAGE_URL -f ./Dockerfile --push .
 
       # 使用编译的镜像触发 SAE 部署
       - name: Deploy to SAE
