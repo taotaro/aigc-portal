@@ -14,7 +14,7 @@ RUN npm install
 RUN npm run build
 
 
-# CMD ["pm2-runtime", "start", "--name", "aigc-portal", "npm", "--", "run", "start"]
+CMD ["pm2-runtime", "start", "--name", "aigc-portal", "npm", "--", "run", "start"]
 
 # RUN yarn install
 
@@ -22,4 +22,4 @@ RUN npm run build
 # RUN yarn run build
 
 # launch core js, to use pm2 for docker container, it needs to use pm2-runtime to keep the container running continued
-CMD ["pm2-runtime", "start", "/home/project/dist/index.js"]
+# CMD ["pm2-runtime", "start", "/home/project/dist/index.js"]
