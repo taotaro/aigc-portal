@@ -358,8 +358,12 @@ export default function Registration() {
             console.log("payload: ", payload);
             const response = await axios.post(
                 // "https://aigc-backend-dev.materia-logic.com/common/register",
+<<<<<<< HEAD
                 "https://alibabacloudtongyi.com.hk/common/register",
                 // "http://127.0.0.1:8000/common/register",
+=======
+                "http://127.0.0.1:8000/common/register",
+>>>>>>> b18a93b (new children links added)
                 payload
             );
             console.log(response.data);
