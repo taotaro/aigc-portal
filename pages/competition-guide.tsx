@@ -87,6 +87,7 @@ export default function CompetitionGuide() {
 
     const sponsorList = [
         { name: "SteelSeries", logo: "/images/steelseries.png" },
+        { name: "Lawsgroup", logo: "/images/LAWSGROUP.png" },
     ];
 
     function onWindowResize() {

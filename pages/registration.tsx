@@ -60,6 +60,7 @@ export default function Registration() {
 
     const sponsorList = [
         { name: "SteelSeries", logo: "/images/steelseries.png" },
+        { name: "Lawsgroup", logo: "/images/LAWSGROUP.png" },
     ];
 
     const FormList = [
