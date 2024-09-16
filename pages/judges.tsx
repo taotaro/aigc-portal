@@ -168,6 +168,7 @@ export default function Judges() {
                                     <div
                                         className={`module-logo module-logo-${item.name}`}
                                         key={item.name}
+                                        style={{ minHeight: "150px" }}
                                     >
                                         <img
                                             className="module-logo__img"

@@ -741,7 +741,7 @@ export default function Registration() {
                                             在以下方格內加上「√」號並完成登記手續後，本人將確認以上填寫的個人資料均是真實和正確的，並同意上述資料如有錯漏，Alibaba
                                             Cloud毋須負責。本人亦同意在參與活動時遵守{" "}
                                             <a
-                                                href="https://aigc-portal-dev.materia-logic.com/terms"
+                                                href="/terms"
                                                 target="_blank"
                                                 style={{ color: "#ff6a00" }}
                                             >
@@ -928,6 +928,7 @@ export default function Registration() {
                                     <div
                                         className={`module-logo module-logo-${item.name}`}
                                         key={item.name}
+                                        style={{ minHeight: "150px" }}
                                     >
                                         <img
                                             className="module-logo__img"

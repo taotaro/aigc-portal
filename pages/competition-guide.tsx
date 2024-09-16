@@ -722,7 +722,7 @@ export default function CompetitionGuide() {
                             <div style={{ marginBottom: "24px" }}>
                                 參賽者必須同意在參與活動時遵守活動條款及細則，詳情請
                                 <a
-                                    href="https://aigc-portal-dev.materia-logic.com/terms"
+                                    href="/terms"
                                     target="_blank"
                                     style={{ color: "#ff6a00" }}
                                 >
@@ -853,6 +853,7 @@ export default function CompetitionGuide() {
                                     <div
                                         className={`module-logo module-logo-${item.name}`}
                                         key={item.name}
+                                        style={{ minHeight: "150px" }}
                                     >
                                         <img
                                             className="module-logo__img"
