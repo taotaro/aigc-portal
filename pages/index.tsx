@@ -88,6 +88,7 @@ export default function Index() {
     const sponsorList = [
         { name: "SteelSeries", logo: "/images/steelseries.png" },
         { name: "Lawsgroup", logo: "/images/LAWSGROUP.png" },
+        { name: "LawsKnitters", logo: "/images/Laws Knitters Logo.png" },
     ];
 
     const PhotoList = [
