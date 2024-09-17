@@ -116,7 +116,7 @@ export default function Teams({
                                     cursor: "pointer",
                                 }}
                             >
-                                删除会员 -
+                                刪除隊員 -
                             </div>
                         )}
                     </div>
