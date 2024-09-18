@@ -10,9 +10,11 @@ import '../styles/popuo-box.css';
 import '../styles/bootstrap.css';
 import '../styles/style.css';
 import '../styles/main.css';
+import '../styles/aliplayer-min.css';
 
 import '../pages/index/index.css';
 import '../components/header/index.css';
+
 
 
 type ComponentWithPageLayout = AppProps & {
