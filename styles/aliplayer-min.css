@@ -1,5 +1,5 @@
 .prism-player .prism-big-play-btn {
-    /* background: url(./img/bigplay.png) no-repeat; */
+    background: url(/images/player/bigplay.png) no-repeat;
     background-size: contain;
     width: 64px;
     height: 64px
@@ -23,7 +23,7 @@
 .prism-player .prism-play-btn {
     width: 24px;
     height: 24px;
-    /* background: url(./img/smallplay.png) no-repeat; */
+    background: url(/images/player/smallplay.png) no-repeat;
     background-size: contain
 }
 
@@ -45,7 +45,7 @@
 }
 
 .prism-player .prism-play-btn.playing {
-    /* background: url(./img/smallpause.png) no-repeat; */
+    background: url(/images/player/smallpause.png) no-repeat;
     background-size: contain
 }
 
@@ -56,7 +56,7 @@
 .prism-player .prism-fullscreen-btn {
     width: 24px;
     height: 24px;
-    /* background: url(./img/fullscreen.png) no-repeat; */
+    background: url(/images/player/fullscreen.png) no-repeat;
     background-size: contain
 }
 
@@ -65,7 +65,7 @@
 }
 
 .prism-player .prism-fullscreen-btn.fullscreen {
-    /* background: url(./img/smallscreen.png) no-repeat; */
+    background: url(/images/player/smallscreen.png) no-repeat;
     background-size: contain
 }
 
@@ -84,7 +84,7 @@
 .prism-player .prism-volume .volume-icon {
     width: 28px;
     height: 28px;
-    /* background: url(./img/volume.png); */
+    background: url(/images/player/volume.png);
     background-size: contain
 }
 
@@ -147,23 +147,23 @@
 .prism-player .prism-volume-control .volume-control-icon {
     width: 32px;
     height: 32px;
-    /* background: url(./img/unmutevolume.png) no-repeat; */
+    background: url(/images/player/unmutevolume.png) no-repeat;
     background-size: contain
 }
 
 .prism-player .prism-volume-control .volume-control-icon:hover {
     cursor: pointer;
-    /* background: url(./img/volumehover.png) no-repeat; */
+    background: url(/images/player/volumehover.png) no-repeat;
     background-size: contain
 }
 
 .prism-player .prism-volume-control .volume-control-icon.mute {
-    /* background: url(./img/volumemute.png) no-repeat; */
+    background: url(/images/player/volumemute.png) no-repeat;
     background-size: contain
 }
 
 .prism-player .prism-volume-control .volume-control-icon.mute:hover {
-    /* background: url(./img/volumemutehover.png) no-repeat; */
+    background: url(/images/player/volumemutehover.png) no-repeat;
     background-size: contain;
     cursor: pointer
 }
@@ -227,12 +227,12 @@
 }
 
 .prism-player .prism-play-animation {
-    /* background: url(./img/playanimation.png) no-repeat; */
+    background: url(/images/player/playanimation.png) no-repeat;
     background-size: contain
 }
 
 .prism-player .prism-pause-animation {
-    /* background: url(./img/pauseanimation.png) no-repeat; */
+    background: url(/images/player/pauseanimation.png) no-repeat;
     background-size: contain
 }
 
@@ -762,7 +762,7 @@
     height: 16px;
     overflow: hidden;
     box-sizing: content-box;
-    /* background: url(./img/dragcursorhover.png) center; */
+    background: url(/images/player/dragcursorhover.png) center;
     display: none
 }
 
@@ -917,7 +917,7 @@
 .prism-player .prism-snapshot-btn {
     width: 32px;
     height: 32px;
-    /* background: url(./img/snapshot.png) no-repeat; */
+    background: url(/images/player/snapshot.png) no-repeat;
     background-size: contain
 }
 
@@ -1016,7 +1016,7 @@
 .prism-player .prism-cc-btn {
     height: 24px;
     width: 24px;
-    /* background: url(./img/cc.png) center no-repeat; */
+    background: url(/images/player/cc.png) center no-repeat;
     background-size: contain
 }
 
@@ -1031,7 +1031,7 @@
 .prism-player .prism-setting-btn {
     height: 24px;
     width: 24px;
-    /* background: url(./img/setting.png) center no-repeat; */
+    background: url(/images/player/setting.png) center no-repeat;
     background-size: contain
 }
 

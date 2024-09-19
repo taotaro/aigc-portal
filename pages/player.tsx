@@ -4,13 +4,12 @@ import useTranslation from "next-translate/useTranslation";
 
 export default function Judges() {
     const { t } = useTranslation("common");
-    const [fixedBgHeight, setFixedBgHeight] = useState(200);
 
     const initAliplayer = () => {
         // @ts-ignore
-        var player = new window.Aliplayer({
+        let player = new window.Aliplayer({
             id: 'aliyun-player',
-            source: 'artc://live-pull.test.taotaro.app/aigc1/aigc1?auth_key=1726651392-0-0-4fdd06663f76816b79c72bd614a3e08f',
+            source: 'artc://stream-pull.alibabacloudtongyi.com.hk/aigc/aigc?auth_key=1726723417-0-0-160da524d3aa07c26db0ed81405aad30',
             isLive: true,
         }, (player) => {
             console.log('The player is created.', player);
