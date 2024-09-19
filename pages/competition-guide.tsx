@@ -87,6 +87,8 @@ export default function CompetitionGuide() {
 
     const sponsorList = [
         { name: "SteelSeries", logo: "/images/steelseries.png" },
+        { name: "Lawsgroup", logo: "/images/LAWSGROUP.png" },
+        { name: "LawsKnitters", logo: "/images/Laws Knitters Logo.png" },
     ];
 
     function onWindowResize() {
@@ -203,9 +205,9 @@ export default function CompetitionGuide() {
                                         「通義萬相」文生圖模型
                                     </a>{" "}
                                 </ul>
-                                <li>
-                                    所有參賽者必須參加最少一場由阿里雲香港舉辦的實體工作坊；缺席者將會被取消參賽資格。
-                                </li>
+                                {/* <li>
+                                    所有參賽者必須參加最少一場由阿里雲香港舉辦的實體工作坊；缺席者將會被取消參賽資格。 
+                                </li> */}
                                 <li>
                                     參賽者須根據大會指定主題創作一本故事圖書。
                                 </li>
@@ -274,9 +276,9 @@ export default function CompetitionGuide() {
                                         「通義萬相」文生圖模型
                                     </a>{" "}
                                 </ul>
-                                <li>
-                                    所有參賽者必須參加最少一場由阿里雲香港舉辦的實體工作坊；缺席者將會被取消參賽資格。
-                                </li>
+                                {/* <li>
+                                    所有參賽者必須參加最少一場由阿里雲香港舉辦的實體工作坊；缺席者將會被取消參賽資格。 
+                                </li> */}
                                 <li>
                                     參賽者須根據大會指定主題創作一本互動式小說。
                                 </li>
@@ -348,9 +350,9 @@ export default function CompetitionGuide() {
                                         「通義萬相」文生圖模型
                                     </a>{" "}
                                 </ul>
-                                <li>
-                                    所有參賽者必須參加最少一場由阿里雲香港舉辦的實體工作坊；缺席者將會被取消參賽資格。
-                                </li>
+                                {/* <li>
+                                    所有參賽者必須參加最少一場由阿里雲香港舉辦的實體工作坊；缺席者將會被取消參賽資格。 
+                                </li> */}
                                 <li>
                                     參賽者可自由選擇主題創作一幅圖像作品，以鼓勵表達個人興趣、情感或需要。
                                 </li>
@@ -720,7 +722,7 @@ export default function CompetitionGuide() {
                             <div style={{ marginBottom: "24px" }}>
                                 參賽者必須同意在參與活動時遵守活動條款及細則，詳情請
                                 <a
-                                    href="https://aigc-portal-dev.materia-logic.com/terms"
+                                    href="/terms"
                                     target="_blank"
                                     style={{ color: "#ff6a00" }}
                                 >
@@ -851,6 +853,7 @@ export default function CompetitionGuide() {
                                     <div
                                         className={`module-logo module-logo-${item.name}`}
                                         key={item.name}
+                                        style={{ minHeight: "150px" }}
                                     >
                                         <img
                                             className="module-logo__img"

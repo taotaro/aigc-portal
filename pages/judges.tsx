@@ -18,6 +18,8 @@ export default function Judges() {
 
     const sponsorList = [
         { name: "SteelSeries", logo: "/images/steelseries.png" },
+        { name: "Lawsgroup", logo: "/images/LAWSGROUP.png" },
+        { name: "LawsKnitters", logo: "/images/Laws Knitters Logo.png" },
     ];
 
     const judgeData = [
@@ -166,6 +168,7 @@ export default function Judges() {
                                     <div
                                         className={`module-logo module-logo-${item.name}`}
                                         key={item.name}
+                                        style={{ minHeight: "150px" }}
                                     >
                                         <img
                                             className="module-logo__img"

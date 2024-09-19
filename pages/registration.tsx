@@ -60,6 +60,8 @@ export default function Registration() {
 
     const sponsorList = [
         { name: "SteelSeries", logo: "/images/steelseries.png" },
+        { name: "Lawsgroup", logo: "/images/LAWSGROUP.png" },
+        { name: "LawsKnitters", logo: "/images/Laws Knitters Logo.png" },
     ];
 
     const FormList = [
@@ -397,7 +399,14 @@ export default function Registration() {
 
             return;
         } catch (error) {
-            console.error(error);
+            // console.error(error);
+            console.log("error", error, typeof error);
+            const response = await axios.post(
+                "https://aigc-backend-dev.materia-logic.com/common/log-error",
+                // "http://127.0.0.1:8000/common/log-error",
+                { error: error }
+            );
+            console.log("error: ", error);
             toast.error("註冊失敗！請重試");
         }
     };
@@ -739,7 +748,7 @@ export default function Registration() {
                                             在以下方格內加上「√」號並完成登記手續後，本人將確認以上填寫的個人資料均是真實和正確的，並同意上述資料如有錯漏，Alibaba
                                             Cloud毋須負責。本人亦同意在參與活動時遵守{" "}
                                             <a
-                                                href="https://aigc-portal-dev.materia-logic.com/terms"
+                                                href="/terms"
                                                 target="_blank"
                                                 style={{ color: "#ff6a00" }}
                                             >
@@ -926,6 +935,7 @@ export default function Registration() {
                                     <div
                                         className={`module-logo module-logo-${item.name}`}
                                         key={item.name}
+                                        style={{ minHeight: "150px" }}
                                     >
                                         <img
                                             className="module-logo__img"
