@@ -1,10 +1,10 @@
 version: "3"
 services:
-  aigc-portal-web:
-    container_name: PROJECT_NAME
-    image: PROJECT_NAME:latest
-    hostname: "PROJECT_NAME"
-    ports:
-      - "9140:3000"
-    network_mode: bridge
-    restart: always
+    aigc-portal-web:
+        container_name: PROJECT_NAME
+        image: PROJECT_NAME:latest
+        hostname: "PROJECT_NAME"
+        ports:
+            - "EXPOSE_PORT:3000"
+        network_mode: bridge
+        restart: always
