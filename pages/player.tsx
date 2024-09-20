@@ -6,6 +6,7 @@ export default function Judges() {
     const { t } = useTranslation("common");
 
     const initAliplayer = () => {
+        console.log('==========1===========');
         // @ts-ignore
         let player = new window.Aliplayer({
             id: 'aliyun-player',
