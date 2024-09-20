@@ -9,7 +9,7 @@ export default function Judges() {
         // @ts-ignore
         let player = new window.Aliplayer({
             id: 'aliyun-player',
-            source: 'artc://stream-pull.alibabacloudtongyi.com.hk/aigc/aigc?auth_key=1726723417-0-0-160da524d3aa07c26db0ed81405aad30',
+            source: 'artc://stream-pull.alibabacloudtongyi.com.hk/aigc/aigc_ud?auth_key=1726822519-0-0-83575157d468cfe1396ba485a4552aa3',
             isLive: true,
         }, (player) => {
             console.log('The player is created.', player);
