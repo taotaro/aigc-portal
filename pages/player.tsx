@@ -2,15 +2,27 @@ import React, { useEffect, useState } from "react";
 import { NextSeo } from "next-seo";
 import useTranslation from "next-translate/useTranslation";
 
+function getQueryString(key: string) {
+    const reg = new RegExp('(^|&)' + key + '=([^&]*)(&|$)', 'i');
+    const query =
+        window.location.search.substring(1) || window.location.hash.split('?')[1];
+    if (query) {
+        const r = query.match(reg);
+        if (r != null) {
+            return decodeURI(r[2]);
+        }
+    }
+    return '';
+};
+
 export default function Judges() {
     const { t } = useTranslation("common");
-
     const initAliplayer = () => {
-        console.log('==========1===========');
+        console.log('new version');
         // @ts-ignore
         let player = new window.Aliplayer({
             id: 'aliyun-player',
-            source: 'artc://stream-pull.alibabacloudtongyi.com.hk/aigc/aigc_ud?auth_key=1726822519-0-0-83575157d468cfe1396ba485a4552aa3',
+            source: `artc://stream-pull.alibabacloudtongyi.com.hk/aigc/aigc?auth_key=${getQueryString('authKey')}`,
             isLive: true,
         }, (player) => {
             console.log('The player is created.', player);
