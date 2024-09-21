@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { NextSeo } from "next-seo";
-import useTranslation from "next-translate/useTranslation";
 
 function getQueryString(key: string) {
     const reg = new RegExp('(^|&)' + key + '=([^&]*)(&|$)', 'i');
@@ -15,17 +14,18 @@ function getQueryString(key: string) {
     return '';
 };
 
-export default function Judges() {
-    const { t } = useTranslation("common");
+export default function Player() {
+
     const initAliplayer = () => {
-        console.log('new version');
+        const authKey = getQueryString('authKey');
+        const mediaName = getQueryString('mediaName') || 'aigc_ud';
         // @ts-ignore
         let player = new window.Aliplayer({
             id: 'aliyun-player',
-            source: `artc://stream-pull.alibabacloudtongyi.com.hk/aigc/aigc?auth_key=${getQueryString('authKey')}`,
+            source: `artc://stream-pull.alibabacloudtongyi.com.hk/aigc/${mediaName}?auth_key=${authKey}`,
             isLive: true,
         }, (player) => {
-            console.log('The player is created.', player);
+            console.log('[播放器初始化成功]', player);
         });
     }
 
@@ -50,11 +50,7 @@ export default function Judges() {
                 }}
                 id="fixed-bg"
             />
-            <div id="aliyun-player" style={{
-                width: "100%",
-                height: "calc(100vh - 80px)",
-            }}>
-
+            <div id="aliyun-player" style={{ width: "100%", height: "calc(100vh - 80px)" }}>
             </div>
         </>
     );
