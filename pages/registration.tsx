@@ -5,9 +5,7 @@ import { throttle } from "../util/index";
 import Teams from "../components/teams";
 import axios from "axios";
 import { toast, Toaster } from "react-hot-toast";
-import { wrap } from "module";
 import { FaTrashAlt } from "react-icons/fa";
-import { v4 as uuidv4 } from "uuid";
 import InputField from "../components/input-field";
 
 export default function Registration() {
@@ -29,8 +27,6 @@ export default function Registration() {
     const [formData, setFormData] = useState({
         schoolNameCN: "",
         schoolNameEN: "",
-        // schoolAddressCN: "",
-        // schoolAddressEN: "",
         teacherTitle: "",
         teacherNameCN: "",
         teacherNameEN: "",
@@ -85,26 +81,6 @@ export default function Registration() {
             options: [],
             error: "請輸入學校名稱（英文）",
         },
-        // {
-        //     key: 3,
-        //     label: "3. 學校地址（中文）",
-        //     value: formData.schoolAddressCN,
-        //     type: "text",
-        //     name: "schoolAddressCN",
-        //     required: true,
-        //     options: [],
-        //     error: "請輸入學校地址（中文）",
-        // },
-        // {
-        //     key: 4,
-        //     label: "4. 學校地址（英文）",
-        //     value: formData.schoolAddressEN,
-        //     type: "text",
-        //     name: "schoolAddressEN",
-        //     required: true,
-        //     options: [],
-        //     error: "請輸入學校地址（英文）",
-        // },
         {
             key: 3,
             label: "3. 學校電話 ",
@@ -264,8 +240,6 @@ export default function Registration() {
             const fieldsToCheck = [
                 "schoolNameCN",
                 "schoolNameEN",
-                // "schoolAddressCN",
-                // "schoolAddressEN",
                 "teacherNameCN",
                 "teacherNameEN",
                 "schoolPhone",
@@ -292,8 +266,6 @@ export default function Registration() {
                     console.log(member);
                     const memberFieldsToCheck = [
                         "studentNameCN",
-                        // "studentNameEN",
-                        // "studentYearOfBirth",
                         "studentGrade",
                     ];
 
@@ -318,18 +290,8 @@ export default function Registration() {
             team_name: `Team ${index + 1}`,
             school_group: team.schoolGroup,
             team_members: team.members.map((member) => ({
-                // name_english: member.data.studentNameEN,
                 name_chinese: member.data.studentNameCN,
-                // year_of_birth: member.data.studentYearOfBirth,
-                // gender: member.data.studentGender
-                //     ? member.data.studentGender
-                //     : "男性",
-                // school_group: member.data.schoolGroup,
                 grade: member.data.studentGrade,
-                // mobile_phone: member.data.studentPhone
-                //     ? member.data.studentPhone
-                //     : "",
-                // email: member.data.studentEmail ? member.data.studentEmail : "",
             })),
         }));
 
@@ -339,8 +301,6 @@ export default function Registration() {
             name_chinese: formData.teacherNameCN,
             school_name_english: formData.schoolNameEN,
             school_name_chinese: formData.schoolNameCN,
-            // school_address_english: formData.schoolAddressEN,
-            // school_address_chinese: formData.schoolAddressCN,
             mobile_phone: formData.teacherPhone,
             telephone: formData.schoolPhone,
             team_info: teamData,
@@ -357,8 +317,7 @@ export default function Registration() {
         try {
             console.log("payload: ", payload);
             const response = await axios.post(
-                "https://alibabacloudtongyi.com.hk/common/register",
-                // "http://127.0.0.1:8000/common/register",
+                process.env.NEXT_PUBLIC_API_URL + "/common/register",
                 payload
             );
             console.log(response.data);
@@ -370,8 +329,6 @@ export default function Registration() {
             setFormData({
                 schoolNameCN: "",
                 schoolNameEN: "",
-                // schoolAddressCN: "",
-                // schoolAddressEN: "",
                 teacherTitle: "",
                 teacherNameCN: "",
                 teacherNameEN: "",
@@ -393,17 +350,12 @@ export default function Registration() {
             console.log("team members: ", teams);
             setIsAgreed(false);
             setResetAllFields(true);
-            //   setTimeout(() => {
-            //     window.location.reload();
-            //   }, 3000);
 
             return;
         } catch (error) {
-            // console.error(error);
             console.log("error", error, typeof error);
             const response = await axios.post(
-                "https://alibabacloudtongyi.com.hk/common/log-error",
-                // "http://127.0.0.1:8000/common/log-error",
+                process.env.NEXT_PUBLIC_API_URL + "/common/log-error",
                 { error: error }
             );
             console.log("error: ", error);
@@ -468,17 +420,11 @@ export default function Registration() {
                                         工作坊及賽事作品內容均以中文進行。
                                     </div>
                                     <div>參賽費用全免。</div>
-                                    {/* <div
-                                    // style={{ fontWeight: "bold" }}
-                                    >
-                                        截止報名為2024年9月20日23:59。
-                                    </div> */}
                                     <div>
                                         如學校需要為5隊或以上報名，請聯絡
                                         Gamenoodlesoup (
                                         <a
                                             href="mailto:edu@gamenoodlesoup.com"
-                                            // target="_blank"
                                             style={{
                                                 color: "#ff6a00",
                                                 wordBreak: "break-all",
