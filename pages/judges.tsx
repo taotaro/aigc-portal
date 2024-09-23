@@ -3,24 +3,11 @@ import { NextSeo } from "next-seo";
 import useTranslation from "next-translate/useTranslation";
 import { throttle } from "../util/index";
 import Judge from "../components/judge";
+import Logo from "../components/logo";
 
 export default function Judges() {
     const { t } = useTranslation("common");
     const [fixedBgHeight, setFixedBgHeight] = useState(200);
-
-    const LogoList = [
-        { name: "Alibaba", logo: "/images/ali.jpeg" },
-        { name: "GamingNoodleSoup", logo: "/images/gns.png" },
-        { name: "Materia Logic", logo: "/images/ml.png" },
-        { name: "HKFEW", logo: "/images/teachers.jpeg" },
-        { name: "Aitle", logo: "/images/aitle.png" },
-    ];
-
-    const sponsorList = [
-        { name: "SteelSeries", logo: "/images/steelseries.png" },
-        { name: "Lawsgroup", logo: "/images/LAWSGROUP.png" },
-        { name: "LawsKnitters", logo: "/images/Laws Knitters Logo.png" },
-    ];
 
     const judgeData = [
         {
@@ -116,70 +103,7 @@ export default function Judges() {
                     </div>
                 </section>
                 {/* {footer} */}
-                <section className="position-relative module-box">
-                    <p className="module-title">活動主辦</p>
-                    <div className="module-logos">
-                        {LogoList.filter((item) => item.name === "Alibaba").map(
-                            (item) => {
-                                return (
-                                    <div
-                                        className={`module-logo module-logo-${item.name}`}
-                                        key={item.name}
-                                    >
-                                        <img
-                                            className="module-logo__img"
-                                            src={item.logo}
-                                            alt={item.name}
-                                        />
-                                    </div>
-                                );
-                            }
-                        )}
-                    </div>
-                    <p className="module-title" style={{ paddingTop: "24px" }}>
-                        支持單位
-                    </p>
-                    <div className="module-logos">
-                        {LogoList.filter((item) => item.name !== "Alibaba").map(
-                            (item) => {
-                                return (
-                                    <div
-                                        className={`module-logo module-logo-${item.name}`}
-                                        key={item.name}
-                                    >
-                                        <img
-                                            className="module-logo__img"
-                                            src={item.logo}
-                                            alt={item.name}
-                                        />
-                                    </div>
-                                );
-                            }
-                        )}
-                    </div>
-                    <p className="module-title" style={{ paddingTop: "24px" }}>
-                        活動贊助
-                    </p>
-                    <div className="module-logos">
-                        {sponsorList
-                            .filter((item) => item.name !== "Alibaba")
-                            .map((item) => {
-                                return (
-                                    <div
-                                        className={`module-logo module-logo-${item.name}`}
-                                        key={item.name}
-                                        style={{ minHeight: "150px" }}
-                                    >
-                                        <img
-                                            className="module-logo__img"
-                                            src={item.logo}
-                                            alt={item.name}
-                                        />
-                                    </div>
-                                );
-                            })}
-                    </div>
-                </section>
+                <Logo />
             </div>
         </>
     );
