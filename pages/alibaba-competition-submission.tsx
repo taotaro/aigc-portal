@@ -40,7 +40,7 @@ export default function AlibabaCompetitionSubmission() {
                 }}
             />
             <div
-                className="module-container"
+                // className="iframe-container"
                 style={{ height: "900px", overflow: "hidden" }}
             >
                 <iframe
