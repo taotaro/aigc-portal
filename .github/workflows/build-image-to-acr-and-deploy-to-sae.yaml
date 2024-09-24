@@ -7,13 +7,13 @@ on:
       - staging
       - development
       - main
-  # pull_request:
-  #   branches:
-  #     - development
-  #     - preview
-  #     - main
-  #     - production
-  #     - main
+  pull_request:
+    branches:
+      - development
+      - preview
+      - main
+      - production
+      - main
 
 jobs:
   build:
