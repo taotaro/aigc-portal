@@ -14,6 +14,7 @@ export default function AlibabaCompetitionSubmission() {
     }
 
     const throttledResize = throttle(onWindowResize, 200);
+    console.log("test");
 
     useEffect(() => {
         window.scrollTo(0, 0);
