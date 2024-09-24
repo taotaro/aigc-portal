@@ -39,10 +39,7 @@ export default function AlibabaCompetitionSubmission() {
                     backgroundImage: `url('/images/index-bg.jpeg')`,
                 }}
             />
-            <div
-                // className="iframe-container"
-                style={{ height: "900px", overflow: "hidden" }}
-            >
+            <div style={{ height: "900px", overflow: "hidden" }}>
                 <iframe
                     src="https://materia-logic.sg.larksuite.com/share/base/form/shrlg5YSiLwlfeKieg83UqwkKQK"
                     width="100%"
