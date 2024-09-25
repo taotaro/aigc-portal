@@ -40,15 +40,23 @@ export default function AlibabaCompetitionSubmission() {
                     backgroundImage: `url('/images/index-bg.jpeg')`,
                 }}
             />
-            <div style={{ height: "900px", overflow: "hidden" }}>
+            <div style={{ overflow: "hidden" }}>
                 <iframe
                     src="https://materia-logic.sg.larksuite.com/share/base/form/shrlg5YSiLwlfeKieg83UqwkKQK"
-                    width="100%"
                     height="1000px"
+                    width="101%"
                     style={{ border: "none" }}
                     title="Alibaba Competition Submission Form"
                     allowFullScreen
+                    scrolling="no"
                 ></iframe>
+                <div
+                    style={{
+                        height: "100px",
+                        backgroundColor: "white",
+                        translate: "0 -80%",
+                    }}
+                />
             </div>
         </>
     );
