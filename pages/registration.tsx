@@ -10,7 +10,8 @@ import { FaTrashAlt } from "react-icons/fa";
 import { v4 as uuidv4 } from "uuid";
 import InputField from "../components/input-field";
 
-axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL;
+// axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL;
+axios.defaults.baseURL = "https://aigc-backend-dev.materia-logic.com";
 
 export default function Registration() {
     const { t } = useTranslation("common");
