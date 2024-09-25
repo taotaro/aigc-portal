@@ -357,6 +357,7 @@ export default function Registration() {
         try {
             console.log("payload: ", payload);
             const response = await axios.post(
+                // "https://aigc-backend-dev.materia-logic.com/common/register",
                 "https://alibabacloudtongyi.com.hk/common/register",
                 // "http://127.0.0.1:8000/common/register",
                 payload
@@ -403,6 +404,7 @@ export default function Registration() {
             console.log("error", error, typeof error);
             const response = await axios.post(
                 "https://alibabacloudtongyi.com.hk/common/log-error",
+                // "https://aigc-backend-dev.materia-logic.com/common/log-error",
                 // "http://127.0.0.1:8000/common/log-error",
                 { error: error }
             );

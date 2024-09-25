@@ -115,7 +115,16 @@ export default function Header(props) {
             document.body.scrollTop;
 
         // Change styles when scrolled down on mobile view
-        if (scrollHeight > 800 && !isMobile) {
+        if (
+            window.location.pathname.includes(
+                "/alibaba-competition-submission"
+            ) &&
+            scrollHeight > 50
+        ) {
+            console.log("include");
+            setNavLinkStyle({ color: "#333" });
+            setScrolled(true);
+        } else if (scrollHeight > 800 && !isMobile) {
             setNavLinkStyle({ color: "#333" });
             setScrolled(true);
         } else if (scrollHeight > 200 && isMobile) {

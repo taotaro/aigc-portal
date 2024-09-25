@@ -122,6 +122,7 @@ export default function Index() {
         window.scrollTo(0, 0);
         onWindowResize();
         window.addEventListener("resize", throttledResize);
+        console.log("env ", process.env.NEXT_PUBLIC_API_URL);
         return () => {
             window.removeEventListener("resize", throttledResize);
         };
