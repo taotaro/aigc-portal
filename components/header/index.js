@@ -41,6 +41,12 @@ export default function Header(props) {
             href: "/registration",
             style: { color: "#ff6a00" },
         },
+        {
+            label: "現場直播",
+            current: "PLAYER",
+            href: "/player?authKey=TODO",
+            style: { color: "#ff6a00" },
+        },
     ];
 
     function SubMenu({ item }) {

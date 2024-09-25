@@ -36,6 +36,9 @@ export default function Player() {
         initAliplayer();
     }, []);
 
+    const liveIsStart = Date.now() >= new Date('2024-09-28T09:55:00').getTime();
+    console.log('[liveIsStart]', liveIsStart);
+
     return (
         <>
             <NextSeo
@@ -52,10 +55,14 @@ export default function Player() {
                 }}
                 id="fixed-bg"
             />
+            {
+                liveIsStart ? null : <div style={{ 'textAlign': 'center', padding: '5px 0' }}>直播将于2024年9月28日星期六上午9:55左右开始</div>
+            }
             <div
                 id="aliyun-player"
                 style={{ width: "100%", height: "calc(100vh - 80px)" }}
-            ></div>
+            >
+            </div>
         </>
     );
 }
