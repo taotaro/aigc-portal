@@ -10,6 +10,8 @@ import { FaTrashAlt } from "react-icons/fa";
 import { v4 as uuidv4 } from "uuid";
 import InputField from "../components/input-field";
 
+axios.defaults.baseURL = process.env.NEXT_PUBLIC_API_URL;
+
 export default function Registration() {
     const { t } = useTranslation("common");
     const [fixedBgHeight, setFixedBgHeight] = useState(200);
@@ -358,7 +360,7 @@ export default function Registration() {
             console.log("payload: ", payload);
             const response = await axios.post(
                 // "https://aigc-backend-dev.materia-logic.com/common/register",
-                process.env.NEXT_PUBLIC_API_URL + "/common/register",
+                "/common/register",
                 // "http://127.0.0.1:8000/common/register",
                 payload
             );
@@ -403,7 +405,8 @@ export default function Registration() {
             // console.error(error);
             console.log("error", error, typeof error);
             const response = await axios.post(
-                "https://aigc-backend-dev.materia-logic.com/common/log-error",
+                // "https://aigc-backend-dev.materia-logic.com/common/log-error",
+                "/common/log-error",
                 // "http://127.0.0.1:8000/common/log-error",
                 { error: error }
             );
