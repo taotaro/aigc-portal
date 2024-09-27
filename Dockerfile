@@ -3,10 +3,10 @@ FROM node:18
 
 WORKDIR /home/project
 
-ARG NEXT_PIBLIC_API_URL
+ARG NEXT_PUBLIC_API_URL
 
 # Echo build args to .env file for yarn build or npm build
-RUN echo "NEXT_PIBLIC_API_URL=$NEXT_PIBLIC_API_URLY" >> .env 
+RUN echo "NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL" >> .env 
 
 COPY . .
 RUN ls -lha
