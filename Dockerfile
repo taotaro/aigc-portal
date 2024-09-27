@@ -1,13 +1,18 @@
 # FROM PROJECT_NAME-runtime:latest
 FROM node:18
 
-RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
-RUN echo 'Asia/Shanghai' > /etc/timezone
-
 WORKDIR /home/project
 
-# COPY . /home/project/
+ARG NEXT_PUBLIC_API_URL
+
+# Echo build args to .env file for yarn build or npm build
+RUN echo "NEXT_PUBLIC_API_URL=$NEXT_PUBLIC_API_URL" >> .env 
+
 COPY . .
+RUN ls -lha
+
+RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+RUN echo 'Asia/Shanghai' > /etc/timezone
 
 RUN npm i pm2 -g
 RUN npm install 
