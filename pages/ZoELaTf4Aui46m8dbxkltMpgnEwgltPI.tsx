@@ -58,7 +58,7 @@ export default function Login() {
         console.log(payload);
         try {
             const response = await axios.post(
-                "http://127.0.0.1:8000/common/login",
+                "https://aigc-backend-dev.materia-logic.com/common/login",
                 payload
             );
             console.log(response);
@@ -79,7 +79,7 @@ export default function Login() {
         console.log("download");
         try {
             const response = await axios.get(
-                "http://127.0.0.1:8000/common/excel",
+                "https://aigc-backend-dev.materia-logic.com/common/excel",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
