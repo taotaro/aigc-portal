@@ -58,7 +58,8 @@ export default function Login() {
         console.log(payload);
         try {
             const response = await axios.post(
-                "https://aigc-backend-dev.materia-logic.com/common/login",
+                // "https://aigc-backend-dev.materia-logic.com/common/login",
+                process.env.NEXT_PUBLIC_API_URL + "/common/login",
                 payload
             );
             console.log(response);
@@ -79,7 +80,8 @@ export default function Login() {
         console.log("download");
         try {
             const response = await axios.get(
-                "https://aigc-backend-dev.materia-logic.com/common/excel",
+                // "https://aigc-backend-dev.materia-logic.com/common/excel",
+                process.env.NEXT_PUBLIC_API_URL + "/common/excel",
                 {
                     headers: {
                         Authorization: `Bearer ${token}`,
