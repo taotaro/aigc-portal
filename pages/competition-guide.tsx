@@ -639,6 +639,20 @@ export default function CompetitionGuide() {
                     id="gameInfoModule"
                     style={{ scrollMarginTop: "100px" }}
                 >
+                    <p className="module-title">通義平台註冊教學 </p>
+                    <video
+                        controls
+                        style={{ width: "100%", marginTop: "80px" }}
+                    >
+                        <source src="/videos/tutorial.mp4" type="video/mp4" />
+                        Your browser does not support the video tag.
+                    </video>
+                </section>
+                <section
+                    className="position-relative module-box"
+                    id="gameInfoModule"
+                    style={{ scrollMarginTop: "100px" }}
+                >
                     <p className="module-title">注意事項 </p>
                     <div className="module-content" style={{ padding: "36px" }}>
                         <div className="module-content__left">
