@@ -96,7 +96,7 @@ export default function Player() {
                             <div className="module-content__left">
                                 <div className="module-content__desc">
                                     <ul style={{ paddingLeft: "20px", textIndent: "-2px" }}>
-                                        <p>直播将于2024年9月28日星期六上午9:55左右开始</p>
+                                        <p>直播將於2024年9月28日星期六上午9:55左右開始</p>
                                     </ul>
                                 </div>
                             </div>
