@@ -44,7 +44,7 @@ export default function Header(props) {
         {
             label: "現場直播",
             current: "PLAYER",
-            href: "/player?authKey=TODO",
+            href: "/player?authKey=1727442933-0-0-be1a7e8ce1449628a8a69a412f068ace",
             style: { color: "#ff6a00" },
         },
     ];
