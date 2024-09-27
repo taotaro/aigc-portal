@@ -817,6 +817,54 @@ export default function Registration() {
                                         </div>
                                     </div>
                                 </section>
+                                <section>
+                                    <div
+                                        style={{
+                                            textAlign: "left",
+                                            fontSize: "24px",
+                                            display: "flex",
+                                            flexDirection: "column",
+                                            justifyContent: "center",
+                                            gap: "10px",
+                                            alignSelf: "stretch",
+                                            marginTop: "36px",
+                                            marginBottom: "36px",
+                                        }}
+                                    >
+                                        <div
+                                            className="module-content__desc"
+                                            style={{
+                                                wordWrap: "break-word",
+                                                overflowWrap: "break-word",
+                                            }}
+                                        >
+                                            成功登記後，你將收到來自
+                                            <a
+                                                href="mailto:no-reply@mail.materia-logic.com"
+                                                style={{
+                                                    color: "#ff6a00",
+                                                    wordBreak: "break-all",
+                                                }}
+                                            >
+                                                「no-reply@mail.materia-logic.com」
+                                            </a>
+                                            的確認電郵，包含參賽隊伍資料及相對應的作品遞交編號（12位字元），請妥善保存並用以遞交作品。
+                                            如沒有收到郵件，請留意電郵是否被分類至垃圾信箱。如有疑難，請聯絡Gamenoodlesoup
+                                            ({" "}
+                                            <a
+                                                href="mailto:edu@gamenoodlesoup.com"
+                                                // target="_blank"
+                                                style={{
+                                                    color: "#ff6a00",
+                                                    wordBreak: "break-all",
+                                                }}
+                                            >
+                                                edu@gamenoodlesoup.com
+                                            </a>{" "}
+                                            / 30011280)
+                                        </div>
+                                    </div>
+                                </section>
 
                                 <div
                                     style={{
