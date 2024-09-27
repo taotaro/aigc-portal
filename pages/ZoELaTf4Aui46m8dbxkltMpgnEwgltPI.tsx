@@ -133,26 +133,6 @@ export default function Login() {
                         height: "100vh",
                     }}
                 >
-                    <div
-                        className="input-container"
-                        style={{
-                            marginBottom: "20px",
-                            width: "100%",
-                            maxWidth: "400px",
-                        }}
-                    >
-                        <InputField
-                            inputLabel="Enter password to access excel file"
-                            inputName="password"
-                            inputValue={password}
-                            onInputChange={handlePasswordChange}
-                            inputType="text"
-                            isRequired={true}
-                            inputOptions={[]}
-                            errorMessage="Please enter a valid password"
-                            isSubmitted={false}
-                        />
-                    </div>
                     {valid ? (
                         <div
                             className="module-button"
@@ -171,22 +151,44 @@ export default function Login() {
                             Download Excel
                         </div>
                     ) : (
-                        <div
-                            className="module-button"
-                            onClick={handleSubmit}
-                            style={{
-                                background: "#FE6A00",
-                                cursor: "pointer",
-                                padding: "10px 20px",
-                                color: "white",
-                                borderRadius: "5px",
-                                textAlign: "center",
-                                width: "100%", // Full width of the button container
-                                maxWidth: "400px", // Restrict button width
-                            }}
-                        >
-                            Submit
-                        </div>
+                        <>
+                            <div
+                                className="input-container"
+                                style={{
+                                    marginBottom: "20px",
+                                    width: "100%",
+                                    maxWidth: "400px",
+                                }}
+                            >
+                                <InputField
+                                    inputLabel="Enter password to login"
+                                    inputName="password"
+                                    inputValue={password}
+                                    onInputChange={handlePasswordChange}
+                                    inputType="text"
+                                    isRequired={true}
+                                    inputOptions={[]}
+                                    errorMessage="Please enter a valid password"
+                                    isSubmitted={false}
+                                />
+                            </div>
+                            <div
+                                className="module-button"
+                                onClick={handleSubmit}
+                                style={{
+                                    background: "#FE6A00",
+                                    cursor: "pointer",
+                                    padding: "10px 20px",
+                                    color: "white",
+                                    borderRadius: "5px",
+                                    textAlign: "center",
+                                    width: "100%", // Full width of the button container
+                                    maxWidth: "400px", // Restrict button width
+                                }}
+                            >
+                                Submit
+                            </div>
+                        </>
                     )}
                 </section>
 
