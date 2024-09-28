@@ -87,9 +87,9 @@ export default function Player() {
                 liveIsStart
                     ? <div id="aliyun-player" style={{ width: "100%", height: "calc(100vh - 80px)" }} > </div>
                     : <section
-                        className="position-relative module-box"
+                        className="module-box"
                         id="gameInfoModule"
-                        style={{ height: 'calc(100vh - 80px)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: '#242424', fontSize: '32px' }}
+                        style={{ width: "100%", height: 'calc(100vh - 80px)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: '#242424', fontSize: '32px' }}
                     >
                         <p className="module-title">直播預告</p>
                         <div className="module-content" style={{ padding: "36px" }}>
@@ -103,8 +103,7 @@ export default function Player() {
                         </div>
                     </section>
             }
-
-            <section className="position-relative module-box" style={{ marginTop: '64px' }}>
+            <section className="module-box" style={{ marginTop: '64px' }}>
                 <p className="module-title">活動主辦</p>
                 <div className="module-logos">
                     {LogoList.filter((item) => item.name === "Alibaba").map(

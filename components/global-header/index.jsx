@@ -6,7 +6,7 @@ export default function GlobalHeader() {
     <>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
         <meta
           name="description"
           content="阿里雲香港未來教室 暨「雲馳通義 ‧ 洞見萬相千問」生成式 AI 校際比賽發佈會"
