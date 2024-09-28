@@ -41,7 +41,8 @@ const LogoList = [
 ];
 
 export default function Player() {
-    const [liveIsStart] = useState(Date.now() >= new Date('2024-09-28T09:55:00').getTime());
+    // const [liveIsStart] = useState(Date.now() >= new Date('2024-09-28T09:55:00').getTime());
+    const [liveIsStart] = useState(true);
     const initAliplayer = () => {
         const authKey = getQueryString("authKey");
         const mediaName = getQueryString("mediaName") || "aigc_ud";
