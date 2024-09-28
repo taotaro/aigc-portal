@@ -41,8 +41,7 @@ const LogoList = [
 ];
 
 export default function Player() {
-    // const [liveIsStart] = useState(Date.now() >= new Date('2024-09-28T09:55:00').getTime());
-    const [liveIsStart] = useState(true);
+    const [liveIsStart] = useState(false);
     const initAliplayer = () => {
         const authKey = getQueryString("authKey");
         const mediaName = getQueryString("mediaName") || "aigc_ud";
@@ -92,16 +91,7 @@ export default function Player() {
                         id="gameInfoModule"
                         style={{ width: "100%", height: 'calc(100vh - 80px)', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', color: '#242424', fontSize: '32px' }}
                     >
-                        <p className="module-title">直播預告</p>
-                        <div className="module-content" style={{ padding: "36px" }}>
-                            <div className="module-content__left">
-                                <div className="module-content__desc">
-                                    <ul style={{ paddingLeft: "20px", textIndent: "-2px" }}>
-                                        <p>直播將於2024年9月28日星期六上午9:55左右開始</p>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
+                        <p className="module-title">直播完畢，多謝收看！</p>
                     </section>
             }
             <section className="module-box" style={{ marginTop: '64px' }}>
