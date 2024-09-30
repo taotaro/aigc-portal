@@ -42,7 +42,7 @@ export default function Header(props) {
             style: { color: "#ff6a00" },
         },
         {
-            label: "現場直播",
+            label: "工作坊直播重溫",
             current: "PLAYER",
             href: "/player",
             style: { color: "#ff6a00" },
