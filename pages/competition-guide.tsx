@@ -152,7 +152,10 @@ export default function CompetitionGuide() {
                 style={{ width: "100%", height: "80px" }}
             /> */}
 
-            <div className="module-container">
+            <div
+                // className="module-container"
+                style={{ overflow: "hidden" }}
+            >
                 {/* 介绍 */}
 
                 <section
