@@ -19,6 +19,7 @@ export default function GlobalHeader() {
         {/* <link rel="manifest" href="/manifest.json" /> */}
         {/* <title>雲馳通義 ‧ 洞見萬相千問</title> */}
         <script type="text/javascript" src="/js/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="/js/aliplayercomponents-1.1.0.min.js"></script>
         <script
           type="text/javascript"
           src="/js/responsiveslides.min.js"

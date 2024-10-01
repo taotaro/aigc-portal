@@ -42,9 +42,15 @@ export default function Header(props) {
             style: { color: "#ff6a00" },
         },
         {
-            label: "現場直播",
+            label: "遞交作品",
+            current: "ALIBABA COMPETITION SUBMISSION",
+            href: "/alibaba-competition-submission",
+            style: { color: "#ff6a00" },
+        },
+        {
+            label: "工作坊直播重溫",
             current: "PLAYER",
-            href: "/player?authKey=1727442933-0-0-be1a7e8ce1449628a8a69a412f068ace",
+            href: "/player",
             style: { color: "#ff6a00" },
         },
     ];

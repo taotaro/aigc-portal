@@ -430,7 +430,7 @@ export default function Registration() {
                 }}
                 id="fixed-bg"
             />
-            <div className="module-container">
+            <div>
                 {/* Registration form */}
                 <section className="position-relative module-box">
                     <div className="registration-form">
@@ -491,6 +491,20 @@ export default function Registration() {
                                             edu@gamenoodlesoup.com
                                         </a>{" "}
                                         / 30011280)。
+                                    </div>
+                                    <div>
+                                        為幫助同學上手應用「通義平台」，遊戲湯麵將開設2場「應用實踐線上工作坊」，學校師生可身處於有網絡連線的環境參與工作坊。如欲報名應用實踐線上工作坊，請
+                                        <a
+                                            href="/online-workshop"
+                                            // target="_blank"
+                                            style={{
+                                                color: "#ff6a00",
+                                                wordBreak: "break-all",
+                                            }}
+                                        >
+                                            按此
+                                        </a>
+                                        前往表格。
                                     </div>
                                 </div>
                             </div>
