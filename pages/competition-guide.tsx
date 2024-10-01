@@ -639,6 +639,23 @@ export default function CompetitionGuide() {
                     id="gameInfoModule"
                     style={{ scrollMarginTop: "100px" }}
                 >
+                    <p className="module-title">通義平台應用及遞交作品教學 </p>
+                </section>
+                <section className="position-relative module-box">
+                    <div className="module-button">
+                        <a
+                            href="https://cri-jh0uqm2iyt2q8ku4-registry.oss-cn-hongkong.aliyuncs.com/AIGC_Opening_Workshop.pdf"
+                            target="__blank"
+                        >
+                            按此下載文件
+                        </a>
+                    </div>
+                </section>
+                <section
+                    className="position-relative module-box"
+                    id="gameInfoModule"
+                    style={{ scrollMarginTop: "100px" }}
+                >
                     <p className="module-title">通義平台註冊教學 </p>
                     <video
                         controls
