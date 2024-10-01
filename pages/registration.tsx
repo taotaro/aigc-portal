@@ -430,7 +430,7 @@ export default function Registration() {
                 }}
                 id="fixed-bg"
             />
-            <div className="module-container">
+            <div>
                 {/* Registration form */}
                 <section className="position-relative module-box">
                     <div className="registration-form">
