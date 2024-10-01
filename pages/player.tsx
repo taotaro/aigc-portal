@@ -31,16 +31,33 @@ export default function Player() {
         // @ts-ignore
         var player = new Aliplayer({
             id: "aliyun-player",
-            source: "http://test.bluebots.xyz/c058fb5d7ed271ef801f5014c1da0102/42fdf45937d54b12a8abd978061beb03-9c95b279f3fbebcc4e9f9ebb125be92d-fd.mp4",
+            source: JSON.stringify({
+                "FD": "https://vod.alibabacloudtongyi.com.hk/c058fb5d7ed271ef801f5014c1da0102/42fdf45937d54b12a8abd978061beb03-9c95b279f3fbebcc4e9f9ebb125be92d-fd.mp4",
+                "LD": "https://vod.alibabacloudtongyi.com.hk/c058fb5d7ed271ef801f5014c1da0102/42fdf45937d54b12a8abd978061beb03-fee35f58c20af701e7fa19b794dc7046-ld.mp4",
+                "SD": "https://vod.alibabacloudtongyi.com.hk/c058fb5d7ed271ef801f5014c1da0102/42fdf45937d54b12a8abd978061beb03-eeca52cfbe329771ee4c3eff06c9f494-sd.mp4",
+                "HD": "https://vod.alibabacloudtongyi.com.hk/c058fb5d7ed271ef801f5014c1da0102/42fdf45937d54b12a8abd978061beb03-dc987bd24e22d37cde39e38d5ee64371-hd.mp4",
+            }),
             width: "100%",
             height: "500px",
-            cover: 'http://test.bluebots.xyz/c058fb5d7ed271ef801f5014c1da0102/snapshots/020666a6f1e14b438e0fef92431ad1ea-00005.jpg',
-            /* To set an album art, you must set 'autoplay' and 'preload' to 'false' */
             autoplay: false,
-            preload: false,
-            isLive: false
+            isLive: false,
+            components: [{
+                name: 'QualityComponent',
+                // @ts-ignore
+                type: window.AliPlayerComponent.QualityComponent,
+                args: [function (definition, desc) {
+                    console.log(definition + '-----' + desc)
+                }]
+            }]
         }, function (player) {
             console.log("The player is created");
+            /* Register the sourceloaded of the player, query the resolution of the video, invoke the resolution component, and call the setCurrentQuality method to set the resolution. */
+            player.on('sourceloaded', function (params) {
+                var paramData = params.paramData
+                var desc = paramData.desc
+                var definition = paramData.definition
+                player.getComponent('QualityComponent').setCurrentQuality(desc, definition)
+            })
         });
     };
 
