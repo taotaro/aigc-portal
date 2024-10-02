@@ -24,9 +24,14 @@ export default function Header(props) {
             // href: "https://tongyi.aliyun.com",
             children: [
                 {
-                    label: "平台網頁",
+                    label: "通義千問",
                     current: "",
                     href: "https://tongyi.aliyun.com",
+                },
+                {
+                    label: "通義萬相",
+                    current: "",
+                    href: "https://tongyi.aliyun.com/wanxiang/",
                 },
                 {
                     label: "登入教程",
