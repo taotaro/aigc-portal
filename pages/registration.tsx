@@ -262,21 +262,22 @@ export default function Registration() {
         const validateForm = () => {
             console.log("validate");
             const fieldsToCheck = [
-                "schoolNameCN",
-                "schoolNameEN",
-                // "schoolAddressCN",
-                // "schoolAddressEN",
-                "teacherNameCN",
-                "teacherNameEN",
-                "schoolPhone",
-                "teacherPhone",
-                "teacherEmail",
+                { field: "schoolNameCN", label: "學校名稱 (中文)" },
+                { field: "schoolNameEN", label: "學校名稱 (英文)" },
+                { field: "teacherPhone", label: "學校電話" },
+                { field: "teacherTitle", label: "教師職稱" },
+
+                { field: "teacherNameCN", label: "聯絡老師姓名 (中文)" },
+                { field: "teacherNameEN", label: "聯絡老師姓名 (英文)" },
+                { field: "schoolPhone", label: "聯絡老師手提電話" },
+
+                { field: "teacherEmail", label: "聯絡老師電子郵箱" },
             ];
 
-            for (let field of fieldsToCheck) {
+            for (let { field, label } of fieldsToCheck) {
                 if (!formData[field]) {
-                    toast.error(`請填寫所有必填欄位。`);
-
+                    console.log("not filled: ", field, label);
+                    toast.error(`請填寫必填欄位：${label}`);
                     return false;
                 }
             }
@@ -284,22 +285,20 @@ export default function Registration() {
             for (let team of teams) {
                 console.log(team);
                 if (team.members.length === 0) {
-                    toast.error("請填寫至少一個團隊資訊才能繼續。 ");
+                    toast.error("請填寫至少一個團隊資訊才能繼續。");
                     console.log("not members");
                     return false;
                 }
                 for (let member of team.members) {
                     console.log(member);
                     const memberFieldsToCheck = [
-                        "studentNameCN",
-                        // "studentNameEN",
-                        // "studentYearOfBirth",
-                        "studentGrade",
+                        { field: "studentNameCN", label: "學生姓名" },
+                        { field: "studentGrade", label: "就讀年級" },
                     ];
 
-                    for (let field of memberFieldsToCheck) {
+                    for (let { field, label } of memberFieldsToCheck) {
                         if (!member.data[field]) {
-                            toast.error("請填寫所有團隊成員的所有必填欄位。");
+                            toast.error(`請填寫團隊成員的必填欄位：${label}`);
                             console.log("not filled");
                             return false;
                         }
@@ -318,18 +317,8 @@ export default function Registration() {
             team_name: `Team ${index + 1}`,
             school_group: team.schoolGroup,
             team_members: team.members.map((member) => ({
-                // name_english: member.data.studentNameEN,
                 name_chinese: member.data.studentNameCN,
-                // year_of_birth: member.data.studentYearOfBirth,
-                // gender: member.data.studentGender
-                //     ? member.data.studentGender
-                //     : "男性",
-                // school_group: member.data.schoolGroup,
                 grade: member.data.studentGrade,
-                // mobile_phone: member.data.studentPhone
-                //     ? member.data.studentPhone
-                //     : "",
-                // email: member.data.studentEmail ? member.data.studentEmail : "",
             })),
         }));
 
@@ -339,8 +328,6 @@ export default function Registration() {
             name_chinese: formData.teacherNameCN,
             school_name_english: formData.schoolNameEN,
             school_name_chinese: formData.schoolNameCN,
-            // school_address_english: formData.schoolAddressEN,
-            // school_address_chinese: formData.schoolAddressCN,
             mobile_phone: formData.teacherPhone,
             telephone: formData.schoolPhone,
             team_info: teamData,
@@ -357,10 +344,7 @@ export default function Registration() {
         try {
             console.log("payload: ", payload);
             const response = await axios.post(
-                // "https://aigc-backend-dev.materia-logic.com/common/register",
                 process.env.NEXT_PUBLIC_API_URL + "/common/register",
-                // "http://127.0.0.1:8000/common/register",
-                // "http://127.0.0.1:8000/common/register",
                 payload
             );
             console.log(response.data);
@@ -372,8 +356,6 @@ export default function Registration() {
             setFormData({
                 schoolNameCN: "",
                 schoolNameEN: "",
-                // schoolAddressCN: "",
-                // schoolAddressEN: "",
                 teacherTitle: "",
                 teacherNameCN: "",
                 teacherNameEN: "",
@@ -395,25 +377,19 @@ export default function Registration() {
             console.log("team members: ", teams);
             setIsAgreed(false);
             setResetAllFields(true);
-            //   setTimeout(() => {
-            //     window.location.reload();
-            //   }, 3000);
 
             return;
         } catch (error) {
-            // console.error(error);
             console.log("error", error, typeof error);
             const response = await axios.post(
-                // "https://alibabacloudtongyi.com.hk/common/log-error",
-                // "https://aigc-backend-dev.materia-logic.com/common/log-error",
                 process.env.NEXT_PUBLIC_API_URL + "/common/log-error",
-                // "http://127.0.0.1:8000/common/log-error",
                 { error: error }
             );
             console.log("error: ", error);
             toast.error("註冊失敗！請重試");
         }
     };
+
     return (
         <>
             <NextSeo
