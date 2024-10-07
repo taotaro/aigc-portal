@@ -148,6 +148,13 @@ export default function Index() {
         );
     });
 
+    const closeModal = () => {
+        const modal = document.getElementById("modal");
+        if (modal) {
+            modal.style.display = "none"; // Hide the modal
+        }
+    };
+
     return (
         <>
             <NextSeo
@@ -195,6 +202,24 @@ export default function Index() {
                     </div>
                     {/* </section> */}
                 </section>
+            </div>
+            <div className="module-button" style={{ textAlign: "center" }}>
+                <div id="openModal">Open Modal</div>
+            </div>
+
+            {/* Modal */}
+            <div id="modal" className="modal">
+                <div className="modal-content">
+                    <span className="close" onClick={() => closeModal()}>
+                        &times;
+                    </span>
+                    <p>
+                        為幫助同學上手應用「通義平台」，遊戲湯麵將開設2場「應用實踐線上工作坊」，內容將涵蓋「通義千問」和「通義萬相」的平台應用，包括示範繪圖的精準提示、如何引導AI提供需要的內容等等。師生可以自備設備，跟隨主持同步實踐指令。
+                        <p style={{ marginTop: "24px" }}>
+                            請<strong>按此</strong>報名。
+                        </p>
+                    </p>
+                </div>
             </div>
             <div className="module-container">
                 {/* 介绍 */}
