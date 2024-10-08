@@ -138,7 +138,7 @@ export default function Header(props) {
             ) &&
             scrollHeight > 50
         ) {
-            console.log("include");
+            // console.log("include");
             setNavLinkStyle({ color: "#333" });
             setScrolled(true);
         } else if (scrollHeight > 800 && !isMobile) {
