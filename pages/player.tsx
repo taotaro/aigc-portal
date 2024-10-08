@@ -29,41 +29,49 @@ const LogoList = [
 export default function Player() {
     const initAliplayer = () => {
         // @ts-ignore
-        var player = new Aliplayer({
-            id: "aliyun-player",
-            source: JSON.stringify({
-                "FD": "https://vod.alibabacloudtongyi.com.hk/c058fb5d7ed271ef801f5014c1da0102/42fdf45937d54b12a8abd978061beb03-9c95b279f3fbebcc4e9f9ebb125be92d-fd.mp4",
-                "LD": "https://vod.alibabacloudtongyi.com.hk/c058fb5d7ed271ef801f5014c1da0102/42fdf45937d54b12a8abd978061beb03-fee35f58c20af701e7fa19b794dc7046-ld.mp4",
-                "SD": "https://vod.alibabacloudtongyi.com.hk/c058fb5d7ed271ef801f5014c1da0102/42fdf45937d54b12a8abd978061beb03-eeca52cfbe329771ee4c3eff06c9f494-sd.mp4",
-                "HD": "https://vod.alibabacloudtongyi.com.hk/c058fb5d7ed271ef801f5014c1da0102/42fdf45937d54b12a8abd978061beb03-dc987bd24e22d37cde39e38d5ee64371-hd.mp4",
-            }),
-            width: "100%",
-            height: "500px",
-            autoplay: false,
-            isLive: false,
-            components: [{
-                name: 'QualityComponent',
-                // @ts-ignore
-                type: window.AliPlayerComponent.QualityComponent,
-                args: [function (definition, desc) {
-                    console.log(definition + '-----' + desc)
-                }]
-            }]
-        }, function (player) {
-            console.log("The player is created");
-            /* Register the sourceloaded of the player, query the resolution of the video, invoke the resolution component, and call the setCurrentQuality method to set the resolution. */
-            player.on('sourceloaded', function (params) {
-                var paramData = params.paramData
-                var desc = paramData.desc
-                var definition = paramData.definition
-                player.getComponent('QualityComponent').setCurrentQuality(desc, definition)
-            })
-        });
+        var player = new Aliplayer(
+            {
+                id: "aliyun-player",
+                source: JSON.stringify({
+                    FD: "https://vod.alibabacloudtongyi.com.hk/c058fb5d7ed271ef801f5014c1da0102/42fdf45937d54b12a8abd978061beb03-9c95b279f3fbebcc4e9f9ebb125be92d-fd.mp4",
+                    LD: "https://vod.alibabacloudtongyi.com.hk/c058fb5d7ed271ef801f5014c1da0102/42fdf45937d54b12a8abd978061beb03-fee35f58c20af701e7fa19b794dc7046-ld.mp4",
+                    SD: "https://vod.alibabacloudtongyi.com.hk/c058fb5d7ed271ef801f5014c1da0102/42fdf45937d54b12a8abd978061beb03-eeca52cfbe329771ee4c3eff06c9f494-sd.mp4",
+                    HD: "https://vod.alibabacloudtongyi.com.hk/c058fb5d7ed271ef801f5014c1da0102/42fdf45937d54b12a8abd978061beb03-dc987bd24e22d37cde39e38d5ee64371-hd.mp4",
+                }),
+                width: "100%",
+                height: "500px",
+                autoplay: false,
+                isLive: false,
+                components: [
+                    {
+                        name: "QualityComponent",
+                        // @ts-ignore
+                        type: window.AliPlayerComponent.QualityComponent,
+                        args: [
+                            function (definition, desc) {
+                                console.log(definition + "-----" + desc);
+                            },
+                        ],
+                    },
+                ],
+            },
+            function (player) {
+                // console.log("The player is created");
+                /* Register the sourceloaded of the player, query the resolution of the video, invoke the resolution component, and call the setCurrentQuality method to set the resolution. */
+                player.on("sourceloaded", function (params) {
+                    var paramData = params.paramData;
+                    var desc = paramData.desc;
+                    var definition = paramData.definition;
+                    player
+                        .getComponent("QualityComponent")
+                        .setCurrentQuality(desc, definition);
+                });
+            }
+        );
     };
 
     useEffect(() => {
         initAliplayer();
-
     }, []);
 
     return (
@@ -82,12 +90,26 @@ export default function Player() {
                 }}
                 id="fixed-bg"
             />
-            <div id="aliyun-player" style={{ width: "100%", height: "calc(100vh - 80px)" }} > </div>
-            <section className="module-box" style={{ marginTop: '64px' }}>
-                <p className="module-title">免費下載 《數字時代簡史 未來世代必修課》</p>
-                <div className="module-logos" style={{ marginBottom: '32px' }}>
-                    <a href="https://ml-aigc.oss-cn-hongkong.aliyuncs.com/1_%E6%95%B8%E5%AD%97%E6%99%82%E4%BB%A3%E7%B0%A1%E5%8F%B2-%E6%9C%AA%E4%BE%86%E4%B8%96%E4%BB%A3%E5%BF%85%E4%BF%AE%E8%AA%B2%202024%E5%B9%B4%E9%96%B1%E8%AE%80%E7%89%88.pdf" target="__blank">
-                        <img src="https://ml-aigc.oss-cn-hongkong.aliyuncs.com/WX20240930-113809%402x.png" style={{ width: '200px', height: 'auto' }} alt="" />
+            <div
+                id="aliyun-player"
+                style={{ width: "100%", height: "calc(100vh - 80px)" }}
+            >
+                {" "}
+            </div>
+            <section className="module-box" style={{ marginTop: "64px" }}>
+                <p className="module-title">
+                    免費下載 《數字時代簡史 未來世代必修課》
+                </p>
+                <div className="module-logos" style={{ marginBottom: "32px" }}>
+                    <a
+                        href="https://ml-aigc.oss-cn-hongkong.aliyuncs.com/1_%E6%95%B8%E5%AD%97%E6%99%82%E4%BB%A3%E7%B0%A1%E5%8F%B2-%E6%9C%AA%E4%BE%86%E4%B8%96%E4%BB%A3%E5%BF%85%E4%BF%AE%E8%AA%B2%202024%E5%B9%B4%E9%96%B1%E8%AE%80%E7%89%88.pdf"
+                        target="__blank"
+                    >
+                        <img
+                            src="https://ml-aigc.oss-cn-hongkong.aliyuncs.com/WX20240930-113809%402x.png"
+                            style={{ width: "200px", height: "auto" }}
+                            alt=""
+                        />
                     </a>
                 </div>
                 <p className="module-title">活動主辦</p>

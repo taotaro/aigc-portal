@@ -50,34 +50,34 @@ export default function Login() {
     };
 
     const handleSubmit = async () => {
-        console.log("submit");
+        // console.log("submit");
         const payload = {
             password: password,
         };
 
-        console.log(payload);
+        // console.log(payload);
         try {
             const response = await axios.post(
                 // "https://aigc-backend-dev.materia-logic.com/common/login",
                 process.env.NEXT_PUBLIC_API_URL + "/common/login",
                 payload
             );
-            console.log(response);
+            // console.log(response);
             if (response.data.code === "2000") {
-                console.log("invalid");
+                // console.log("invalid");
                 toast.error("invalid password");
             } else {
                 setValid(true);
                 setToken(response.data.data.token);
             }
         } catch (error) {
-            console.log(error);
+            // console.log(error);
             toast.error(error);
         }
     };
 
     const handleDownload = async () => {
-        console.log("download");
+        // console.log("download");
         try {
             const response = await axios.get(
                 // "https://aigc-backend-dev.materia-logic.com/common/excel",
@@ -89,7 +89,7 @@ export default function Login() {
                     responseType: "blob",
                 }
             );
-            console.log("response: ", response);
+            // console.log("response: ", response);
             const url = window.URL.createObjectURL(
                 new Blob([response.data], {
                     type: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
@@ -102,7 +102,7 @@ export default function Login() {
             link.click();
             document.body.removeChild(link); // Cleanup the DOM
         } catch (error) {
-            console.log(error);
+            // console.log(error);
             toast.error(error);
         }
     };
