@@ -203,9 +203,6 @@ export default function Index() {
                     {/* </section> */}
                 </section>
             </div>
-            <div className="module-button" style={{ textAlign: "center" }}>
-                <div id="openModal">Open Modal</div>
-            </div>
 
             {/* Modal */}
             <div id="modal" className="modal">
