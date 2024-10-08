@@ -256,11 +256,11 @@ export default function Registration() {
 
     const handleSubmit = async (e) => {
         setIsSubmitted(true);
-        console.log("submit button pressed test");
+        // console.log("submit button pressed test");
         e.preventDefault();
 
         const validateForm = () => {
-            console.log("validate");
+            // console.log("validate");
             const fieldsToCheck = [
                 { field: "schoolNameCN", label: "學校名稱 (中文)" },
                 { field: "schoolNameEN", label: "學校名稱 (英文)" },
@@ -276,21 +276,21 @@ export default function Registration() {
 
             for (let { field, label } of fieldsToCheck) {
                 if (!formData[field]) {
-                    console.log("not filled: ", field, label);
+                    // console.log("not filled: ", field, label);
                     toast.error(`請填寫必填欄位：${label}`);
                     return false;
                 }
             }
 
             for (let team of teams) {
-                console.log(team);
+                // console.log(team);
                 if (team.members.length === 0) {
                     toast.error("請填寫至少一個團隊資訊才能繼續。");
-                    console.log("not members");
+                    // console.log("not members");
                     return false;
                 }
                 for (let member of team.members) {
-                    console.log(member);
+                    // console.log(member);
                     const memberFieldsToCheck = [
                         { field: "studentNameCN", label: "學生姓名" },
                         { field: "studentGrade", label: "就讀年級" },
@@ -299,7 +299,7 @@ export default function Registration() {
                     for (let { field, label } of memberFieldsToCheck) {
                         if (!member.data[field]) {
                             toast.error(`請填寫團隊成員的必填欄位：${label}`);
-                            console.log("not filled");
+                            // console.log("not filled");
                             return false;
                         }
                     }
@@ -339,15 +339,15 @@ export default function Registration() {
             return;
         }
 
-        console.log("calling backend");
+        // console.log("calling backend");
 
         try {
-            console.log("payload: ", payload);
+            // console.log("payload: ", payload);
             const response = await axios.post(
                 process.env.NEXT_PUBLIC_API_URL + "/common/register",
                 payload
             );
-            console.log(response.data);
+            // console.log(response.data);
             if (response.data.code !== "0000") {
                 toast.error(response.data.data);
                 return;
@@ -374,18 +374,18 @@ export default function Registration() {
                     schoolGroup: "",
                 },
             ]);
-            console.log("team members: ", teams);
+            // console.log("team members: ", teams);
             setIsAgreed(false);
             setResetAllFields(true);
 
             return;
         } catch (error) {
-            console.log("error", error, typeof error);
+            // console.log("error", error, typeof error);
             const response = await axios.post(
                 process.env.NEXT_PUBLIC_API_URL + "/common/log-error",
                 { error: error }
             );
-            console.log("error: ", error);
+            // console.log("error: ", error);
             toast.error("註冊失敗！請重試");
         }
     };
