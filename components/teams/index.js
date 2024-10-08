@@ -21,14 +21,14 @@ export default function Teams({
     }, [membersData]);
 
     useEffect(() => {
-        console.log("reset: ", reset);
+        // console.log("reset: ", reset);
         if (reset) {
             setMembers([
                 { id: 1, data: {} },
                 { id: 2, data: {} },
             ]);
         } else if (membersInfo) {
-            console.log("Setting Members: ", membersInfo);
+            // console.log("Setting Members: ", membersInfo);
             const validMembers =
                 membersInfo.length === 2
                     ? membersInfo
