@@ -205,7 +205,7 @@ export default function Index() {
             </div>
 
             {/* Modal */}
-            <div id="modal" className="modal">
+            {/* <div id="modal" className="modal">
                 <div className="modal-content">
                     <span className="close" onClick={() => closeModal()}>
                         &times;
@@ -224,7 +224,7 @@ export default function Index() {
                         </p>
                     </p>
                 </div>
-            </div>
+            </div> */}
             <div className="module-container">
                 {/* 介绍 */}
                 <section
