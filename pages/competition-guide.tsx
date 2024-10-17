@@ -705,6 +705,9 @@ export default function CompetitionGuide() {
                                     </li>
                                     <li>工作坊及賽事作品內容均以中文進行。</li>
                                     <li>參賽費用全免。</li>
+                                    <li>
+                                        基於公平原則，所有作品必須經平台遞交，不接受電郵或任何其他方式上傳。
+                                    </li>
                                 </ul>
                             </div>
                         </div>
