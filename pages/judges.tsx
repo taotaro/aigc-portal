@@ -10,10 +10,22 @@ export default function Judges() {
 
     const LogoList = [
         { name: "Alibaba", logo: "/images/ali.jpeg" },
+
+        { name: "Materia Logic", logo: "/images/MateriaLogic.png" },
         { name: "GamingNoodleSoup", logo: "/images/gns.png" },
-        { name: "Materia Logic", logo: "/images/ml.png" },
         { name: "HKFEW", logo: "/images/teachers.jpeg" },
+        { name: "HKACE", logo: "/images/hkace.png" },
         { name: "Aitle", logo: "/images/aitle.png" },
+        { name: "HKISHA", logo: "/images/HKISHA.jpg" },
+        { name: "KSHA", logo: "/images/KSHA.png" },
+        { name: "NTSHA", logo: "/images/NTSHA.png" },
+        { name: "hkhxei", logo: "/images/hkhxei.jpg" },
+        { name: "pauls", logo: "/images/Pauls.png" },
+        { name: "HKSSSC", logo: "/images/HKSSSC.jpg" },
+        { name: "DSSSC", logo: "/images/DSSSC.png" },
+        { name: "ahss", logo: "/images/ahss.jpg" },
+        { name: "HKCMSA", logo: "/images/HKCMSA.png" },
+        { name: "APSHA", logo: "/images/APSHA.png" },
     ];
 
     const sponsorList = [
@@ -24,34 +36,28 @@ export default function Judges() {
 
     const judgeData = [
         {
-            name: "Test",
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            name: "阿里雲",
+            description: "亞太北大區市場總監",
+            info: "鄧惠良先生",
+            photo: "/images/judge1.JPG",
         },
         {
-            name: "Test",
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            name: "羅氏針織有限公司",
+            description: "工作室策展人",
+            info: "黃靖貽小姐",
+            photo: "/images/judge2.JPG",
         },
         {
-            name: "Test",
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            name: "遊戲湯麵",
+            description: "創辦人",
+            info: "余安濤先生",
+            photo: "/images/judge3.jpg",
         },
         {
-            name: "Test",
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        },
-        {
-            name: "Test",
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        },
-        {
-            name: "Test",
-            description:
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            name: "Materia Logic",
+            description: "創辦人",
+            info: "黃暐喬先生",
+            photo: "/images/judge4.PNG",
         },
     ];
 
@@ -110,6 +116,8 @@ export default function Judges() {
                                     key={index}
                                     judgeName={item.name}
                                     judgeDescription={item.description}
+                                    judgeInfo={item.info}
+                                    judgePhoto={item.photo}
                                 />
                             );
                         })}
@@ -139,16 +147,37 @@ export default function Judges() {
                     <p className="module-title" style={{ paddingTop: "24px" }}>
                         支持單位
                     </p>
-                    <div className="module-logos">
+                    <div
+                        style={{
+                            display: "flex",
+                            flexWrap: "wrap",
+                            gap: "20px",
+                            paddingTop: "24px",
+                            justifyContent: "center", // Centers the items horizontally
+                            alignItems: "center", // Centers the items vertically
+                        }}
+                    >
                         {LogoList.filter((item) => item.name !== "Alibaba").map(
-                            (item) => {
+                            (item, index) => {
                                 return (
                                     <div
-                                        className={`module-logo module-logo-${item.name}`}
+                                        style={{
+                                            flex: "1 1 23.5%",
+                                            maxWidth: "23.5%",
+                                            boxSizing: "border-box",
+                                            textAlign: "center",
+                                            display: "flex", // Add display flex to the item container
+                                            justifyContent: "center", // Center the image horizontally
+                                            alignItems: "center", // Center the image vertically
+                                        }}
                                         key={item.name}
                                     >
                                         <img
-                                            className="module-logo__img"
+                                            style={{
+                                                maxWidth: "100%",
+                                                width: "auto",
+                                                maxHeight: "100px",
+                                            }}
                                             src={item.logo}
                                             alt={item.name}
                                         />

@@ -19,6 +19,11 @@ export default function Header(props) {
             href: "/competition-guide",
         },
         {
+            label: "法官",
+            current: "JUDGES",
+            href: "/judges",
+        },
+        {
             label: "通義平台",
             current: "",
             // href: "https://tongyi.aliyun.com",
