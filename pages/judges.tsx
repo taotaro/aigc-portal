@@ -94,11 +94,16 @@ export default function Judges() {
                 }}
             />
             <div className="module-container">
+                <section
+                    className="position-relative module-box"
+                    style={{ paddingTop: "80px", marginBottom: "-80px" }}
+                >
+                    <p className="module-title">賽事評審 </p>
+                </section>
                 <section className="position-relative intro-box">
                     <div
                         style={{
                             display: "flex",
-                            padding: "80px",
                             // flexDirection: "column",
                             gap: "40px",
                             // alignContent: "flex-start",
