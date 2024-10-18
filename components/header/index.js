@@ -15,14 +15,21 @@ export default function Header(props) {
         { label: "比賽詳情 ", current: "INDEX", href: "/#requirementsModule" },
         {
             label: "比賽指南",
-            current: "COMPETITION_GUIDE",
-            href: "/competition-guide",
+            current: "",
+            children: [
+                {
+                    label: "參賽須知",
+                    current: "COMPETITION_GUIDE",
+                    href: "/competition-guide",
+                },
+                {
+                    label: "賽事評審",
+                    current: "JUDGES",
+                    href: "/judges",
+                },
+            ],
         },
-        {
-            label: "法官",
-            current: "JUDGES",
-            href: "/judges",
-        },
+
         {
             label: "通義平台",
             current: "",
