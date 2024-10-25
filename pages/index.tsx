@@ -1088,7 +1088,7 @@ export default function Index() {
                         }}
                         id="scheduleModule"
                     >
-                        頒獎禮@「阿里雲香港峰會」
+                        頒獎禮@「阿里雲香港峰會2024」
                     </p>
                     <div
                         className="module-content"
@@ -1098,8 +1098,11 @@ export default function Index() {
                             {/* <div className="module-content__title">活動資訊</div> */}
                             <div className="module-content__desc">
                                 <div>日期：2024年11月27日（星期三）</div>
-                                <div>時間：待定</div>
-                                <div>地點：待定</div>
+                                <div>時間：10:30 - 10:45</div>
+                                <div>
+                                    地點：香港天際100
+                                    (香港九龍柯士甸道西1號環球貿易廣場100樓)
+                                </div>
                                 <div>*部分安排可能會更改，以不作另行通知</div>
                             </div>
                         </div>
