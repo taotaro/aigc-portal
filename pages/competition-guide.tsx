@@ -721,13 +721,13 @@ export default function CompetitionGuide() {
                     </div>
                 </section>
 
-                <section className="position-relative module-box">
+                {/* <section className="position-relative module-box">
                     <div className="module-button">
                         <a href="/registration" target="__blank">
                             立即報名
                         </a>
                     </div>
-                </section>
+                </section> */}
                 <section
                     className="position-relative module-box"
                     id="gameInfoModule"
