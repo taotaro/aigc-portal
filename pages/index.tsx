@@ -1104,7 +1104,7 @@ export default function Index() {
                             {/* <div className="module-content__title">活動資訊</div> */}
                             <div className="module-content__desc">
                                 <div>日期：2024年11月27日（星期三）</div>
-                                <div>時間：10:30 - 10:45</div>
+                                <div>時間：10:15 - 10:25</div>
                                 <div>
                                     地點：香港嘉里酒店 (香港紅磡紅鸞道38號)
                                 </div>
