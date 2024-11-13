@@ -205,7 +205,7 @@ export default function Index() {
             </div>
 
             {/* Modal */}
-            <div id="modal" className="modal">
+            {/* <div id="modal" className="modal">
                 <div className="modal-content">
                     <span className="close" onClick={() => closeModal()}>
                         &times;
@@ -218,19 +218,9 @@ export default function Index() {
                         <p>
                             為免網絡擁擠，參賽代表請預留最少3小時接收確認電郵，並以電郵內附有的提交作品編號於23:59前於賽事平台「遞交作品」頁面提交同學作品。基於公平原則，所有作品必須經平台遞交，不接受電郵或任何其他方式上傳。大會亦只接受附有遞交編號的作品。
                         </p>
-                        {/* <p style={{ marginTop: "24px" }}>
-                            請
-                            <a
-                                href="/online-workshop"
-                                style={{ color: "#ff6a00" }}
-                            >
-                                按此
-                            </a>
-                            報名。
-                        </p> */}
                     </p>
                 </div>
-            </div>
+            </div> */}
             <div className="module-container">
                 {/* 介绍 */}
                 <section
