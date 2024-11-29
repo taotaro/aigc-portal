@@ -52,18 +52,19 @@ export default function Header(props) {
                 },
             ],
         },
-        {
-            label: "網上報名",
-            current: "REGISTRATION",
-            href: "/registration",
-            style: { color: "#ff6a00" },
-        },
-        {
-            label: "遞交作品",
-            current: "ALIBABA COMPETITION SUBMISSION",
-            href: "/alibaba-competition-submission",
-            style: { color: "#ff6a00" },
-        },
+        // {
+        //     label: "網上報名",
+        //     current: "REGISTRATION",
+        //     href: "/registration",
+        //     style: { color: "#ff6a00" },
+        // },
+        // {
+        //     label: "遞交作品",
+        //     current: "ALIBABA COMPETITION SUBMISSION",
+        //     href: "/alibaba-competition-submission",
+        //     style: { color: "#ff6a00" },
+        // },
+        { label: "得獎名單", current: "WINNERS", href: "/winners" },
         {
             label: "工作坊直播重溫",
             current: "PLAYER",
