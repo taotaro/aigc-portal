@@ -195,11 +195,11 @@ export default function Index() {
                         校際生成式AI比賽
                     </h1>
                     {/* <section className="position-relative module-box"> */}
-                    <div className="module-button">
+                    {/* <div className="module-button">
                         <a href="/registration" target="__blank">
                             立即報名
                         </a>
-                    </div>
+                    </div> */}
                     {/* </section> */}
                 </section>
             </div>
@@ -1094,7 +1094,7 @@ export default function Index() {
                             {/* <div className="module-content__title">活動資訊</div> */}
                             <div className="module-content__desc">
                                 <div>日期：2024年11月27日（星期三）</div>
-                                <div>時間：10:30 - 10:45</div>
+                                <div>時間：10:15 - 10:25</div>
                                 <div>
                                     地點：香港嘉里酒店 (香港紅磡紅鸞道38號)
                                 </div>
@@ -1104,13 +1104,13 @@ export default function Index() {
                     </div>
                 </section>
 
-                <section className="position-relative module-box">
+                {/* <section className="position-relative module-box">
                     <div className="module-button">
                         <a href="/registration" target="__blank">
                             立即報名
                         </a>
                     </div>
-                </section>
+                </section> */}
                 <section
                     className="position-relative module-box"
                     id="gameInfoModule"
