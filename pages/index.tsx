@@ -205,22 +205,17 @@ export default function Index() {
             </div>
 
             {/* Modal */}
-            {/* <div id="modal" className="modal">
+            <div id="modal" className="modal">
                 <div className="modal-content">
                     <span className="close" onClick={() => closeModal()}>
                         &times;
                     </span>
-                    <p>
-                        <p>
-                            由於遞交作品於今日截止，大會已不接受以電郵或任何形式提交的大量報名申請。如有學校需要參賽，請把握時間填寫報名表。
-                        </p>
-                         
-                        <p>
-                            為免網絡擁擠，參賽代表請預留最少3小時接收確認電郵，並以電郵內附有的提交作品編號於23:59前於賽事平台「遞交作品」頁面提交同學作品。基於公平原則，所有作品必須經平台遞交，不接受電郵或任何其他方式上傳。大會亦只接受附有遞交編號的作品。
-                        </p>
-                    </p>
+                    <p>本屆賽事之得獎名單已經公佈，可<a href="https://alibabacloudtongyi.com.hk/winners" target="_blank">按此</a>查閱。</p>
+                    <p> 所有成功登記及遞交作品的同學將會獲頒參與證書，</p>
+                    <p>並將於1月陸續郵寄到校，請耐心等候。</p>
+                    <p>多謝支持！</p>
                 </div>
-            </div> */}
+            </div>
             <div className="module-container">
                 {/* 介绍 */}
                 <section
@@ -324,7 +319,7 @@ export default function Index() {
                                             objectFit: "cover", // Cover the entire div while maintaining aspect ratio
                                             borderRadius: "8px", // Apply the same border radius as the div for a seamless look
                                         }}
-                                        // style={{ width: "100%", height: "auto" }}
+                                    // style={{ width: "100%", height: "auto" }}
                                     />
                                 </div>
                             );
