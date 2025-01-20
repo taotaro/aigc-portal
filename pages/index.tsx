@@ -211,8 +211,8 @@ export default function Index() {
                         &times;
                     </span>
                     <p>本屆賽事之得獎名單已經公佈，可<a href="https://alibabacloudtongyi.com.hk/winners" target="_blank">按此</a>查閱。</p>
-                    <p> 所有成功登記及遞交作品的同學將會獲頒參與證書，</p>
-                    <p>並將於1月陸續郵寄到校，請耐心等候。</p>
+                    <p>所有成功登記及遞交作品同學的參與證書經已寄出，</p>
+                    <p>如有疑問，請於1月31日前電郵 <a href="mailto:edu@gamenoodlesoup.com">edu@gamenoodlesoup.com</a> 聯絡大會，</p>
                     <p>多謝支持！</p>
                 </div>
             </div>
